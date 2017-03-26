@@ -12,7 +12,7 @@ import java.util.ArrayList;
 /**
  * Created by timothysmith on 2017-03-25.
  */
-public class UserBean implements Serializable{
+public class UserBean implements Serializable {
 
     private String email;
     private String username;

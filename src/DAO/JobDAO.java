@@ -26,7 +26,7 @@ public class JobDAO {
 
         try {
             st = connection.createStatement();
-            rs = st.executeQuery("SELECT jobid, jobname, joblevel, rateofpay " +
+            rs = st.executeQuery("SELECT jobid, jobname, joblevel, rateofpay, companyid " +
                     "FROM \"Proj\".JOB  NATURAL JOIN \"Proj\".APPLIES_TO " +
                     "GROUP BY jobid ORDER BY count(jobid) DESC;");
             while (rs.next()) {
@@ -34,6 +34,7 @@ public class JobDAO {
                 job.setJobName(rs.getString("jobname"));
                 job.setJobLevel(rs.getInt("joblevel"));
                 job.setRateOfPay(rs.getDouble("rateofpay"));
+                job.setCompanyId(rs.getString("companyid"));
                 jobList.add(job);
             }
                 rs.close();

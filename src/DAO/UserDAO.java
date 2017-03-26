@@ -13,15 +13,14 @@ import java.sql.Statement;
  */
 public class UserDAO {
 
-    static DataAccess db = new DataAccess();
-    static Connection connection;
-    static Statement st;
-    static ResultSet rs;
+    static private Connection connection;
+    static private Statement st;
+    static private ResultSet rs;
 
 
     public static UserBean login(UserBean userBean) {
-        db.openConnection();
-        connection = db.getConnection();
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
 
         String username = userBean.getUsername();
         String password = userBean.getPassword();

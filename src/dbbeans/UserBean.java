@@ -1,5 +1,6 @@
 package dbbeans;
 
+import DAO.UserDAO;
 import connection.DataAccess;
 import java.io.Serializable;
 import java.sql.Connection;
@@ -139,23 +140,7 @@ public class UserBean implements Serializable{
         return users;
     }
 
-    public String login(String username, String password, DataAccess db) {
-        db.openConnection();
-        connection = db.getConnection();
-
-        try {
-            st = connection.createStatement();
-            rs = st.executeQuery("SELECT email FROM \"Proj\".suser WHERE "
-                    + "username = '" + username + "' AND password = '" + password + "';");
-            if (rs.next()) {
-                return rs.getString("Email");
-            }
-            else {
-                return null;
-            }
-        }
-        catch (SQLException e) {
-            e.printStackTrace();}
-        return null;
+    public UserBean login(UserBean userBean) {
+        return UserDAO.login(userBean);
     }
 }

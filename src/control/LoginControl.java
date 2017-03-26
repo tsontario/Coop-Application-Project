@@ -22,24 +22,24 @@ public class LoginControl extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        HttpSession session = request.getSession(true);
-        String uName = request.getParameter("uname");
-        String pWord = request.getParameter("pword");
-
         UserBean userBean = new UserBean();
+        userBean.setUsername(request.getParameter("uname"));
+        userBean.setPassword(request.getParameter("pword"));
+
         db = new DataAccess();
         db.openConnection();
         System.out.println("Is db DEFINED? ::::: " + db.getConnection());
 
 
-        String email = userBean.login(uName, pWord, db);
-        System.out.println("EMAIL: " + email);
+        userBean = userBean.login(userBean);
 
-        if (email != null) {
-            System.out.println("SUCCESS");
+        if (userBean != null) {
+            HttpSession session = request.getSession(true);
+            session.setAttribute("currentUser", userBean);
+            response.sendRedirect("studenthome.jsp");
         }
         else {
-            System.out.println("FAILURE");
+            response.sendRedirect("loginfail.jsp");
         }
     }
 

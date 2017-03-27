@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c66776c-91ba-47b4-93d7-18d5440d1161" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dbbeans/UserBean.java" afterPath="$PROJECT_DIR$/src/dbbeans/UserBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/studenthome.jsp" afterPath="$PROJECT_DIR$/web/studenthome.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,6 +96,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="DataAccess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/connection/DataAccess.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="20" column="140" lean-forward="false" selection-start-line="20" selection-start-column="140" selection-end-line="20" selection-end-column="140" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="studenthome.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/studenthome.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyBean.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CompanyBean.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
+            <state relative-caret-position="396">
               <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -149,8 +157,8 @@
       <file leaf-file-name="LoginControl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/LoginControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+            <state relative-caret-position="277">
+              <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,24 +169,24 @@
       <file leaf-file-name="CompanyDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/CompanyDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="58" lean-forward="false" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
+            <state relative-caret-position="-99">
+              <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1490573426000" expanded="true" signature="694:722" ph="SELECT CNAME... " />
-                <marker date="1490573426000" expanded="true" signature="694:723" ph="SELECT CNAME... " />
-                <marker date="1490573426000" expanded="true" signature="694:739" ph="SELECT CNAME... company" />
-                <marker date="1490573426000" expanded="true" signature="694:781" ph="SELECT CNAME... companyWHERE" />
-                <marker date="1490573426000" expanded="true" signature="694:783" ph="SELECT CNAME... companyWHERE" />
-                <marker date="1490573426000" expanded="true" signature="694:795" ph="SELECT cname... company" />
-                <marker date="1490573426000" expanded="true" signature="1433:1466" ph="SELECT COUNT... " />
-                <marker date="1490573426000" expanded="true" signature="1433:1503" ph="SELECT COUNT... " />
-                <marker date="1490573426000" expanded="true" signature="1433:1533" ph="SELECT COUNT... company_review" />
-                <marker date="1490573426000" expanded="true" signature="1433:1564" ph="SELECT COUNT... company_review" />
-                <marker date="1490573426000" expanded="true" signature="1433:1566" ph="SELECT COUNT... company_review" />
-                <marker date="1490573426000" expanded="true" signature="2188:2251" ph="SELECT cname... company" />
-                <marker date="1490573426000" expanded="true" signature="2188:2308" ph="SELECT ratin... companyORDER" />
-                <marker date="1490573426000" expanded="true" signature="2188:2321" ph="SELECT ratin... company" />
+                <marker date="1490574608000" expanded="true" signature="694:722" ph="SELECT CNAME... " />
+                <marker date="1490574608000" expanded="true" signature="694:723" ph="SELECT CNAME... " />
+                <marker date="1490574608000" expanded="true" signature="694:739" ph="SELECT CNAME... company" />
+                <marker date="1490574608000" expanded="true" signature="694:781" ph="SELECT CNAME... companyWHERE" />
+                <marker date="1490574608000" expanded="true" signature="694:783" ph="SELECT CNAME... companyWHERE" />
+                <marker date="1490574608000" expanded="true" signature="694:795" ph="SELECT cname... company" />
+                <marker date="1490574608000" expanded="true" signature="1433:1466" ph="SELECT COUNT... " />
+                <marker date="1490574608000" expanded="true" signature="1433:1503" ph="SELECT COUNT... " />
+                <marker date="1490574608000" expanded="true" signature="1433:1533" ph="SELECT COUNT... company_review" />
+                <marker date="1490574608000" expanded="true" signature="1433:1564" ph="SELECT COUNT... company_review" />
+                <marker date="1490574608000" expanded="true" signature="1433:1566" ph="SELECT COUNT... company_review" />
+                <marker date="1490574608000" expanded="true" signature="2102:2165" ph="SELECT cname... company" />
+                <marker date="1490574608000" expanded="true" signature="2102:2222" ph="SELECT ratin... companyORDER" />
+                <marker date="1490574608000" expanded="true" signature="2102:2235" ph="SELECT ratin... company" />
               </folding>
             </state>
           </provider>
@@ -199,10 +207,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
+            <state relative-caret-position="171">
               <caret line="57" column="68" lean-forward="false" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -236,8 +244,8 @@
       <file leaf-file-name="JobDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/JobDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="46" selection-end-column="23" />
+            <state relative-caret-position="410">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <marker date="1490569332000" expanded="true" signature="692:702" ph="SELECT jobna... job" />
@@ -282,20 +290,20 @@
         <option value="$PROJECT_DIR$/src/connection/Password.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/connection/DataAccess.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/web/loginfail.jsp" />
-        <option value="$PROJECT_DIR$/src/control/LoginControl.java" />
         <option value="$PROJECT_DIR$/src/DAO/JobDAO.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b8b3eb9d-378d-4fb7-ae01-7d05e320dffc/console.sql" />
         <option value="$PROJECT_DIR$/src/dbbeans/JobBean.java" />
         <option value="dbtable:/109168c8/a24c54fd-4c9c-427e-88ac-6c4b29ddc7a7/postgres.Proj.company_review" />
         <option value="$PROJECT_DIR$/src/dbbeans/CompanyBean.java" />
-        <option value="$PROJECT_DIR$/src/DAO/CompanyDAO.java" />
         <option value="$PROJECT_DIR$/src/dbbeans/UserBean.java" />
         <option value="$PROJECT_DIR$/web/studenthome.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a24c54fd-4c9c-427e-88ac-6c4b29ddc7a7/console.sql" />
         <option value="$PROJECT_DIR$/src/DAO/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/connection/DataAccess.java" />
+        <option value="$PROJECT_DIR$/src/control/LoginControl.java" />
+        <option value="$PROJECT_DIR$/src/DAO/CompanyDAO.java" />
       </list>
     </option>
   </component>
@@ -985,16 +993,15 @@
       <updated>1490539064691</updated>
       <workItem from="1490539072582" duration="4248000" />
       <workItem from="1490544191150" duration="3464000" />
-      <workItem from="1490548683832" duration="13548000" />
+      <workItem from="1490548683832" duration="13718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21260000" />
+    <option name="totallyTimeSpent" value="21430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1015,9 +1022,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22974768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22974768" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.146875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1261,14 +1268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/connection/DataAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="140" lean-forward="false" selection-start-line="20" selection-start-column="140" selection-end-line="20" selection-end-column="140" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b8b3eb9d-378d-4fb7-ae01-7d05e320dffc/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1289,19 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/JobDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="46" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1490569332000" expanded="true" signature="692:702" ph="SELECT jobna... job" />
-            <marker date="1490569332000" expanded="true" signature="692:889" ph="SELECT jobna... job" />
-            <marker date="1490569332000" expanded="true" signature="692:892" ph="SELECT jobna... job" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/109168c8/a24c54fd-4c9c-427e-88ac-6c4b29ddc7a7/postgres.Proj.company">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1312,76 +1298,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/CompanyDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="58" lean-forward="false" selection-start-line="56" selection-start-column="58" selection-end-line="56" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1490573426000" expanded="true" signature="694:722" ph="SELECT CNAME... " />
-            <marker date="1490573426000" expanded="true" signature="694:723" ph="SELECT CNAME... " />
-            <marker date="1490573426000" expanded="true" signature="694:739" ph="SELECT CNAME... company" />
-            <marker date="1490573426000" expanded="true" signature="694:781" ph="SELECT CNAME... companyWHERE" />
-            <marker date="1490573426000" expanded="true" signature="694:783" ph="SELECT CNAME... companyWHERE" />
-            <marker date="1490573426000" expanded="true" signature="694:795" ph="SELECT cname... company" />
-            <marker date="1490573426000" expanded="true" signature="1433:1466" ph="SELECT COUNT... " />
-            <marker date="1490573426000" expanded="true" signature="1433:1503" ph="SELECT COUNT... " />
-            <marker date="1490573426000" expanded="true" signature="1433:1533" ph="SELECT COUNT... company_review" />
-            <marker date="1490573426000" expanded="true" signature="1433:1564" ph="SELECT COUNT... company_review" />
-            <marker date="1490573426000" expanded="true" signature="1433:1566" ph="SELECT COUNT... company_review" />
-            <marker date="1490573426000" expanded="true" signature="2188:2251" ph="SELECT cname... company" />
-            <marker date="1490573426000" expanded="true" signature="2188:2308" ph="SELECT ratin... companyORDER" />
-            <marker date="1490573426000" expanded="true" signature="2188:2321" ph="SELECT ratin... company" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/LoginControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
-            <element signature="e#764#765#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-            <element signature="e#1020#1021#0" expanded="true" />
-            <element signature="e#1048#1049#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1243#1244#0" expanded="true" />
-            <element signature="e#1310#1311#0" expanded="true" />
-            <element signature="e#1366#1367#0" expanded="true" />
-            <element signature="e#1412#1413#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1440,9 +1356,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/connection/DataAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="20" column="140" lean-forward="false" selection-start-line="20" selection-start-column="140" selection-end-line="20" selection-end-column="140" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/LoginControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/CompanyDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="57" column="13" lean-forward="true" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1490574608000" expanded="true" signature="694:722" ph="SELECT CNAME... " />
+            <marker date="1490574608000" expanded="true" signature="694:723" ph="SELECT CNAME... " />
+            <marker date="1490574608000" expanded="true" signature="694:739" ph="SELECT CNAME... company" />
+            <marker date="1490574608000" expanded="true" signature="694:781" ph="SELECT CNAME... companyWHERE" />
+            <marker date="1490574608000" expanded="true" signature="694:783" ph="SELECT CNAME... companyWHERE" />
+            <marker date="1490574608000" expanded="true" signature="694:795" ph="SELECT cname... company" />
+            <marker date="1490574608000" expanded="true" signature="1433:1466" ph="SELECT COUNT... " />
+            <marker date="1490574608000" expanded="true" signature="1433:1503" ph="SELECT COUNT... " />
+            <marker date="1490574608000" expanded="true" signature="1433:1533" ph="SELECT COUNT... company_review" />
+            <marker date="1490574608000" expanded="true" signature="1433:1564" ph="SELECT COUNT... company_review" />
+            <marker date="1490574608000" expanded="true" signature="1433:1566" ph="SELECT COUNT... company_review" />
+            <marker date="1490574608000" expanded="true" signature="2102:2165" ph="SELECT cname... company" />
+            <marker date="1490574608000" expanded="true" signature="2102:2222" ph="SELECT ratin... companyORDER" />
+            <marker date="1490574608000" expanded="true" signature="2102:2235" ph="SELECT ratin... company" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/JobDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1490569332000" expanded="true" signature="692:702" ph="SELECT jobna... job" />
+            <marker date="1490569332000" expanded="true" signature="692:889" ph="SELECT jobna... job" />
+            <marker date="1490569332000" expanded="true" signature="692:892" ph="SELECT jobna... job" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
+        <state relative-caret-position="171">
           <caret line="57" column="68" lean-forward="false" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1453,6 +1424,42 @@
             <marker date="1490574533000" expanded="true" signature="1672:1762" ph="SELECT email... suser" />
             <marker date="1490574533000" expanded="true" signature="1672:1780" ph="SELECT usern... suser" />
             <marker date="1490574533000" expanded="true" signature="1672:1783" ph="SELECT email... Proj" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1184#1185#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
+            <element signature="e#1310#1311#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
           </folding>
         </state>
       </provider>

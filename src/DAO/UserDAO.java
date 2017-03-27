@@ -54,7 +54,7 @@ public class UserDAO {
 
         try {
             st = connection.createStatement();
-            rs = st.executeQuery("SELECT username FROM \"Proj\".suser " +
+            rs = st.executeQuery("SELECT username FROM \"Proj\".admin " +
                                 "WHERE username = '" + username + "';");
             if (rs.next()) {
                 rs.close();

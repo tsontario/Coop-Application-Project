@@ -13,8 +13,10 @@
   <body>
 
   <form action="LoginControl" method="POST">
-    <input type="text" name="uname" />
-    <input type="password" name="pword" />
+    <label for="uname">Username:</label>
+    <input id="uname" type="text" name="uname" />
+    <label for="password">Password: </label>
+    <input id="password" type="password" name="pword" />
     <button type="submit">Submit</button>
   </form>
   </body>

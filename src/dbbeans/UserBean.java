@@ -61,7 +61,7 @@ public class UserBean implements Serializable {
     }
 
     public void setProgramCode(String programCode) {
-        programCode = programCode;
+        this.programCode = programCode;
     }
 
     public int getLevel() {

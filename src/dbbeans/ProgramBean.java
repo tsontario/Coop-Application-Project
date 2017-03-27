@@ -1,6 +1,9 @@
 package dbbeans;
 
+import DAO.ProgramDAO;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by timothysmith on 2017-03-27.
@@ -28,5 +31,9 @@ public class ProgramBean implements Serializable {
 
     public void setProgramCode(String programCode) {
         this.programCode = programCode;
+    }
+
+    public static ArrayList<ProgramBean> getProgramList() {
+        return ProgramDAO.getProgramList();
     }
 }

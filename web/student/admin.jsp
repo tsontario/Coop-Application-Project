@@ -4,7 +4,7 @@
 <% UserBean admin = (UserBean) request.getSession().getAttribute("currentUser"); %>
 <html>
     <head>
-        <title>Admin Page: ${currentUser.getfName()} ${currentUser.getlName()}</title>
+        <title>Admin Page: ${currentUser}</title>
     </head>
     <body>
     </body>

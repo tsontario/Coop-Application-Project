@@ -151,4 +151,9 @@ public class UserBean implements Serializable {
     public boolean isModerator(String username) {
         return UserDAO.isModerator(username);
     }
+
+    public String toString() {
+        String res = getfName() + " " + getlName();
+        return res;
+    }
 }

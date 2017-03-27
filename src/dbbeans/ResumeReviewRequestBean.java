@@ -1,6 +1,9 @@
 package dbbeans;
 
+import DAO.ResumeReviewRequestDAO;
+
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by timothysmith on 2017-03-27.
@@ -36,5 +39,9 @@ public class ResumeReviewRequestBean implements Serializable {
 
     public void setVersionNo(int versionNo) {
         this.versionNo = versionNo;
+    }
+
+    public static ArrayList<ResumeReviewRequestBean> getReviewRequests() {
+        return ResumeReviewRequestDAO.getReviewRequests();
     }
 }

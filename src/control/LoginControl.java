@@ -28,8 +28,6 @@ public class LoginControl extends HttpServlet {
 
         db = new DataAccess();
         db.openConnection();
-        System.out.println("Is db DEFINED? ::::: " + db.getConnection());
-
 
         userBean = userBean.login(userBean);
 

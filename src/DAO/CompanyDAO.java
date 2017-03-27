@@ -55,7 +55,6 @@ public class CompanyDAO {
                     + id + "';");
             if (rs.next()) {
                 averageRating = rs.getInt(1) / rs.getInt(2);
-                System.out.println("In the try: averageRating is: " + averageRating);
             }
 
         } catch (SQLException e) {

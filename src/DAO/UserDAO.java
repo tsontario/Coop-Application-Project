@@ -97,4 +97,40 @@ public class UserDAO {
             e.printStackTrace();}
         return false;
     }
+
+    public static boolean isUnique(String username) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT username FROM \"Proj\".suser" +
+                    " WHERE username = '" + username + "';");
+            if (rs.next()) {
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    public static void insertIntoDB(UserBean userBean) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("INSERT INTO \"Proj\".suser VALUES ('" +
+                                        userBean.getEmail() + "', '" +
+                                        userBean.getUsername() + "', '" +
+                                        userBean.getProgramCode() + "', " +
+                                        userBean.getLevel() + ", '" +
+                                        userBean.getPassword() + "', '" +
+                                        userBean.getfName() + "', '" +
+                                        userBean.getlName() + "');");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

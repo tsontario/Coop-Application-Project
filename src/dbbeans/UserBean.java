@@ -61,7 +61,7 @@ public class UserBean implements Serializable {
     }
 
     public void setProgramCode(String programCode) {
-        programCode = programCode;
+        this.programCode = programCode;
     }
 
     public int getLevel() {
@@ -155,5 +155,13 @@ public class UserBean implements Serializable {
     public String toString() {
         String res = getfName() + " " + getlName();
         return res;
+    }
+
+    public static boolean isUnique(String username) {
+        return UserDAO.isUnique(username);
+    }
+
+    public void insertIntoDB() {
+        UserDAO.insertIntoDB(this);
     }
 }

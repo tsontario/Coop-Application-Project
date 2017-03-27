@@ -28,6 +28,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>StudentRegisterControl</servlet-name>
-        <url-pattern>StudentRegisterControl</url-pattern>
+        <url-pattern>/StudentRegisterControl</url-pattern>
     </servlet-mapping>
 </web-app>

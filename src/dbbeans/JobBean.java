@@ -98,7 +98,7 @@ public class JobBean implements Serializable {
         this.postingDate = postingDate;
     }
 
-    public ArrayList<JobBean> listTopFiveJobs() {
+    public static ArrayList<JobBean> listTopFiveJobs() {
         return JobDAO.listTopFiveJobs();
     }
 }

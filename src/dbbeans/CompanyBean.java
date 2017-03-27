@@ -3,6 +3,7 @@ package dbbeans;
 import DAO.CompanyDAO;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Created by timothysmith on 2017-03-26.
@@ -61,5 +62,13 @@ public class CompanyBean implements Serializable {
 
     public CompanyBean getCompanyById(String companyId) {
         return CompanyDAO.getCompanyById(companyId);
+    }
+
+    public static ArrayList<CompanyBean> listTopFiveCompanies() {
+        return CompanyDAO.listTopFiveCompanies();
+    }
+
+    public int getAverageRating(String id) {
+        return CompanyDAO.getAverageRating(id);
     }
 }

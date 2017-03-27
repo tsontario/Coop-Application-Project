@@ -45,8 +45,8 @@
     </schema>
     <schema id="14" parent="2" name="Proj">
       <ObjectId>18693</ObjectId>
-      <IntrospectionTimestamp>2017-03-26.18:55:41.709</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1119</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-03-27.12:17:02.825</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1159</IntrospectionStateNumber>
       <Visible>1</Visible>
     </schema>
     <schema id="15" parent="2" name="fakr">
@@ -90,7 +90,7 @@
     </table>
     <table id="25" parent="14" name="resume">
       <ObjectId>18904</ObjectId>
-      <StateNumber>1119</StateNumber>
+      <StateNumber>1159</StateNumber>
     </table>
     <table id="26" parent="14" name="resume_review">
       <ObjectId>18919</ObjectId>
@@ -516,8 +516,8 @@ programcode</ColNames>
     </column>
     <column id="98" parent="25" name="resume">
       <Position>4</Position>
-      <DataType>bytea|0</DataType>
-      <StateNumber>1119</StateNumber>
+      <DataType>varchar(1000)|0</DataType>
+      <StateNumber>1159</StateNumber>
     </column>
     <index id="99" parent="25" name="resume_pkey">
       <ObjectId>18910</ObjectId>

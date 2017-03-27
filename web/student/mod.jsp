@@ -8,9 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Moderator Panel: ${currentUser.getUsername()}</title>
+    <title>Moderator Panel: ${currentUser.getfName()} + ${currentUser.getlName}</title>
 </head>
 <body>
+    <h2>Resumes to be reviewed:</h2>
+
+    <ul>
+
+    </ul>
 
 </body>
 </html>

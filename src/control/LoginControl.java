@@ -35,10 +35,10 @@ public class LoginControl extends HttpServlet {
         if (userBean != null) {
             session = request.getSession(true);
             session.setAttribute("currentUser", userBean);
-            response.sendRedirect("studenthome.jsp");
+            response.sendRedirect("student/studenthome.jsp");
         }
         else {
-            response.sendRedirect("loginfail.jsp");
+            response.sendRedirect("session/loginfail.jsp");
         }
     }
 

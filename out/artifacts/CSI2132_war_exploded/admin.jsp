@@ -7,6 +7,5 @@
         <title>Admin Page: ${currentUser.getUsername()}</title>
     </head>
     <body>
-        <p>Admin page of ${currentUser.getUsername()}</p>
     </body>
 </html>

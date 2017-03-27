@@ -10,10 +10,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<% ArrayList<JobBean> jobList = JobBean.listTopFiveJobs(); %>
-<% ArrayList<CompanyBean> companyList = CompanyBean.listTopFiveCompanies(); %>
-<% CompanyBean companyBean = new CompanyBean(); %>
-<% UserBean user = (UserBean) request.getSession().getAttribute("currentUser"); %>
+<%
+    ArrayList<JobBean> jobList = JobBean.listTopFiveJobs();
+    ArrayList<CompanyBean> companyList = CompanyBean.listTopFiveCompanies();
+    CompanyBean companyBean = new CompanyBean();
+    UserBean user = (UserBean) request.getSession().getAttribute("currentUser");
+    if (user == null) {response.sendRedirect("sessionended.jsp"); }
+%>
 
 <html>
 <head>
@@ -70,12 +73,14 @@
     <nr />
     <h2>Select an option: </h2>
 
-    <% if (user.isAdmin(user.getUsername())) { %>
-        <a href="admin.jsp"><button>Admin page</button></a>
-    <% } %>
-
-    <% if (user.isModerator(user.getUsername())) { %>
-        <%= "MOD" %>
-    <% } %>
+    <% if (user != null) {
+            if (user.isAdmin(user.getUsername())) { %>
+            <a href="admin.jsp"><button>Admin page</button></a>
+        <% } %>
+        <% if (user.isModerator(user.getUsername())) { %>
+            <%= "MOD" %>
+        <% }
+    }%>
+        <a href="goodbye.jsp"><button>Logout</button></a>
 </body>
 </html>

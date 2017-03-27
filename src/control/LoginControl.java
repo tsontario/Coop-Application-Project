@@ -18,6 +18,7 @@ import java.sql.DriverManager;
 public class LoginControl extends HttpServlet {
 
     private DataAccess db;
+    private HttpSession session;
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -32,7 +33,7 @@ public class LoginControl extends HttpServlet {
         userBean = userBean.login(userBean);
 
         if (userBean != null) {
-            HttpSession session = request.getSession(true);
+            session = request.getSession(true);
             session.setAttribute("currentUser", userBean);
             response.sendRedirect("studenthome.jsp");
         }

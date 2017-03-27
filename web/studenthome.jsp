@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <p>Hello ${currentUser.getUsername()}</p>
+    <p>Hello ${currentUser.getUsername()}, welcome to your home page!</p>
     <br />
 
-    <h2>Top 5 Jobs</h2>
+    <h2>Top Jobs</h2>
     <table id="top5_jobs">
         <tr>
             <th>Job Title</th>
@@ -69,8 +69,9 @@
     <hr />
     <nr />
     <h2>Select an option: </h2>
+
     <% if (user.isAdmin(user.getUsername())) { %>
-        <%= "ADMIN!" %>
+        <a href="admin.jsp"><button>Admin page</button></a>
     <% } %>
 
     <% if (user.isModerator(user.getUsername())) { %>

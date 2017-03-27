@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% %>
+
 <html>
     <head>
         <title>New Student Registration</title>
@@ -6,20 +8,27 @@
     <body>
         <form action="StudentRegisterControl" method="POST">
 
-            <label for="#">First Name: </label>
-            <input type="text" />
+            <label for="fname">First Name: </label>
+            <input id="fname" type="text" />
+            <br />
 
-            <label for="#">Last Name: </label>
-            <input type="text" />
+            <label for="lname">Last Name: </label>
+            <input id="lname" type="text" />
+            <br />
 
-            <label for="#">Username: </label>
-            <input type="text" />
+            <label for="username">Username: </label>
+            <input id="username" type="text" />
+            <br />
 
-            <label for="#">Your Program: </label>
-            <!-- pull down menu -->
+            <label for="programcode">Your Program: </label>
+            <select id="programcode">
+                <% %>
+            </select>
+            <br />
 
             <label for="#">Current School Year: </label>
             <!-- pull down menu -->
+            <br />
 
             <button type="submit">Register</button>
         </form>

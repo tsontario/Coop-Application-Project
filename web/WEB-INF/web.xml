@@ -22,12 +22,12 @@
         <url-pattern>/CompanyLoginControl</url-pattern>
     </servlet-mapping>
     
-    <servlet>
-        <servlet-name>StudentRegisterControl</servlet-name>
-        <servlet-class>control.StudentRegisterControl</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>StudentRegisterControl</servlet-name>
-        <url-pattern>StudentRegisterControl</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>StudentRegisterControl</servlet-name>-->
+        <!--<servlet-class>control.StudentRegisterControl</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>StudentRegisterControl</servlet-name>-->
+        <!--<url-pattern>StudentRegisterControl</url-pattern>-->
+    <!--</servlet-mapping>-->
 </web-app>

@@ -22,6 +22,10 @@
             <input name="username" id="username" type="text" />
             <br />
 
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" />
+            <br />
+
             <label for="programcode">Your Program: </label>
             <select name="programcode" id="programcode">
                 <% for (ProgramBean program : programList) {
@@ -40,7 +44,15 @@
             </select>
             <br />
 
-            <input type="submit">Register</input>
+            <label for="password1">Enter Password:</label>
+            <input type="password" id="password1" name="password" />
+            <br />
+
+            <label for="password2">Reenter Password:</label>
+            <input type="password" id="password2" name="passwordcheck" />
+            <br />
+
+            <input type="submit" />
         </form>
     </body>
 </html>

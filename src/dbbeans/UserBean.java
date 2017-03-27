@@ -156,4 +156,12 @@ public class UserBean implements Serializable {
         String res = getfName() + " " + getlName();
         return res;
     }
+
+    public static boolean isUnique(String username) {
+        return UserDAO.isUnique(username);
+    }
+
+    public void insertIntoDB() {
+        UserDAO.insertIntoDB(this);
+    }
 }

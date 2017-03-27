@@ -23,30 +23,61 @@ public class StudentRegisterControl extends HttpServlet {
 
         UserBean userBean = new UserBean();
 
+        String email = request.getParameter("email");
         String fName = request.getParameter("fname");
         String lName = request.getParameter("lname");
         String username = request.getParameter("username");
         String programCode = request.getParameter("programcode");
-        System.out.println("Value of level: " + request.getParameter("level"));
-        System.out.println("Value of pcode: " + programCode);
+        int level = Integer.parseInt(request.getParameter("level"));
+
+        String password = request.getParameter("password");
+        String passwordCheck = request.getParameter("passwordcheck");
 
         // Check for valid fields
-        if (fName == null || fName.trim().length() < 5) {
-            fail(response);
+        if (fName == null || fName.trim().length() < 1) {
+            fail(response, request, "First name can't be empty");
             return;
         }
         if (lName == null || lName.trim().length() < 1) {
-            fail(response);
+            fail(response, request, "Last name can't be empty");
             return;
         }
         if (username == null || username.length() < 5) {
-            fail(response);
+            fail(response, request, "Username must be 4 characters or more");
+            return;
+        }
+        if (email == null || email.trim() == "") {
+            fail(response, request, "You need to enter an email");
+        }
+
+        if(!(UserBean.isUnique(username))) {
+            fail(response, request, "Username already taken!");
+            return;
+        }
+        if (!(password.equals(passwordCheck))) {
+            fail(response, request, "Passwords don't match!");
             return;
         }
 
+        userBean.setEmail(email);
+        userBean.setUsername(username);
+        userBean.setfName(fName);
+        userBean.setlName(lName);
+        userBean.setProgramCode(programCode);
+        userBean.setLevel(level);
+        userBean.setPassword(password);
+
+        userBean.insertIntoDB();
+
+        session = request.getSession(true);
+        session.setAttribute("currentUser", userBean);
+        response.sendRedirect("student/studenthome.jsp");
+
     }
 
-    private void fail(HttpServletResponse response) throws IOException {
-            response.sendRedirect("register_error.jsp");
+    private void fail(HttpServletResponse response, HttpServletRequest request, String msg) throws IOException {
+            session = request.getSession(true);
+            session.setAttribute("error", msg);
+            response.sendRedirect("session/registererror.jsp");
     }
 }

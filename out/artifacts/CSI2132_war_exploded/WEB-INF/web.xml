@@ -12,4 +12,13 @@
         <servlet-name>LoginControl</servlet-name>
         <url-pattern>/LoginControl</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CompanyLoginControl</servlet-name>
+        <servlet-class>control.CompanyLoginControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CompanyLoginControl</servlet-name>
+        <url-pattern>/CompanyLoginControl</url-pattern>
+    </servlet-mapping>
 </web-app>

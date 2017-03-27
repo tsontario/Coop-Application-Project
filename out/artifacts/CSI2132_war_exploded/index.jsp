@@ -12,6 +12,7 @@
   </head>
   <body>
 
+  <h1>Student login</h1>
   <form action="LoginControl" method="POST">
     <label for="uname">Username:</label>
     <input id="uname" type="text" name="uname" />
@@ -19,5 +20,18 @@
     <input id="password" type="password" name="pword" />
     <button type="submit">Submit</button>
   </form>
+
+  <br />
+  <hr />
+  <br />
+
+  <h1>Company login</h1>
+    <form action="CompanyLoginControl" method="POST">
+      <label for="cname">Company Name:</label>
+      <input id="cname" type="text" name="cname"/>
+      <label for="cpassword">Password:</label>
+      <input id="cpassword" type="password" name="cpassword" />
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <p>Hello ${currentUser.getUsername()}, welcome to your home page!</p>
+    <p>Hello ${currentUser.getfName()}, welcome to your home page!</p>
     <br />
 
     <h2>Top Jobs</h2>
@@ -81,6 +81,7 @@
             <a href="mod.jsp"><button>Moderator Panel</button></a>
         <% }
     }%>
+        <a href="profile.jsp"><button>Edit Profile</button></a>
         <a href="#"><button>My Resume</button></a>
         <a href="#"><button>Browse Jobs</button></a>
         <a href="#"><button>Write a Review</button></a>

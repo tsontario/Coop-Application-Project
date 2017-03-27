@@ -17,8 +17,8 @@
 
 <html>
 <head>
-
     <title>Welcome</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <p>Hello ${currentUser.getUsername()}</p>
@@ -68,9 +68,13 @@
     <br />
     <hr />
     <nr />
-
+    <h2>Select an option: </h2>
     <% if (user.isAdmin(user.getUsername())) { %>
-        <%= "ADMIN!"%>
+        <%= "ADMIN!" %>
+    <% } %>
+
+    <% if (user.isModerator(user.getUsername())) { %>
+        <%= "MOD" %>
     <% } %>
 </body>
 </html>

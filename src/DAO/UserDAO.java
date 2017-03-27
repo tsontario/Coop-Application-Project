@@ -72,4 +72,29 @@ public class UserDAO {
             e.printStackTrace();}
         return false;
     }
+
+    public static boolean isModerator(String username) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT username FROM \"Proj\".moderator " +
+                    "WHERE username = '" + username + "';");
+            if (rs.next()) {
+                rs.close();
+                st.close();
+                connection.close();
+                return true;
+            }
+            else {
+                rs.close();
+                st.close();
+                connection.close();
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();}
+        return false;
+    }
 }

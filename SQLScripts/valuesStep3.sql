@@ -19,9 +19,9 @@ INSERT INTO Admin VALUES
 	('leule089');
 
 INSERT INTO Company VALUES
-	(1, 1000, 'Ottawa', -1, 'Shopify'),
-	(2, 250, 'Ottawa', -1, 'Kinaxis'),
-	(3, 10000, 'Google', -1, 'Silicon Valley')
+	(1, 1000, 'Ottawa', -1, 'Shopify', 'passw0rd'),
+	(2, 250, 'Ottawa', -1, 'Kinaxis', 'passw0rd'),
+	(3, 10000, 'Google', -1, 'Silicon Valley', 'passw0rd')
 ;
 
 INSERT INTO Company_Review VALUES

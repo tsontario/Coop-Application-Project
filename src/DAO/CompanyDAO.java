@@ -32,7 +32,7 @@ public class CompanyDAO {
                     "WHERE companyid = '" + id + "';");
             if (rs.next()) {
                 companyBean.setcName(rs.getString("cname"));
-                companyBean.setCompanyId(rs.getString("companyid"));
+                companyBean.setCompanyId(rs.getInt("companyid"));
             }
             rs.close();
             st.close();
@@ -79,7 +79,7 @@ public class CompanyDAO {
                 CompanyBean company = new CompanyBean();
                 company.setcName(rs.getString("cname"));
                 company.setLocation(rs.getString("location"));
-                company.setCompanyId(rs.getString("companyid"));
+                company.setCompanyId(rs.getInt("companyid"));
 
                 companyList.add(company);
             }
@@ -103,8 +103,9 @@ public class CompanyDAO {
             st = connection.createStatement();
             rs = st.executeQuery("SELECT * FROM \"Proj\".company WHERE "
                     + "cname = '" + companyName + "' AND password = '" + password + "';");
+            System.out.println(rs.getRow());
             if (rs.next()) {
-                companyBean.setCompanyId(rs.getString("companyid"));
+                companyBean.setCompanyId(rs.getInt("companyid"));
                 companyBean.setCompanySize(rs.getInt("companysize"));
                 companyBean.setLocation(rs.getString("location"));
                 companyBean.setRating( (int) rs.getDouble("rating"));

@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Created by timothysmith on 2017-03-26.
  */
 public class CompanyBean implements Serializable {
-    private String companyId;
+    private int companyId;
     private String password;
     private int companySize;
     private String location;
@@ -20,11 +20,11 @@ public class CompanyBean implements Serializable {
 
     }
 
-    public String getCompanyId() {
+    public int getCompanyId() {
         return companyId;
     }
 
-    public void setCompanyId(String companyId) {
+    public void setCompanyId(int companyId) {
         this.companyId = companyId;
     }
 

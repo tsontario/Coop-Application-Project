@@ -75,12 +75,15 @@
 
     <% if (user != null) {
             if (user.isAdmin(user.getUsername())) { %>
-            <a href="admin.jsp"><button>Admin page</button></a>
+            <a href="admin.jsp"><button>Admin Panel</button></a>
         <% } %>
         <% if (user.isModerator(user.getUsername())) { %>
-            <%= "MOD" %>
+            <a href="mod.jsp"><button>Moderator Panel</button></a>
         <% }
     }%>
+        <a href="#"><button>My Resume</button></a>
+        <a href="#"><button>Browse Jobs</button></a>
+        <a href="#"><button>Write a Review</button></a>
         <a href="goodbye.jsp"><button>Logout</button></a>
 </body>
 </html>

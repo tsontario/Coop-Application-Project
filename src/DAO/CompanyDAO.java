@@ -44,7 +44,7 @@ public class CompanyDAO {
         return companyBean;
     }
 
-    public static int getAverageRating(String id) {
+    public static int getAverageRating(int id) {
 
         int averageRating = 0;
         DataAccess.openConnection();
@@ -53,8 +53,8 @@ public class CompanyDAO {
         try {
             st = connection.createStatement();
             rs = st.executeQuery("SELECT SUM(rating), COUNT(rating) " +
-                    "FROM \"Proj\".company WHERE companyid = '"
-                    + id + "';");
+                    "FROM \"Proj\".company WHERE companyid = "
+                    + id + ";");
             if (rs.next()) {
                 averageRating = rs.getInt(1) / rs.getInt(2);
             }

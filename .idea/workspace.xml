@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c66776c-91ba-47b4-93d7-18d5440d1161" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/a24c54fd-4c9c-427e-88ac-6c4b29ddc7a7.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/a24c54fd-4c9c-427e-88ac-6c4b29ddc7a7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/b8b3eb9d-378d-4fb7-ae01-7d05e320dffc.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/b8b3eb9d-378d-4fb7-ae01-7d05e320dffc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAO/CompanyDAO.java" afterPath="$PROJECT_DIR$/src/DAO/CompanyDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dbbeans/CompanyBean.java" afterPath="$PROJECT_DIR$/src/dbbeans/CompanyBean.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,10 +100,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="studenthome.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/student/studenthome.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CompanyLoginControl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/CompanyLoginControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="185">
               <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -135,43 +145,45 @@
       <file leaf-file-name="CompanyBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-213">
-              <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+            <state relative-caret-position="305">
+              <caret line="79" column="35" lean-forward="false" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
               <folding>
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#463#464#0" expanded="true" />
                 <element signature="e#587#588#0" expanded="true" />
                 <element signature="e#618#619#0" expanded="true" />
                 <element signature="e#666#667#0" expanded="true" />
                 <element signature="e#706#707#0" expanded="true" />
-                <element signature="e#1586#1587#0" expanded="true" />
-                <element signature="e#1640#1641#0" expanded="true" />
-                <element signature="e#1697#1698#0" expanded="true" />
-                <element signature="e#1749#1750#0" expanded="true" />
+                <element signature="e#1583#1584#0" expanded="true" />
+                <element signature="e#1637#1638#0" expanded="true" />
+                <element signature="e#1694#1695#0" expanded="true" />
+                <element signature="e#1746#1747#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyDAO.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CompanyDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DAO/CompanyDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="103" column="34" lean-forward="true" selection-start-line="103" selection-start-column="34" selection-end-line="104" selection-end-column="87" />
+            <state relative-caret-position="274">
+              <caret line="56" column="28" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
               <folding>
-                <marker date="1490637798000" expanded="true" signature="696:724" ph="SELECT CNAME... " />
-                <marker date="1490637798000" expanded="true" signature="696:725" ph="SELECT CNAME... " />
-                <marker date="1490637798000" expanded="true" signature="696:741" ph="SELECT CNAME... company" />
-                <marker date="1490637798000" expanded="true" signature="696:783" ph="SELECT CNAME... companyWHERE" />
-                <marker date="1490637798000" expanded="true" signature="696:785" ph="SELECT CNAME... companyWHERE" />
-                <marker date="1490637798000" expanded="true" signature="696:797" ph="SELECT cname... company" />
-                <marker date="1490637798000" expanded="true" signature="1432:1465" ph="SELECT COUNT... " />
-                <marker date="1490637798000" expanded="true" signature="1432:1502" ph="SELECT COUNT... " />
-                <marker date="1490637798000" expanded="true" signature="1432:1532" ph="SELECT COUNT... company_review" />
-                <marker date="1490637798000" expanded="true" signature="1432:1563" ph="SELECT COUNT... company_review" />
-                <marker date="1490637798000" expanded="true" signature="1432:1565" ph="SELECT COUNT... company_review" />
-                <marker date="1490637798000" expanded="true" signature="2101:2164" ph="SELECT cname... company" />
-                <marker date="1490637798000" expanded="true" signature="2101:2221" ph="SELECT ratin... companyORDER" />
-                <marker date="1490637798000" expanded="true" signature="2101:2234" ph="SELECT ratin... company" />
-                <marker date="1490637798000" expanded="true" signature="3112:3237" ph="SELECT * FRO... company" />
+                <marker date="1490638052000" expanded="true" signature="696:724" ph="SELECT CNAME... " />
+                <marker date="1490638052000" expanded="true" signature="696:725" ph="SELECT CNAME... " />
+                <marker date="1490638052000" expanded="true" signature="696:741" ph="SELECT CNAME... company" />
+                <marker date="1490638052000" expanded="true" signature="696:783" ph="SELECT CNAME... companyWHERE" />
+                <marker date="1490638052000" expanded="true" signature="696:785" ph="SELECT CNAME... companyWHERE" />
+                <marker date="1490638052000" expanded="true" signature="696:797" ph="SELECT cname... company" />
+                <marker date="1490638052000" expanded="true" signature="1429:1462" ph="SELECT COUNT... " />
+                <marker date="1490638052000" expanded="true" signature="1429:1499" ph="SELECT COUNT... " />
+                <marker date="1490638052000" expanded="true" signature="1429:1528" ph="SELECT COUNT... company_review" />
+                <marker date="1490638052000" expanded="true" signature="1429:1558" ph="SELECT COUNT... company_review" />
+                <marker date="1490638052000" expanded="true" signature="1429:1560" ph="SELECT COUNT... company_review" />
+                <marker date="1490638052000" expanded="true" signature="2096:2159" ph="SELECT cname... company" />
+                <marker date="1490638052000" expanded="true" signature="2096:2216" ph="SELECT ratin... companyORDER" />
+                <marker date="1490638052000" expanded="true" signature="2096:2229" ph="SELECT ratin... company" />
+                <marker date="1490638052000" expanded="true" signature="3107:3232" ph="SELECT * FRO... company" />
               </folding>
             </state>
           </provider>
@@ -187,17 +199,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postgres.Proj.company" pinned="false" current-in-tab="true">
-        <entry file="dbDummy://dbtable:/109168c8/a24c54fd-4c9c-427e-88ac-6c4b29ddc7a7/postgres.Proj.company">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="valuesStep3.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SQLScripts/valuesStep3.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
               <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -223,25 +230,6 @@
             <state relative-caret-position="-99">
               <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="46" selection-end-column="24" />
-              <folding>
-                <marker date="1490622501000" expanded="true" signature="703:826" ph="SELECT * FRO... suser" />
-                <marker date="1490622501000" expanded="true" signature="1672:1699" ph="SELECT email... " />
-                <marker date="1490622501000" expanded="true" signature="1672:1702" ph="SELECT email... suser" />
-                <marker date="1490622501000" expanded="true" signature="1672:1761" ph="SELECT email... suser" />
-                <marker date="1490622501000" expanded="true" signature="1672:1762" ph="SELECT email... suser" />
-                <marker date="1490622501000" expanded="true" signature="1672:1780" ph="SELECT usern... suser" />
-                <marker date="1490622501000" expanded="true" signature="1672:1783" ph="SELECT email... Proj" />
-                <marker date="1490622501000" expanded="true" signature="2419:2519" ph="SELECT usern... moderator" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -294,8 +282,9 @@
         <option value="$PROJECT_DIR$/src/control/CompanyLoginControl.java" />
         <option value="$PROJECT_DIR$/web/company/companyhome.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/a24c54fd-4c9c-427e-88ac-6c4b29ddc7a7/console.sql" />
-        <option value="$PROJECT_DIR$/src/dbbeans/CompanyBean.java" />
         <option value="$PROJECT_DIR$/SQLScripts/tablesStep3.sql" />
+        <option value="$PROJECT_DIR$/SQLScripts/valuesStep3.sql" />
+        <option value="$PROJECT_DIR$/src/dbbeans/CompanyBean.java" />
         <option value="$PROJECT_DIR$/src/DAO/CompanyDAO.java" />
       </list>
     </option>
@@ -356,6 +345,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSI2132" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSI2132" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="student" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -446,6 +453,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="connection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSI2132" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSI2132" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SQLScripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -993,12 +1014,12 @@
       <workItem from="1490548683832" duration="13826000" />
       <workItem from="1490586864041" duration="546000" />
       <workItem from="1490621923588" duration="1482000" />
-      <workItem from="1490627187000" duration="4789000" />
+      <workItem from="1490627187000" duration="4949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28355000" />
+    <option name="totallyTimeSpent" value="28515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1056,14 +1077,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1336,14 +1349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/student/studenthome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="83" column="42" lean-forward="false" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1478,14 +1483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/company/companyhome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SQLScripts/tablesStep3.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1502,38 +1499,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/CompanyLoginControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-114">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="12" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-213">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-            <element signature="e#1697#1698#0" expanded="true" />
-            <element signature="e#1749#1750#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1550,27 +1520,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/CompanyDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="103" column="34" lean-forward="true" selection-start-line="103" selection-start-column="34" selection-end-line="104" selection-end-column="87" />
-          <folding>
-            <marker date="1490637798000" expanded="true" signature="696:724" ph="SELECT CNAME... " />
-            <marker date="1490637798000" expanded="true" signature="696:725" ph="SELECT CNAME... " />
-            <marker date="1490637798000" expanded="true" signature="696:741" ph="SELECT CNAME... company" />
-            <marker date="1490637798000" expanded="true" signature="696:783" ph="SELECT CNAME... companyWHERE" />
-            <marker date="1490637798000" expanded="true" signature="696:785" ph="SELECT CNAME... companyWHERE" />
-            <marker date="1490637798000" expanded="true" signature="696:797" ph="SELECT cname... company" />
-            <marker date="1490637798000" expanded="true" signature="1432:1465" ph="SELECT COUNT... " />
-            <marker date="1490637798000" expanded="true" signature="1432:1502" ph="SELECT COUNT... " />
-            <marker date="1490637798000" expanded="true" signature="1432:1532" ph="SELECT COUNT... company_review" />
-            <marker date="1490637798000" expanded="true" signature="1432:1563" ph="SELECT COUNT... company_review" />
-            <marker date="1490637798000" expanded="true" signature="1432:1565" ph="SELECT COUNT... company_review" />
-            <marker date="1490637798000" expanded="true" signature="2101:2164" ph="SELECT cname... company" />
-            <marker date="1490637798000" expanded="true" signature="2101:2221" ph="SELECT ratin... companyORDER" />
-            <marker date="1490637798000" expanded="true" signature="2101:2234" ph="SELECT ratin... company" />
-            <marker date="1490637798000" expanded="true" signature="3112:3237" ph="SELECT * FRO... company" />
-          </folding>
+    <entry file="dbDummy://dbtable:/109168c8/a24c54fd-4c9c-427e-88ac-6c4b29ddc7a7/postgres.Proj.company">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1582,16 +1541,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/109168c8/a24c54fd-4c9c-427e-88ac-6c4b29ddc7a7/postgres.Proj.company">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/SQLScripts/valuesStep3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/CompanyLoginControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/company/companyhome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student/studenthome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="79" column="35" lean-forward="false" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+          <folding>
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#1583#1584#0" expanded="true" />
+            <element signature="e#1637#1638#0" expanded="true" />
+            <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#1746#1747#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/CompanyDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="56" column="28" lean-forward="true" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+          <folding>
+            <marker date="1490638052000" expanded="true" signature="696:724" ph="SELECT CNAME... " />
+            <marker date="1490638052000" expanded="true" signature="696:725" ph="SELECT CNAME... " />
+            <marker date="1490638052000" expanded="true" signature="696:741" ph="SELECT CNAME... company" />
+            <marker date="1490638052000" expanded="true" signature="696:783" ph="SELECT CNAME... companyWHERE" />
+            <marker date="1490638052000" expanded="true" signature="696:785" ph="SELECT CNAME... companyWHERE" />
+            <marker date="1490638052000" expanded="true" signature="696:797" ph="SELECT cname... company" />
+            <marker date="1490638052000" expanded="true" signature="1429:1462" ph="SELECT COUNT... " />
+            <marker date="1490638052000" expanded="true" signature="1429:1499" ph="SELECT COUNT... " />
+            <marker date="1490638052000" expanded="true" signature="1429:1528" ph="SELECT COUNT... company_review" />
+            <marker date="1490638052000" expanded="true" signature="1429:1558" ph="SELECT COUNT... company_review" />
+            <marker date="1490638052000" expanded="true" signature="1429:1560" ph="SELECT COUNT... company_review" />
+            <marker date="1490638052000" expanded="true" signature="2096:2159" ph="SELECT cname... company" />
+            <marker date="1490638052000" expanded="true" signature="2096:2216" ph="SELECT ratin... companyORDER" />
+            <marker date="1490638052000" expanded="true" signature="2096:2229" ph="SELECT ratin... company" />
+            <marker date="1490638052000" expanded="true" signature="3107:3232" ph="SELECT * FRO... company" />
+          </folding>
         </state>
       </provider>
     </entry>

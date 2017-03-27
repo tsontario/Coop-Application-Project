@@ -77,7 +77,7 @@ public class CompanyBean implements Serializable {
         return CompanyDAO.listTopFiveCompanies();
     }
 
-    public int getAverageRating(String id) {
+    public int getAverageRating(int id) {
         return CompanyDAO.getAverageRating(id);
     }
 

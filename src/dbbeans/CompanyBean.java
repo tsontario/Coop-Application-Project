@@ -10,6 +10,7 @@ import java.util.ArrayList;
  */
 public class CompanyBean implements Serializable {
     private String companyId;
+    private String password;
     private int companySize;
     private String location;
     private int rating;
@@ -25,6 +26,14 @@ public class CompanyBean implements Serializable {
 
     public void setCompanyId(String companyId) {
         this.companyId = companyId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getCompanySize() {
@@ -70,5 +79,9 @@ public class CompanyBean implements Serializable {
 
     public int getAverageRating(String id) {
         return CompanyDAO.getAverageRating(id);
+    }
+
+    public CompanyBean login(CompanyBean companyBean) {
+        return CompanyDAO.login(companyBean);
     }
 }

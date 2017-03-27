@@ -17,6 +17,8 @@ public class CompanyDAO {
     static private Statement st;
     static private ResultSet rs;
 
+
+
     public static CompanyBean getCompanyById(String id) {
 
         CompanyBean companyBean = new CompanyBean();
@@ -90,4 +92,33 @@ public class CompanyDAO {
 
         return companyList;
     }
+
+    public static CompanyBean login(CompanyBean companyBean) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        String companyName = companyBean.getcName();
+        String password = companyBean.getPassword();
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT * FROM \"Proj\".company WHERE "
+                    + "cname = '" + companyName + "' AND password = '" + password + "';");
+            if (rs.next()) {
+                companyBean.setCompanyId(rs.getString("companyid"));
+                companyBean.setCompanySize(rs.getInt("companysize"));
+                companyBean.setLocation(rs.getString("location"));
+                companyBean.setRating( (int) rs.getDouble("rating"));
+            }
+            else {
+                rs.close();
+                st.close();
+                connection.close();
+                return null;
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();}
+        return companyBean;
+    }
 }
+

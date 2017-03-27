@@ -143,4 +143,8 @@ public class UserBean implements Serializable {
     public UserBean login(UserBean userBean) {
         return UserDAO.login(userBean);
     }
+
+    public boolean isAdmin(String username) {
+        return UserDAO.isAdmin(username);
+    }
 }

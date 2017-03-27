@@ -1,6 +1,7 @@
 <%@ page import="dbbeans.JobBean" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="dbbeans.CompanyBean" %>
+<%@ page import="dbbeans.UserBean" %>
 <%--
   Created by IntelliJ IDEA.
   User: timothysmith
@@ -12,6 +13,7 @@
 <% ArrayList<JobBean> jobList = JobBean.listTopFiveJobs(); %>
 <% ArrayList<CompanyBean> companyList = CompanyBean.listTopFiveCompanies(); %>
 <% CompanyBean companyBean = new CompanyBean(); %>
+<% UserBean user = (UserBean) request.getSession().getAttribute("currentUser"); %>
 
 <html>
 <head>
@@ -41,7 +43,12 @@
             %>
         <% } %>
     </table>
+
+    <br />
     <hr />
+    <br />
+
+    <h2>Top Companies</h2>
     <table id="top5_companies">
         <tr>
             <th>Company</th>
@@ -57,8 +64,13 @@
                 "</tr>"
             %>
         <% } %>
-
     </table>
+    <br />
+    <hr />
+    <nr />
 
+    <% if (user.isAdmin(user.getUsername())) { %>
+        <%= "ADMIN!"%>
+    <% } %>
 </body>
 </html>

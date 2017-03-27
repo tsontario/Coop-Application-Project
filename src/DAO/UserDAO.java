@@ -46,4 +46,30 @@ public class UserDAO {
             e.printStackTrace();}
         return userBean;
     }
+
+    public static boolean isAdmin(String username) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT username FROM \"Proj\".suser " +
+                                "WHERE username = '" + username + "';");
+            if (rs.next()) {
+                rs.close();
+                st.close();
+                connection.close();
+                return true;
+            }
+            else {
+                rs.close();
+                st.close();
+                connection.close();
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();}
+        return false;
+    }
 }

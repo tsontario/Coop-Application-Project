@@ -9,6 +9,7 @@
 <html>
   <head>
     <title>Welcome</title>
+
   </head>
   <body>
 
@@ -20,6 +21,7 @@
     <input id="password" type="password" name="pword" />
     <button type="submit">Submit</button>
   </form>
+  <a href="studentregister.jsp"><button>New User? Register Here!</button></a>
 
   <br />
   <hr />
@@ -33,5 +35,6 @@
       <input id="cpassword" type="password" name="cpassword" />
       <button type="submit">Submit</button>
     </form>
+  <a href="companyregister.jsp"><button>New Company? Register Here!</button></a>
   </body>
 </html>

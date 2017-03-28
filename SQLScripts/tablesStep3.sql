@@ -127,9 +127,7 @@ CREATE TABLE Upvote(
 	Foreign Key (ReviewID) REFERENCES Company_Review(ReviewID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-
-
-#Dropping using cascade
+#Dropping using cascade.
 DROP TABLE Program CASCADE;
 DROP TABLE sUSER CASCADE;
 DROP TABLE Moderator CASCADE;

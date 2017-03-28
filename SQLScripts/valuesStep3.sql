@@ -36,7 +36,7 @@ INSERT INTO Company_Review VALUES
 ;
 
 INSERT INTO Job(joblevel, jobname, companyid, description, numpositions,rateofpay,closingdate,postingdate) VALUES
-	(1, 'Frontend Developer', 1, 'Develop for the frontend!', 3, 8000, current_date+10, current_date),
+	(1, 'Frontend Developer', 1, 'Develop for the frontend!', 3, 8001, current_date+10, current_date),
 	(2, 'Quality Assurance Engineer', 3, 'Assure the quality through engineering!', 1, 5000, current_date+10, current_date),
 	(3, 'Risk Analyst', 2, 'Analyze the risk!', 2, 10000, current_date+10, current_date);
 

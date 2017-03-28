@@ -168,7 +168,6 @@ public class CompanyDAO {
                     " cname = '" + companyBean.getcName() + "'," +
                     " password='" + companyBean.getPassword() + "'" +
                     " WHERE companyid = '" + companyBean.getCompanyId() + "';");
-            System.out.println(companyBean.getCompanyId() + "TEEESSSTTT");
         } catch (SQLException e) {
             e.printStackTrace();
         }

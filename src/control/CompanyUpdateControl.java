@@ -32,7 +32,7 @@ public class CompanyUpdateControl extends HttpServlet {
 
         //Check for valid fields
         if (username == null || username.trim().length() < 1) {
-            fail(resp, req, "First name can't be empty.");
+            fail(resp, req, "Company name can't be empty.");
             return;
         }
         if (companySize < 1) {

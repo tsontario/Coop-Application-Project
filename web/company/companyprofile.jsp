@@ -79,7 +79,7 @@
                     <div class="col-md-8">
                         <input type="submit" class="btn btn-primary" value="Save Changes">
                         <span></span>
-                        <a href="companyhome.jsp" class="btn btn-primary">Cancel</a>
+                        <a href="companyhome.jsp" class="btn btn-danger">Cancel</a>
                     </div>
                 </div>
             </form>

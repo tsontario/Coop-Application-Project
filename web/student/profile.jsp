@@ -81,13 +81,14 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
-                        <input name="password1" class="form-control" type="password" value=${currentUser.getPassword()}>
+                        <input name="password" class="form-control" type="password" value=${currentUser.getPassword()}>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Confirm password:</label>
                     <div class="col-md-8">
-                        <input name="password2" class="form-control" type="password" value=${currentUser.getPassword()}>
+                        <input name="passwordcheck" class="form-control" type="password"
+                               value=${currentUser.getPassword()}>
                     </div>
                 </div>
                 <div class="form-group">
@@ -95,7 +96,7 @@
                     <div class="col-md-8">
                         <input type="submit" class="btn btn-primary" value="Save Changes">
                         <span></span>
-                        <button class="btn btn-default">Cancel</button>
+                        <a href="studenthome.jsp" class="btn btn-danger">Cancel</a>
                     </div>
                 </div>
             </form>

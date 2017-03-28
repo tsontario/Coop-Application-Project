@@ -121,5 +121,39 @@ public class CompanyDAO {
             e.printStackTrace();}
         return companyBean;
     }
+
+    public static boolean isUnique(String username) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT cname FROM \"Proj\".company" +
+                    " WHERE cname = '" + username + "';");
+            if (rs.next()) {
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    public static void insertIntoDB(CompanyBean companyBean) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            st.execute("INSERT INTO \"Proj\".company (companysize, location, rating, cname, password) VALUES ('" +
+                    companyBean.getCompanySize() + "', '" +
+                    companyBean.getLocation() + "', '" +
+                    companyBean.getRating() + "', '" +
+                    companyBean.getcName() + "', '" +
+                    companyBean.getPassword() + "');");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

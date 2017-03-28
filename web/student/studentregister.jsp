@@ -13,7 +13,7 @@
 
     <div class="login-page">
         <div class="form">
-            <form class="login-form" action="../StudentRegisterControl" method="POST">
+            <form class="login-form" action="/StudentRegisterControl" method="POST">
                 <input type="text" name="fname" placeholder="First Name"/>
                 <input type="text" name="lname" placeholder="Last Name"/>
                 <input type="text" name="username" placeholder="Username"/>
@@ -21,10 +21,12 @@
                 <div class="form-group">
                     <select name="programcode" class="form-control">
                         <% for (ProgramBean program : programList) {
-                            String p = program.getProgramCode(); %>
+                            String p = program.getProgramCode();
+                        %>
                         <option value="<%=p%>"><%=p%>
                         </option>
                         <% } %>
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -39,7 +41,8 @@
                 <input type="password" name="passwordcheck" placeholder="Password">
                 <button type="submit">register</button>
                 <p class="message">Already Registered? <a href="../index.jsp">Login here</a></p>
-                <p class="message">Company? <a href="../indexCompany.jsp">Login here</a> or <a href="#">Register
+                <p class="message">Company? <a href="../indexCompany.jsp">Login here</a> or <a
+                        href="../company/companyregister.jsp">Register
                     here</a></p>
             </form>
         </div>

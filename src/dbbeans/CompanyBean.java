@@ -13,11 +13,19 @@ public class CompanyBean implements Serializable {
     private String password;
     private int companySize;
     private String location;
-    private int rating;
+    private double rating;
     private String cName;
 
     public CompanyBean() {
 
+    }
+
+    public static ArrayList<CompanyBean> listTopFiveCompanies() {
+        return CompanyDAO.listTopFiveCompanies();
+    }
+
+    public static boolean isUnique(String username) {
+        return CompanyDAO.isUnique(username);
     }
 
     public int getCompanyId() {
@@ -52,11 +60,11 @@ public class CompanyBean implements Serializable {
         this.location = location;
     }
 
-    public int getRating() {
+    public double getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(double rating) {
         this.rating = rating;
     }
 
@@ -68,20 +76,19 @@ public class CompanyBean implements Serializable {
         this.cName = cName;
     }
 
-
     public CompanyBean getCompanyById(String companyId) {
         return CompanyDAO.getCompanyById(companyId);
     }
 
-    public static ArrayList<CompanyBean> listTopFiveCompanies() {
-        return CompanyDAO.listTopFiveCompanies();
-    }
-
-    public int getAverageRating(int id) {
+    public double getAverageRating(int id) {
         return CompanyDAO.getAverageRating(id);
     }
 
     public CompanyBean login(CompanyBean companyBean) {
         return CompanyDAO.login(companyBean);
+    }
+
+    public void insertIntoDB() {
+        CompanyDAO.insertIntoDB(this);
     }
 }

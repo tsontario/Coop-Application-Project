@@ -33,47 +33,49 @@
             </div>
             <h3>Personal info</h3>
 
-            <form action="LoginControl" method="POST" class="form-horizontal" role="form">
+            <form action="UpdateControl" method="POST" class="form-horizontal" role="form">
                 <div class="form-group">
                     <label class="col-lg-3 control-label">First name:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value=${currentUser.getfName()} >
+                        <input name="firstName" class="form-control" type="text" value=${currentUser.getfName()}>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Last name:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value=${currentUser.getlName()}>
+                        <input name="lastName" class="form-control" type="text" value=${currentUser.getlName()}>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Program Code:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value=${currentUser.getProgramCode()}>
+                        <input name="programCode" class="form-control" type="text"
+                               value=${currentUser.getProgramCode()}>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Email:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" value=${currentUser.getEmail()} readonly="true">
+                        <input name="email" class="form-control" type="text"
+                               value=${currentUser.getEmail()} readonly="true">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Username:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="text" value=${currentUser.getUsername()}>
+                        <input name="username" class="form-control" type="text" value=${currentUser.getUsername()}>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" value=${currentUser.getPassword()}>
+                        <input name="password1" class="form-control" type="password" value=${currentUser.getPassword()}>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Confirm password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" value=${currentUser.getPassword()}>
+                        <input name="password2" class="form-control" type="password" value=${currentUser.getPassword()}>
                     </div>
                 </div>
                 <div class="form-group">

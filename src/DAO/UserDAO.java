@@ -97,4 +97,23 @@ public class UserDAO {
             e.printStackTrace();}
         return false;
     }
+
+    public static UserBean updateUser(UserBean userBean) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            System.out.println(userBean.getfName());
+            st.execute("UPDATE \"Proj\".suser SET username = '" + userBean.getUsername() + "', programcode = '" + userBean.getProgramCode() + "', password = '" + userBean.getPassword() + "', fname = '" + userBean.getfName() +
+                    "', lname = '" + userBean.getlName() + "' WHERE email = '" + userBean.getEmail() + "';");
+            st.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return userBean;
+
+    }
 }

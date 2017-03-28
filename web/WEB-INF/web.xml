@@ -21,4 +21,13 @@
         <servlet-name>CompanyLoginControl</servlet-name>
         <url-pattern>/CompanyLoginControl</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateControl</servlet-name>
+        <servlet-class>control.UpdateControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateControl</servlet-name>
+        <url-pattern>/student/UpdateControl</url-pattern>
+    </servlet-mapping>
 </web-app>

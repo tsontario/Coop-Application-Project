@@ -18,8 +18,9 @@ public class DataAccess
         try
         {
             Class.forName("org.postgresql.Driver");
-//            connection = DriverManager.getConnection("jdbc:postgresql://web0.site.uottawa.ca:15432/tsmit094","tsmit094",Password.getPass());
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres",Password.getPass());
+            //connection = DriverManager.getConnection("jdbc:postgresql://web0.site.uottawa.ca:15432/wausr027","wausr027",Password.getPass());
+            //System.out.println(connection);
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","willieausrotas",Password.getPass());
         }catch(Exception e){
             System.out.println("No connection established: "+e.toString());
         }

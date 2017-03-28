@@ -1,4 +1,7 @@
-<%@ page import="dbbeans.UserBean" %><%--
+<%@ page import="dbbeans.UserBean" %>
+<%@ page import="dbbeans.ProgramBean" %>
+<%@ page import="java.util.ArrayList" %>
+<% ArrayList<ProgramBean> programList = ProgramBean.getProgramList(); %><%--
   Created by IntelliJ IDEA.
   User: willieausrotas
   Date: 2017-03-27
@@ -49,8 +52,16 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Program Code:</label>
                     <div class="col-lg-8">
-                        <input name="programCode" class="form-control" type="text"
-                               value=${currentUser.getProgramCode()}>
+                        <select name="programCode" class="form-control">
+                            <% for (ProgramBean program : programList) {
+                                String p = program.getProgramCode();
+                                if (p.equals(user.getProgramCode())){%>
+                                    <option selected="<%=p%>"><%=p%></option>
+                                <% } else{ %>
+                                    <option value="<%=p%>"><%=p%></option>
+                                <% }
+                            } %>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">

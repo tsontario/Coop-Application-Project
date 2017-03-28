@@ -29,7 +29,7 @@ CREATE TABLE Admin(
 );
 
 CREATE TABLE Company(
-	CompanyID INTEGER PRIMARY KEY,
+	CompanyID SERIAL PRIMARY KEY,
 	CompanySize INTEGER,
 	Location VARCHAR(255),
 	Rating REAL,
@@ -53,7 +53,7 @@ CREATE TABLE Company_Review(
 
 
 CREATE TABLE Job(
-	JobID INTEGER,
+	JobID SERIAL,
 	JobLevel INTEGER,
 	JobName VARCHAR(50),
 	CompanyId INTEGER,

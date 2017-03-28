@@ -18,10 +18,10 @@ INSERT INTO Moderator VALUES
 INSERT INTO Admin VALUES
 	('leule089');
 
-INSERT INTO Company VALUES
-	(1, 1000, 'Ottawa', -1, 'Shopify', 'passw0rd'),
-	(2, 250, 'Ottawa', -1, 'Kinaxis', 'passw0rd'),
-	(3, 10000, 'Google', -1, 'Silicon Valley', 'passw0rd')
+INSERT INTO Company(CompanySize, Location, Rating, Cname, Password) VALUES
+	(1000, 'Ottawa', -1, 'Shopify', 'passw0rd'),
+	(250, 'Ottawa', -1, 'Kinaxis', 'passw0rd'),
+	(10000, 'Google', -1, 'Silicon Valley', 'passw0rd')
 ;
 
 INSERT INTO Company_Review VALUES
@@ -34,10 +34,10 @@ INSERT INTO Company_Review VALUES
 	current_date)
 ;
 
-INSERT INTO Job VALUES
-	(1, 1, 'Frontend Developer', 1, 'Develop for the frontend!', 3, 8000, current_date+10, current_date),
-	(2, 2, 'Quality Assurance Engineer', 3, 'Assure the quality through engineering!', 1, 5000, current_date+10, current_date),
-	(3, 3, 'Risk Analyst', 2, 'Analyze the risk!', 2, 10000, current_date+10, current_date);
+INSERT INTO Job(joblevel, jobname, companyid, description, numpositions,rateofpay,closingdate,postingdate) VALUES
+	(1, 'Frontend Developer', 1, 'Develop for the frontend!', 3, 8000, current_date+10, current_date),
+	(2, 'Quality Assurance Engineer', 3, 'Assure the quality through engineering!', 1, 5000, current_date+10, current_date),
+	(3, 'Risk Analyst', 2, 'Analyze the risk!', 2, 10000, current_date+10, current_date);
 
 INSERT INTO Applies_to VALUES
 	(1, 'leule089', current_date),

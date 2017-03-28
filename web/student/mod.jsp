@@ -50,7 +50,7 @@
     <% } %>
     </tbody>
 </table>
-
+<hr>
 
 </body>
 </html>

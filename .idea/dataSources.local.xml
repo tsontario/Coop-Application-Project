@@ -6,16 +6,19 @@
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <user-name>wausr027</user-name>
-      <user-password>dfe2dfcbdfd8dfc6dfcfdfd3df9bdf98df99dfea</user-password>
+
+      <secret-storage>master_key</secret-storage>
+      <user-name>tsmit094</user-name>
+
     </data-source>
     <data-source name="postgres@localhost" uuid="a24c54fd-4c9c-427e-88ac-6c4b29ddc7a7">
       <database-info product="PostgreSQL" version="9.6.2" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <user-name>willieausrotas</user-name>
-      <user-password>dfe2dfcbdfd8dfc6dfcfdfd3df9bdf98df99dfea</user-password>
+
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
     </data-source>
   </component>
 </project>

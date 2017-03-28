@@ -98,12 +98,15 @@ public class UserDAO {
         return false;
     }
 
+
     public static UserBean updateUser(UserBean userBean) {
+
         DataAccess.openConnection();
         connection = DataAccess.getConnection();
 
         try {
             st = connection.createStatement();
+
             System.out.println(userBean.getfName());
             st.execute("UPDATE \"Proj\".suser SET username = '" + userBean.getUsername() + "', programcode = '" + userBean.getProgramCode() + "', password = '" + userBean.getPassword() + "', fname = '" + userBean.getfName() +
                     "', lname = '" + userBean.getlName() + "' WHERE email = '" + userBean.getEmail() + "';");
@@ -114,6 +117,42 @@ public class UserDAO {
             e.printStackTrace();
         }
         return userBean;
+
+  
+      public static boolean isUnique(String username) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT username FROM \"Proj\".suser" +
+                    " WHERE username = '" + username + "';");
+            if (rs.next()) {
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    public static void insertIntoDB(UserBean userBean) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("INSERT INTO \"Proj\".suser VALUES ('" +
+                                        userBean.getEmail() + "', '" +
+                                        userBean.getUsername() + "', '" +
+                                        userBean.getProgramCode() + "', " +
+                                        userBean.getLevel() + ", '" +
+                                        userBean.getPassword() + "', '" +
+                                        userBean.getfName() + "', '" +
+                                        userBean.getlName() + "');");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 }

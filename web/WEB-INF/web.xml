@@ -29,5 +29,15 @@
     <servlet-mapping>
         <servlet-name>UpdateControl</servlet-name>
         <url-pattern>/student/UpdateControl</url-pattern>
+
+    
+    <servlet>
+        <servlet-name>StudentRegisterControl</servlet-name>
+        <servlet-class>control.StudentRegisterControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentRegisterControl</servlet-name>
+        <url-pattern>/StudentRegisterControl</url-pattern>
+
     </servlet-mapping>
 </web-app>

@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+
     <p>Hello ${currentUser.getfName()}, welcome to your home page!</p>
+
     <br />
 
     <h2>Top Jobs</h2>

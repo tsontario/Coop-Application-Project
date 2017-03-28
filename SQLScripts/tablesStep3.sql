@@ -29,7 +29,7 @@ CREATE TABLE Admin(
 );
 
 CREATE TABLE Company(
-	CompanyID INTEGER PRIMARY KEY,
+	CompanyID SERIAL PRIMARY KEY,
 	CompanySize INTEGER,
 	Location VARCHAR(255),
 	Rating REAL,
@@ -53,7 +53,7 @@ CREATE TABLE Company_Review(
 
 
 CREATE TABLE Job(
-	JobID INTEGER,
+	JobID SERIAL,
 	JobLevel INTEGER,
 	JobName VARCHAR(50),
 	CompanyId INTEGER,
@@ -100,10 +100,10 @@ CREATE TABLE Resume(
 );
 
 CREATE TABLE Resume_Review(
-	ReviewID INTEGER UNIQUE,
-	ResumeVersion INTEGER,
-	Moderator VARCHAR(20), 
-	ResumeID INTEGER,
+	ReviewID       INTEGER UNIQUE,
+	ResumeVersion  INTEGER,
+	Moderator      VARCHAR(20),
+	ResumeID       INTEGER,
 	ResumeComments TEXT,
 	Primary Key (ReviewId, ResumeId, ResumeVersion),
 	Foreign Key (Moderator) REFERENCES Moderator(Username) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -127,9 +127,7 @@ CREATE TABLE Upvote(
 	Foreign Key (ReviewID) REFERENCES Company_Review(ReviewID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-
-
-#Dropping using cascade
+#Dropping using cascade.
 DROP TABLE Program CASCADE;
 DROP TABLE sUSER CASCADE;
 DROP TABLE Moderator CASCADE;
@@ -144,6 +142,3 @@ DROP TABLE Resume_Review CASCADE;
 DROP TABLE Resume_Review_Request CASCADE;
 DROP TABLE Upvote CASCADE;
 DROP TABLE job_approval CASCADE;
-
-
-

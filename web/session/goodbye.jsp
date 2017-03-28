@@ -12,5 +12,6 @@
     <title>Thanks for visiting!</title>
 </head>
 <body>
+<h1>You have logged out. Thank you for visiting.</h1>
 </body>
 </html>

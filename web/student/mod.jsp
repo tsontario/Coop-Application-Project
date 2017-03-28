@@ -9,20 +9,37 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    UserBean user = (UserBean) request.getSession().getAttribute("currentUser");
     ArrayList<ResumeReviewRequestBean> resumeList = ResumeReviewRequestBean.getReviewRequests();
 %>
 
 <html>
 <head>
     <title>Moderator Panel: ${currentUser}</title>
+    <link rel="stylesheet" href="./../css/styles.css">
 </head>
 <body>
     <h2>Resumes to be reviewed:</h2>
 
-    <ul>
 
-    </ul>
+    <table>
+        <tr>
+            <th>User</th>
+            <th width="20px"></th>
+        </tr>
+        <% for(ResumeReviewRequestBean resume: resumeList) { %>
+            <tr id="">
+                <td>
+                    <%= resume.getRequesterUsername() %>
+                </td>
+                <td>
+                    <form style="all:initial"action="resumereview.jsp" method="POST">
+                        <input type="hidden" name="resumeid" value="<%= resume.getResumeId() %>" />
+                        <button type="submit">Review</button>
+                    </form>
+                </td>
+            </tr>
 
+        <% } %>
+    </table>
 </body>
 </html>

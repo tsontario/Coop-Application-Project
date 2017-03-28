@@ -3,10 +3,8 @@ package DAO;
 import connection.DataAccess;
 import dbbeans.UserBean;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by timothysmith on 2017-03-26.
@@ -17,6 +15,40 @@ public class UserDAO {
     static private Statement st;
     static private ResultSet rs;
 
+
+    public static UserBean getUserById(String username) {
+        UserBean userBean = null;
+
+        try {
+            connection = DataAccess.getConnection();
+//            st = connection.createStatement();
+            PreparedStatement st = connection.prepareStatement("SELECT * FROM \"Proj\".suser WHERE username = ?");
+            st.setString(1, username);
+            rs = st.executeQuery();
+
+            if (rs.next()) {
+                userBean = new UserBean();
+
+                userBean.setEmail(rs.getString("email"));
+                userBean.setUsername(rs.getString("username"));
+                userBean.setProgramCode(rs.getString("programcode"));
+                userBean.setLevel(rs.getInt("level"));
+                userBean.setPassword(rs.getString("password"));
+                userBean.setfName(rs.getString("fname"));
+                userBean.setlName(rs.getString("lname"));
+
+                rs.close();
+                st.close();
+                connection.close();
+            }
+
+        } catch(Exception e){
+
+            System.out.println("Cant read SUser table");
+        }
+
+        return userBean;
+    }
 
     public static UserBean login(UserBean userBean) {
         DataAccess.openConnection();

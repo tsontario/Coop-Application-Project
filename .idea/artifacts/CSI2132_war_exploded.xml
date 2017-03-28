@@ -6,8 +6,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="CSI2132" />
         </element>
+        <element id="directory" name="lib" />
       </element>
       <element id="javaee-facet-resources" facet="CSI2132/web/Web" />
+      <element id="javaee-facet-resources" facet="CSI2132/web/Web2" />
     </root>
   </artifact>
 </component>

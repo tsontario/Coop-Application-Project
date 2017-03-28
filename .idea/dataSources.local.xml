@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="postgres@localhost" uuid="6f9eca87-55c0-4949-938b-aa3bbbd5049d">
+    <data-source name="tsmit094@web0.site.uottawa.ca" uuid="0cdc5ec1-fdd0-47d8-9a86-cb9c966f1d4c">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>tsmit094</user-name>
+      <introspection-schemas>tsmit094:Proj</introspection-schemas>
+    </data-source>
+    <data-source name="postgres@localhost" uuid="088ea4d4-8dfe-475c-9da7-81c03bf74c6f">
       <database-info product="PostgreSQL" version="9.6.1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>

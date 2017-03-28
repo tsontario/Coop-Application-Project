@@ -1,5 +1,7 @@
 package dbbeans;
 
+import DAO.ResumeDAO;
+
 import java.io.Serializable;
 
 /**
@@ -45,5 +47,9 @@ public class ResumeBean implements Serializable {
 
     public void setResume(String resume) {
         this.resume = resume;
+    }
+
+    public static ResumeBean getResumeById(int id) {
+        return ResumeDAO.getResumeById(id);
     }
 }

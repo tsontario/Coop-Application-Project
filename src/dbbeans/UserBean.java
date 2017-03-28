@@ -96,48 +96,8 @@ public class UserBean implements Serializable {
         this.lName = lName;
     }
 
-    public ArrayList<UserBean> getUserById(String emailId, DataAccess db) throws SQLException {
-        ArrayList<UserBean> users = new ArrayList<>();
-        String email;
-        String username;
-        String fName;
-        String lName;
-        String programCode;
-        int level;
-        String password;
-
-        try {
-            connection = db.getConnection();
-            st = connection.createStatement();
-            rs = st.executeQuery("SELECT * FROM SUser");
-        } catch(Exception e){
-            System.out.println("Cant read SUser table");
-        }
-        try{
-            while (rs.next())
-            {
-                email = rs.getString("Email");
-                fName = rs.getString("FName");
-                lName = rs.getString("LName");
-                username= rs.getString("Username");
-                programCode = rs.getString("ProgramCode");
-                level = rs.getInt("Level");
-                password = rs.getString("Password");
-
-                users.add(new UserBean(email, username, programCode, level, password, fName, lName));
-
-            }
-        }catch(Exception e){
-            System.out.println("Error creating table "+e);
-        }
-        finally {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        return users;
+    public static UserBean getUserById(String username)  {
+        return UserDAO.getUserById(username);
     }
 
     public UserBean login(UserBean userBean) {

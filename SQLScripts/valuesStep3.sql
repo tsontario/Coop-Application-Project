@@ -1,3 +1,4 @@
+
 INSERT INTO PROGRAM VALUES
 	('Software Engineering', 'SEG'),
 	('Computer Science', 'CSI'),
@@ -52,11 +53,11 @@ INSERT INTO Offered_to VALUES
 ;
 
 INSERT INTO Resume VALUES
-	(1, 1, 'tsmit094', "It's a resume"),
-	(2, 1, 'leule089', "Experience: None"),
-	(3, 1, 'cgauss099', "Experience: Some"),
-	(4, 1, 'alkhwa055', "Proven gogetter with management potential"),
-	(1, 2, 'tsmit094', "workyworkwork")
+	(1, 1, 'tsmit094', 'It''s a resume'),
+	(2, 1, 'leule089', 'Experience: None'),
+	(3, 1, 'cgauss099', 'Experience: Some'),
+	(4, 1, 'alkhwa055', 'Proven gogetter with management potential'),
+	(1, 2, 'tsmit094', 'workyworkwork')
 ;
 
 INSERT INTO Resume_Review VALUES
@@ -71,4 +72,3 @@ INSERT INTO Upvote VALUES
 	('cgauss099', 1),
 	('alkhwa055', 1)
 ;
-

@@ -100,10 +100,10 @@ CREATE TABLE Resume(
 );
 
 CREATE TABLE Resume_Review(
-	ReviewID INTEGER UNIQUE,
-	ResumeVersion INTEGER,
-	Moderator VARCHAR(20), 
-	ResumeID INTEGER,
+	ReviewID       INTEGER UNIQUE,
+	ResumeVersion  INTEGER,
+	Moderator      VARCHAR(20),
+	ResumeID       INTEGER,
 	ResumeComments TEXT,
 	Primary Key (ReviewId, ResumeId, ResumeVersion),
 	Foreign Key (Moderator) REFERENCES Moderator(Username) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -144,6 +144,3 @@ DROP TABLE Resume_Review CASCADE;
 DROP TABLE Resume_Review_Request CASCADE;
 DROP TABLE Upvote CASCADE;
 DROP TABLE job_approval CASCADE;
-
-
-

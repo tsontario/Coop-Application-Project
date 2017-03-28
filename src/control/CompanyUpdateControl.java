@@ -1,5 +1,6 @@
 package control;
 
+import DAO.CompanyDAO;
 import connection.DataAccess;
 import dbbeans.CompanyBean;
 
@@ -13,20 +14,21 @@ import java.io.IOException;
 /**
  * Created by willieausrotas on 2017-03-28.
  */
-public class CompanyRegisterControl extends HttpServlet {
+public class CompanyUpdateControl extends HttpServlet {
 
     private DataAccess db;
     private HttpSession session;
 
-
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         CompanyBean companyBean = new CompanyBean();
-
-        String username = req.getParameter("cname");
-        int companySize = Integer.parseInt(req.getParameter("csize"));
+        String username = req.getParameter("cName");
+        int companySize = Integer.parseInt(req.getParameter("size"));
+        double rating = Double.parseDouble(req.getParameter("rating"));
         String location = req.getParameter("location");
         String password = req.getParameter("password");
         String passwordCheck = req.getParameter("passwordcheck");
+        int companyId = Integer.parseInt(req.getParameter("companyid"));
 
         //Check for valid fields
         if (username == null || username.trim().length() < 1) {
@@ -45,28 +47,32 @@ public class CompanyRegisterControl extends HttpServlet {
             fail(resp, req, "Passwords do not match!");
             return;
         }
-        if (!(CompanyBean.isUnique(username))) {
-            fail(resp, req, "Company name already taken.");
-            return;
-        }
 
         companyBean.setcName(username);
         companyBean.setCompanySize(companySize);
         companyBean.setLocation(location);
         companyBean.setPassword(password);
-        companyBean.setRating(-1);
+        companyBean.setRating(rating);
+        companyBean.setCompanyId(companyId);
 
-        companyBean.insertIntoDB();
+        db = new DataAccess();
+        db.openConnection();
 
-        session = req.getSession(true);
-        session.setAttribute("currentCompany", companyBean);
-        resp.sendRedirect("company/companyhome.jsp");
+        companyBean = CompanyDAO.updateCompany(companyBean);
+
+
+        if (companyBean != null) {
+            session = req.getSession(true);
+            session.setAttribute("currentCompany", companyBean);
+            resp.sendRedirect("/company/companyhome.jsp");
+        }
+
 
     }
 
     private void fail(HttpServletResponse resp, HttpServletRequest req, String msg) throws IOException {
         session = req.getSession(true);
-        session.setAttribute("Error", msg);
-        resp.sendRedirect("session/registererror.jsp");
+        session.setAttribute("error", msg);
+        resp.sendRedirect("../session/registererror.jsp");
     }
 }

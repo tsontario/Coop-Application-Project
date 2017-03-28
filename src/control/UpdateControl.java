@@ -33,7 +33,7 @@ public class UpdateControl extends HttpServlet {
         db = new DataAccess();
         db.openConnection();
         userBean = UserDAO.updateUser(userBean);
-        userBean.getfName();
+
 
         if (userBean != null) {
             session = req.getSession(true);

@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Edit Profile</h1>
+    <h1>Edit Company</h1>
     <hr>
     <div class="row">
 
@@ -31,7 +31,9 @@
             </div>
             <h3>Company info</h3>
 
-            <form action="UpdateControl" method="POST" class="form-horizontal" role="form">
+            <form action="CompanyUpdateControl" method="POST" class="form-horizontal" role="form">
+                <input name="companyid" hidden="hidden" readonly="true" type="text"
+                       value=${currentCompany.getCompanyId()}>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Company Name:</label>
                     <div class="col-lg-8">
@@ -77,7 +79,7 @@
                     <div class="col-md-8">
                         <input type="submit" class="btn btn-primary" value="Save Changes">
                         <span></span>
-                        <button class="btn btn-default">Cancel</button>
+                        <a href="companyhome.jsp" class="btn btn-primary">Cancel</a>
                     </div>
                 </div>
             </form>

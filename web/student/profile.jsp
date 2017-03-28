@@ -74,7 +74,8 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Username:</label>
                     <div class="col-md-8">
-                        <input name="username" class="form-control" type="text" value=${currentUser.getUsername()}>
+                        <input name="username" readonly="true" class="form-control" type="text"
+                               value=${currentUser.getUsername()}>
                     </div>
                 </div>
                 <div class="form-group">

@@ -94,7 +94,7 @@
                     <div class="col-md-8">
                         <input type="submit" class="btn btn-primary" value="Save Changes">
                         <span></span>
-                        <input type="reset" class="btn btn-default" value="Cancel">
+                        <button class="btn btn-default">Cancel</button>
                     </div>
                 </div>
             </form>

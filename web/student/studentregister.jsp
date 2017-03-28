@@ -38,8 +38,9 @@
                 <input type="password" name="password" placeholder="Password"/>
                 <input type="password" name="passwordcheck" placeholder="Password">
                 <button type="submit">register</button>
-                <p class="message">Already Registered? <a href="#">Login here</a></p>
-                <p class="message">Company? <a href="#">Login here</a> or <a href="#">Register here</a></p>
+                <p class="message">Already Registered? <a href="../index.jsp">Login here</a></p>
+                <p class="message">Company? <a href="../indexCompany.jsp">Login here</a> or <a href="#">Register
+                    here</a></p>
             </form>
         </div>
     </div>

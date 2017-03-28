@@ -117,6 +117,7 @@ public class UserDAO {
             e.printStackTrace();
         }
         return userBean;
+    }
 
   
       public static boolean isUnique(String username) {

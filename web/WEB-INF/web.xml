@@ -29,6 +29,7 @@
     <servlet-mapping>
         <servlet-name>UpdateControl</servlet-name>
         <url-pattern>/student/UpdateControl</url-pattern>
+    </servlet-mapping>
 
     
     <servlet>

@@ -31,7 +31,7 @@
         <url-pattern>/student/UpdateControl</url-pattern>
     </servlet-mapping>
 
-    
+
     <servlet>
         <servlet-name>StudentRegisterControl</servlet-name>
         <servlet-class>control.StudentRegisterControl</servlet-class>

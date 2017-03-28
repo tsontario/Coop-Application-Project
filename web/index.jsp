@@ -8,32 +8,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
+      <link rel="stylesheet" type="text/css" href="css/indexCSS.css">
     <title>Welcome</title>
   </head>
   <body>
 
-  <h1>Student login</h1>
-  <form action="LoginControl" method="POST">
-    <label for="uname">Username:</label>
-    <input id="uname" type="text" name="uname" />
-    <label for="password">Password: </label>
-    <input id="password" type="password" name="pword" />
-    <button type="submit">Submit</button>
-  </form>
-  <a href="student/studentregister.jsp"><button>New User? Register Here!</button></a>
-
-  <br />
-  <hr />
-  <br />
-
-  <h1>Company login</h1>
-    <form action="CompanyLoginControl" method="POST">
-      <label for="cname">Company Name:</label>
-      <input id="cname" type="text" name="cname"/>
-      <label for="cpassword">Password:</label>
-      <input id="cpassword" type="password" name="cpassword" />
-      <button type="submit">Submit</button>
-    </form>
-  <a href="company/companyregister.jsp"><button>New Company? Register Here!</button></a>
+  <div class="login-page">
+      <div class="form">
+          <form class="login-form" action="LoginControl" method="POST">
+              <p>Student Login</p>
+              <input type="text" name="uname" placeholder="username"/>
+              <input type="password" name="pword" placeholder="password"/>
+              <button type="submit">login</button>
+              <p class="message">Not registered? <a href="student/studentregister.jsp">Create an account</a></p>
+              <p class="message">Company? <a href="indexCompany.jsp">Login here</a></p>
+          </form>
+      </div>
+  </div>
   </body>
 </html>

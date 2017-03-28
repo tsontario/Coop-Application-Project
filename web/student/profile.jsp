@@ -1,7 +1,8 @@
-<%@ page import="dbbeans.UserBean" %>
 <%@ page import="dbbeans.ProgramBean" %>
+<%@ page import="dbbeans.UserBean" %>
 <%@ page import="java.util.ArrayList" %>
-<% ArrayList<ProgramBean> programList = ProgramBean.getProgramList(); %><%--
+<% ArrayList<ProgramBean> programList = ProgramBean.getProgramList(); %>
+<%--
   Created by IntelliJ IDEA.
   User: willieausrotas
   Date: 2017-03-27
@@ -32,7 +33,6 @@
                 <a class="panel-close close" data-dismiss="alert">×</a>
                 <i class="fa fa-coffee"></i>
                 Welcome ${currentUser.getfName()}. Here you can edit any information you need to on your profile.
-                ${currentUser.getProgramCode()}
             </div>
             <h3>Personal info</h3>
 
@@ -94,7 +94,7 @@
                     <div class="col-md-8">
                         <input type="submit" class="btn btn-primary" value="Save Changes">
                         <span></span>
-                        <input type="reset" class="btn btn-default" value="Cancel">
+                        <button class="btn btn-default">Cancel</button>
                     </div>
                 </div>
             </form>

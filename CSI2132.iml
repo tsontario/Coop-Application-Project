@@ -24,5 +24,6 @@
     <orderEntry type="library" name="postgresql-42.0.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="taglibs-standard-impl-1.2.5" level="project" />
+    <orderEntry type="library" name="servlet-api" level="project" />
   </component>
 </module>

@@ -18,7 +18,7 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="../css/modPage.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-    <title>Resume Review</title>
+    <title>Moderator Panel</title>
     <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
 </head>
 

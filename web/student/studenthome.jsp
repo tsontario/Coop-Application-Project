@@ -85,7 +85,7 @@
     }%>
         <a href="profile.jsp"><button>Edit Profile</button></a>
         <a href="#"><button>My Resume</button></a>
-        <a href="#"><button>Browse Jobs</button></a>
+        <a href="../jobs/searchjobs.jsp"><button>Browse Jobs</button></a>
         <a href="#"><button>Write a Review</button></a>
         <a href="../session/goodbye.jsp"><button>Logout</button></a>
 </body>

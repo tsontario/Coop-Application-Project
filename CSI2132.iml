@@ -20,6 +20,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.76" level="application_server_libraries" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="postgresql-9.0-801.jdbc4" level="project" />
+    <orderEntry type="library" name="postgresql-42.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="taglibs-standard-impl-1.2.5" level="project" />
   </component>
 </module>

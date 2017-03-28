@@ -20,6 +20,9 @@ public class JobBean implements Serializable {
     private String closingDate;
     private String postingDate;
 
+    private String cname;
+    private String location;
+
 
 
     public JobBean() {
@@ -98,7 +101,22 @@ public class JobBean implements Serializable {
         this.postingDate = postingDate;
     }
 
+    public void setCName(String cname){ this.cname = cname;}
+
+    public String getCName(){ return this.cname; }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     public static ArrayList<JobBean> listTopFiveJobs() {
         return JobDAO.listTopFiveJobs();
+    }
+    public static ArrayList<JobBean> getAllJobs(){
+        return JobDAO.getAllJobListings();
     }
 }

@@ -19,40 +19,47 @@
 %>
 <% String temp = request.getParameter("name") ;%>
 <html>
-<head>
-    <title>Search Jobs</title>
-    <table id="job_listings">
-        <tr>
-            <th>Company Name</th>
-            <th>Location</th>
-            <th>Number of Pos</th>
-            <th>Rate of pay</th>
-            <th>Job Title</th>
-            <th>Job ID</th>
-            <th>Posting date</th>
-            <th>Closing Date</th>
-            <th>Job Level</th>
 
-        </tr>
-        <p> <%= temp%> </p>
-        <% for (JobBean job : jobList) { %>
-        <%=
-            "<tr>" +
-                "<td>" + job.getCName() + "</td>" +
-                "<td>" + job.getLocation() + "</td>" +
-                "<td>" + job.getNumPositions() + "</td>" +
-                "<td>" + "$"  + job.getRateOfPay() + "</td>" +
-                "<td>" + job.getJobName() + "</td>" +
-                "<td>" + job.getJobId() + "</td>" +
-                "<td>" + job.getPostingDate() + "</td>" +
-                "<td>" + job.getClosingDate() + "</td>" +
-                "<td>" + job.getJobLevel() + "</td>" +
-            "</tr>"
-        %>
-        <% } %>
-    </table>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.css">
+<link rel="stylesheet" type="text/css" href="../css/joblist.css">
+<head>
+
 </head>
 <body>
+<div class="row" style="padding-top: 40px">
+<div class="col-3"></div>
 
+    <div class="col-8">
+        <h2>Job Postings</h2>
+        <hr class="w-100">
+        <% for (JobBean job : jobList) { %>
+        <a href="#">
+            <div class="card w-100">
+                <div class="card-block job-post">
+                    <h4 class="card-title "><a href="#" class="title-link"><%=job.getJobName()%></a></h4>
+                    <h6 class="card-subtitle mb-2 text-muted"><%=job.getCName()%></h6>
+                    <div class="row">
+                        <div class="col">
+                            <p class="card-text "><%=job.getLocation()%></p>
+                        </div>
+                        <div class="col">
+                            <p class="card-text "><%=job.getNumPositions()%> position(s)</p>
+                        </div>
+                        <div class="col">
+                            <p class="card-text ">Rate of pay: $<%=job.getRateOfPay()%></p>
+                        </div>
+                        <div class="col">
+                            <p class="card-text ">Closing date: <%=job.getClosingDate()%></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <% } %>
+    </div>
+
+</div>
 </body>
+
 </html>

@@ -37,7 +37,7 @@
         <a href="#">
             <div class="card w-100">
                 <div class="card-block job-post">
-                    <h4 class="card-title "><a href="#" class="title-link"><%=job.getJobName()%></a></h4>
+                    <h4 class="card-title "><a href="jobpost.jsp?jobid=<%=job.getJobId()%>" target="_blank" class="title-link"><%=job.getJobName()%></a></h4>
                     <h6 class="card-subtitle mb-2 text-muted"><%=job.getCName()%></h6>
                     <div class="row">
                         <div class="col">

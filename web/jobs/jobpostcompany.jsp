@@ -106,7 +106,7 @@
                         "</form>"
                 %>
                 <% if (!jobApprovalBean.isApproved(job.getJobId())) { %>
-                <button class="btn btn-warning">Pending Approval</button>
+                <button class="btn btn-warning" disabled>Pending Approval</button>
                 <% } %>
                 <% } %>
             </div>

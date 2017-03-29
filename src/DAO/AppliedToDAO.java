@@ -3,11 +3,7 @@ package DAO;
 import connection.DataAccess;
 import dbbeans.AppliedToBean;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Date;
+import java.sql.*;
 import java.util.Calendar;
 /**
  * Created by Kevin on 2017-03-28.
@@ -19,7 +15,7 @@ public class AppliedToDAO {
     static Statement st;
     static ResultSet rs;
 
-    public static boolean checkIfUserApplied(String userid, String jobid){
+    public static boolean checkIfUserApplied(String userid, int jobid) {
 
         db.openConnection();
         connection = db.getConnection();
@@ -29,7 +25,7 @@ public class AppliedToDAO {
             rs = st.executeQuery("SELECT * " +
             "FROM \"Proj\".APPLIES_TO WHERE jobid='" + jobid + "' AND " + "userid='" + userid + "';");
             if(rs.next()) {
-                appliedTo.setJobid(rs.getString("jobid"));
+                appliedTo.setJobid(rs.getInt("jobid"));
                 appliedTo.setUserid(rs.getString("userid"));
                 appliedTo.setTimestamp(rs.getDate("timestamp").toString());
                 rs.close();
@@ -39,7 +35,7 @@ public class AppliedToDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if(appliedTo.getJobid() == null || appliedTo.getUserid() == null){
+        if (appliedTo.getJobid() == 0 || appliedTo.getUserid() == null) {
             return false;
         } else {
             return true;
@@ -47,7 +43,7 @@ public class AppliedToDAO {
     }
 
 
-    public static void applyToJob(String userid, String jobid){
+    public static void applyToJob(String userid, int jobid) {
         java.sql.Date timeNow = new Date(Calendar.getInstance().getTimeInMillis());
         System.out.println(userid);
         db.openConnection();
@@ -61,5 +57,27 @@ public class AppliedToDAO {
             e.printStackTrace();
         }
 
+    }
+
+    public static AppliedToBean getStudentInfo(String username, int jobid) {
+        AppliedToBean appliedToBean = new AppliedToBean();
+        db.openConnection();
+        connection = db.getConnection();
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT * FROM \"Proj\".applies_to WHERE userid ='" + username + "' AND jobid = '" + jobid + "';");
+            if (rs.next()) {
+                appliedToBean.setJobid(rs.getInt("jobid"));
+                appliedToBean.setTimestamp(rs.getString("timestamp"));
+                appliedToBean.setUserid(rs.getString("userid"));
+                st.close();
+                rs.close();
+                connection.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return appliedToBean;
     }
 }

@@ -1,11 +1,10 @@
 package dbbeans;
 
 import DAO.UserDAO;
-import connection.DataAccess;
+
 import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -38,6 +37,18 @@ public class UserBean implements Serializable {
         this.password = password;
         this.fName = fName;
         this.lName = lName;
+    }
+
+    public static UserBean getUserById(String username) {
+        return UserDAO.getUserById(username);
+    }
+
+    public static boolean isUnique(String username) {
+        return UserDAO.isUnique(username);
+    }
+
+    public static ArrayList<UserBean> getAllUsers() {
+        return UserDAO.getAllUsers();
     }
 
     public String getEmail() {
@@ -96,10 +107,6 @@ public class UserBean implements Serializable {
         this.lName = lName;
     }
 
-    public static UserBean getUserById(String username)  {
-        return UserDAO.getUserById(username);
-    }
-
     public UserBean login(UserBean userBean) {
         return UserDAO.login(userBean);
     }
@@ -115,10 +122,6 @@ public class UserBean implements Serializable {
     public String toString() {
         String res = getfName() + " " + getlName();
         return res;
-    }
-
-    public static boolean isUnique(String username) {
-        return UserDAO.isUnique(username);
     }
 
     public void insertIntoDB() {

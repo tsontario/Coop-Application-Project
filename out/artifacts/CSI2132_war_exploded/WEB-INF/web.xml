@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
@@ -39,6 +39,41 @@
     <servlet-mapping>
         <servlet-name>StudentRegisterControl</servlet-name>
         <url-pattern>/StudentRegisterControl</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+
+        <servlet-name>ApplyToJobControl</servlet-name>
+        <servlet-class>control.ApplyToJobControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApplyToJobControl</servlet-name>
+        <url-pattern>/ApplyToJobControl</url-pattern>
+    </servlet-mapping>
+  <servlet>
+        <servlet-name>CompanyRegisterControl</servlet-name>
+        <servlet-class>control.CompanyRegisterControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CompanyRegisterControl</servlet-name>
+        <url-pattern>/CompanyRegisterControl</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CompanyUpdateControl</servlet-name>
+        <servlet-class>control.CompanyUpdateControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CompanyUpdateControl</servlet-name>
+        <url-pattern>/company/CompanyUpdateControl</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteJobControl</servlet-name>
+        <servlet-class>control.DeleteJobControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteJobControl</servlet-name>
+        <url-pattern>/DeleteJobControl</url-pattern>
     </servlet-mapping>
 </web-app>

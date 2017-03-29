@@ -19,9 +19,38 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <title>Profile of ${currentUser.getUsername()}</title>
 </head>
 <body>
+<!-- HEADER CODE - DO NOT REMOVE -->
+<header class="header-basic">
+
+    <div class="header-limiter">
+
+        <h1><a href="#">COOP<span>Database</span></a></h1>
+
+        <nav>
+            <a href="../student/studenthome.jsp">Home</a>
+            <a href="profile.jsp" class="selected">Profile</a>
+            <a href="#">Resume</a>
+            <a href="../jobs/searchjobs.jsp">Jobs</a>
+            <a href="#">Write Review</a>
+            <% if (user != null) {
+                if (user.isAdmin(user.getUsername())) { %>
+            <a href="admin.jsp">Admin Panel</a>
+            <% } %>
+            <% if (user.isModerator(user.getUsername())) { %>
+            <a href="mod.jsp">Moderator Panel</a>
+            <% }
+            }%>
+            <a href="../session/goodbye.jsp">Logout</a>
+        </nav>
+    </div>
+
+</header>
+<!-- HEADER CODE - DO NOT REMOVE -->
 <div class="container">
     <h1>Edit Profile</h1>
     <hr>
@@ -74,19 +103,21 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Username:</label>
                     <div class="col-md-8">
-                        <input name="username" class="form-control" type="text" value=${currentUser.getUsername()}>
+                        <input name="username" readonly="true" class="form-control" type="text"
+                               value=${currentUser.getUsername()}>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
-                        <input name="password1" class="form-control" type="password" value=${currentUser.getPassword()}>
+                        <input name="password" class="form-control" type="password" value=${currentUser.getPassword()}>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Confirm password:</label>
                     <div class="col-md-8">
-                        <input name="password2" class="form-control" type="password" value=${currentUser.getPassword()}>
+                        <input name="passwordcheck" class="form-control" type="password"
+                               value=${currentUser.getPassword()}>
                     </div>
                 </div>
                 <div class="form-group">
@@ -94,7 +125,7 @@
                     <div class="col-md-8">
                         <input type="submit" class="btn btn-primary" value="Save Changes">
                         <span></span>
-                        <button class="btn btn-default">Cancel</button>
+                        <a href="studenthome.jsp" class="btn btn-danger">Cancel</a>
                     </div>
                 </div>
             </form>

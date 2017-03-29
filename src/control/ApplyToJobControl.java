@@ -20,7 +20,7 @@ public class ApplyToJobControl  extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-        AppliedToBean.applyTo(request.getParameter("userIDInput"),request.getParameter("jobIDInput"));
+        AppliedToBean.applyTo(request.getParameter("userIDInput"), Integer.parseInt(request.getParameter("jobIDInput")));
 
         response.sendRedirect("jobs/jobpost.jsp?jobid=" + request.getParameter("jobIDInput"));
 

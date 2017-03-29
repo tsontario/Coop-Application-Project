@@ -1,5 +1,6 @@
 package control;
 
+import DAO.UserDAO;
 import connection.DataAccess;
 import dbbeans.UserBean;
 
@@ -46,7 +47,7 @@ public class StudentRegisterControl extends HttpServlet {
             fail(response, request, "Username must be 4 characters or more");
             return;
         }
-        if (email == null || email.trim() == "") {
+        if (email == null || email.trim().equals("")) {
             fail(response, request, "You need to enter an email");
         }
 
@@ -54,6 +55,12 @@ public class StudentRegisterControl extends HttpServlet {
             fail(response, request, "Username already taken!");
             return;
         }
+
+        if (!(UserDAO.isUniqueEmail(email))) {
+            fail(response, request, "Email already taken.");
+            return;
+        }
+
         if (!(password.equals(passwordCheck))) {
             fail(response, request, "Passwords don't match!");
             return;

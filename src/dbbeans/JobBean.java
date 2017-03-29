@@ -142,4 +142,8 @@ public class JobBean implements Serializable {
     public static ArrayList<JobBean> getJobsByCompany(int companyId) {
         return JobDAO.getJobsByCompany(companyId);
     }
+
+    public static ArrayList<JobBean> getPendingJobsByCompany(int companyId) {
+        return JobDAO.getPendingJobsByCompany(companyId);
+    }
 }

@@ -208,4 +208,34 @@ public class JobDAO {
         }
         return jobList;
     }
+
+    public static ArrayList<JobBean> getPendingJobsByCompany(int companyId) {
+        DataAccess.openConnection();
+        ArrayList<JobBean> jobList = new ArrayList<>();
+
+        try {
+            connection = DataAccess.getConnection();
+            st = connection.createStatement();
+            rs = st.executeQuery(
+                    "SELECT jobid, jobname, joblevel, rateofpay, job.companyid, " +
+                            "numpositions, closingdate, postingdate FROM \"Proj\".job_approval NATURAL JOIN \"Proj\".job WHERE companyid = " + companyId + " AND approved = FALSE");
+            while (rs.next()) {
+                JobBean job = new JobBean();
+                job.setJobName(rs.getString("jobname"));
+                job.setJobId(rs.getInt("jobid"));
+                job.setJobLevel(rs.getInt("joblevel"));
+                job.setRateOfPay(rs.getDouble("rateofpay"));
+                job.setCompanyId(rs.getString("companyid"));
+                job.setNumPositions(rs.getInt("numpositions"));
+                job.setClosingDate(rs.getDate("closingdate").toString());
+                job.setPostingDate(rs.getDate("postingdate").toString());
+
+                jobList.add(job);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return jobList;
+    }
+
 }

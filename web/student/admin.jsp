@@ -129,7 +129,7 @@
                 <td><%= c.getCompanyId() %></td>
                 <td><%= c.getCompanySize() %></td>
                 <td><%= (JobBean.getJobsByCompany(c.getCompanyId())).size()%></td>
-
+                <td><%= (JobBean.getPendingJobsByCompany(c.getCompanyId())).size()%></td>
                 <td><a href=admin.jsp?companyaction=true&action=delete&id=<%= c.getCompanyId() %>>
                     <button>Delete User</button></a>
                 </td>

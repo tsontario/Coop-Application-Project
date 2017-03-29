@@ -103,7 +103,7 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Username:</label>
                     <div class="col-md-8">
-                        <input name="username" readonly="true" class="form-control" type="text"
+                        <input name="username" readonly class="form-control" type="text"
                                value=${currentUser.getUsername()} required>
                     </div>
                 </div>

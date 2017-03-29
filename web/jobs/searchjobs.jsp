@@ -19,7 +19,7 @@
 %>
 <% String temp = request.getParameter("name") ;%>
 <html>
-
+<title>Jobs Page</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.css">
 <link rel="stylesheet" type="text/css" href="../css/joblist.css">
@@ -62,7 +62,7 @@
         <h2>Job Postings</h2>
         <hr class="w-100">
         <% for (JobBean job : jobList) { %>
-        <% if(user.getLevel() == job.getJobLevel()){%>
+        <% if(user.getLevel() >= job.getJobLevel()){%>
         <a href="#">
             <div class="card w-100">
                 <div class="card-block job-post">

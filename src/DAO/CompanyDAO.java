@@ -44,9 +44,9 @@ public class CompanyDAO {
         return companyBean;
     }
 
-    public static int getAverageRating(int id) {
+    public static double getAverageRating(int id) {
 
-        int averageRating = 0;
+        double averageRating = 0;
         DataAccess.openConnection();
         connection = DataAccess.getConnection();
 
@@ -56,7 +56,7 @@ public class CompanyDAO {
                     "FROM \"Proj\".company WHERE companyid = "
                     + id + ";");
             if (rs.next()) {
-                averageRating = rs.getInt(1) / rs.getInt(2);
+                averageRating = rs.getDouble(1) / rs.getDouble(2);
             }
 
         } catch (SQLException e) {
@@ -108,7 +108,7 @@ public class CompanyDAO {
                 companyBean.setCompanyId(rs.getInt("companyid"));
                 companyBean.setCompanySize(rs.getInt("companysize"));
                 companyBean.setLocation(rs.getString("location"));
-                companyBean.setRating( (int) rs.getDouble("rating"));
+                companyBean.setRating(rs.getDouble("rating"));
             }
             else {
                 rs.close();
@@ -119,6 +119,59 @@ public class CompanyDAO {
         }
         catch (SQLException e) {
             e.printStackTrace();}
+        return companyBean;
+    }
+
+    public static boolean isUnique(String username) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT cname FROM \"Proj\".company" +
+                    " WHERE cname = '" + username + "';");
+            if (rs.next()) {
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    public static void insertIntoDB(CompanyBean companyBean) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            st.execute("INSERT INTO \"Proj\".company (companysize, location, rating, cname, password) VALUES ('" +
+                    companyBean.getCompanySize() + "', '" +
+                    companyBean.getLocation() + "', '" +
+                    companyBean.getRating() + "', '" +
+                    companyBean.getcName() + "', '" +
+                    companyBean.getPassword() + "');");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static CompanyBean updateCompany(CompanyBean companyBean) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            st.execute("UPDATE \"Proj\".company SET" +
+                    " companysize ='" + companyBean.getCompanySize() + "'," +
+                    " location ='" + companyBean.getLocation() + "'," +
+                    " cname = '" + companyBean.getcName() + "'," +
+                    " password='" + companyBean.getPassword() + "'" +
+                    " WHERE companyid = '" + companyBean.getCompanyId() + "';");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return companyBean;
     }
 }

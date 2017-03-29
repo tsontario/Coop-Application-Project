@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>LoginControl</servlet-name>
+        <servlet-class>control.LoginControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginControl</servlet-name>
+        <url-pattern>/LoginControl</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CompanyLoginControl</servlet-name>
+        <servlet-class>control.CompanyLoginControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CompanyLoginControl</servlet-name>
+        <url-pattern>/CompanyLoginControl</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateControl</servlet-name>
+        <servlet-class>control.UpdateControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateControl</servlet-name>
+        <url-pattern>/student/UpdateControl</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>StudentRegisterControl</servlet-name>
+        <servlet-class>control.StudentRegisterControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentRegisterControl</servlet-name>
+        <url-pattern>/StudentRegisterControl</url-pattern>
+
+    </servlet-mapping>
+</web-app>

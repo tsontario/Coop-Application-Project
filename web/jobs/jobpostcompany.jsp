@@ -10,11 +10,12 @@
 <%@ page import="java.util.ArrayList" %>
 <%
     CompanyBean companyBean = (CompanyBean) request.getSession().getAttribute("currentCompany");
-    ArrayList<ResumeReviewRequestBean> resumeList = ResumeReviewRequestBean.getReviewRequests();
+    ResumeBean resumeBean = new ResumeBean();
+    JobApprovalBean jobApprovalBean = new JobApprovalBean();
 
     String jobid = request.getParameter("jobid");
     if (jobid == null) {
-        response.sendRedirect("searchjobs.jsp");
+        response.sendRedirect("../companyhome.jsp");
     }
     JobBean job = JobBean.getJobByID(Integer.parseInt(jobid));
     ArrayList<UserBean> users = UserBean.getAllUsers();
@@ -104,6 +105,9 @@
                         "<button type=\"submit\" class=\"btn btn-danger\">Delete Job</button>" +
                         "</form>"
                 %>
+                <% if (!jobApprovalBean.isApproved(job.getJobId())) { %>
+                <button class="btn btn-warning">Pending Approval</button>
+                <% } %>
                 <% } %>
             </div>
         </div>
@@ -146,7 +150,18 @@
             <td class="text-left"><%=appliedToBean.getTimestamp()%>
             </td>
             <td class="text-left">
-                <button class="btn btn-primary">Resume</button>
+                <form style="all:initial" action="../company/companyreviewresume.jsp" method="POST">
+                    <% resumeBean = ResumeBean.getResumeByUsername(user.getUsername()); %>
+                    <input type="hidden" name="resumeid" value="<%= resumeBean.getResume() %>"/>
+                    <input type="hidden" name="username" value="<%= user.getUsername()%>">
+                    <input type="hidden" name="fname" value="<%= user.getfName()%>">
+                    <input type="hidden" name="lname" value="<%= user.getlName()%>">
+                    <input type="hidden" name="programCode" value="<%= user.getProgramCode()%>">
+                    <input type="hidden" name="email" value="<%= user.getEmail()%>">
+                    <input type="hidden" name="level" value="<%= user.getLevel()%>">
+                    <input type="hidden" name="jobid" value="<%= job.getJobId()%>">
+                    <button class="btn btn-primary" type="submit">Resume</button>
+                </form>
             </td>
         </tr>
 

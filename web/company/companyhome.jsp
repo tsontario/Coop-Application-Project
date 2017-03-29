@@ -52,7 +52,7 @@
                 <a class="panel-close close" data-dismiss="alert"></a>
                 <i class="fa fa-coffee"></i>
                 Welcome to your dashboard, ${currentCompany.getcName()}.
-                Here you will see your most recent job postings.
+                Here you will see all your job postings.
             </div>
             <h2>Job Postings</h2>
             <hr class="w-100">

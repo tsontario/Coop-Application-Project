@@ -29,6 +29,26 @@ public class JobBean implements Serializable {
 
     }
 
+    public static ArrayList<JobBean> listTopFiveJobs() {
+        return JobDAO.listTopFiveJobs();
+    }
+
+    public static ArrayList<JobBean> getAllJobs() {
+        return JobDAO.getAllJobListings();
+    }
+
+    public static JobBean getJobByID(int id) {
+        return JobDAO.getJobByID(id);
+    }
+
+    public static ArrayList<JobBean> getAllJobsOrderByNewest() {
+        return JobDAO.getAllJobListingsOrderByNewest();
+    }
+
+    public static void deleteJob(int jobid) {
+        JobDAO.deleteJob(jobid);
+    }
+
     public int getJobId() {
         return jobId;
     }
@@ -101,9 +121,11 @@ public class JobBean implements Serializable {
         this.postingDate = postingDate;
     }
 
-    public void setCName(String cname){ this.cname = cname;}
-
     public String getCName(){ return this.cname; }
+
+    public void setCName(String cname) {
+        this.cname = cname;
+    }
 
     public String getLocation() {
         return location;
@@ -113,11 +135,15 @@ public class JobBean implements Serializable {
         this.location = location;
     }
 
+
     public static ArrayList<JobBean> listTopFiveJobs() {
         return JobDAO.listTopFiveJobs();
     }
     public static ArrayList<JobBean> getAllJobs(){
         return JobDAO.getAllValidJobListing();
+
+    public void jobAdd(JobBean jobBean) {
+        JobDAO.addJob(jobBean);
+
     }
-    public static JobBean getJobByID(int id) {return JobDAO.getJobByID(id);}
 }

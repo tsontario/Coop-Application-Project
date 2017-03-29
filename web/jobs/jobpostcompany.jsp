@@ -39,7 +39,7 @@
 
     <div class="header-limiter">
 
-        <h1><a href="#">COOP<span>Database</span></a></h1>
+        <h1><a href="../student/studenthome.jsp">COOP<span>Database</span></a></h1>
 
         <nav>
             <a href="../company/companyhome.jsp">Home</a>

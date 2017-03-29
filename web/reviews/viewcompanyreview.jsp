@@ -5,8 +5,8 @@
   Time: 01:55
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="dbbeans.UserBean" %>
 <%@ page import="dbbeans.CompanyReviewBean" %>
+<%@ page import="dbbeans.UserBean" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
@@ -35,7 +35,7 @@
 
         <div class="header-limiter">
 
-            <h1><a href="#">COOP<span>Database</span></a></h1>
+            <h1><a href="../student/studenthome.jsp">COOP<span>Database</span></a></h1>
 
             <nav>
                 <a href="../student/studenthome.jsp">Home</a>

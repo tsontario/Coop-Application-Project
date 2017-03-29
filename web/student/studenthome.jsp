@@ -21,8 +21,11 @@
 <html>
 <head>
     <title>Welcome</title>
-    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="../css/joblist.css">
     <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -31,7 +34,7 @@
 
     <div class="header-limiter">
 
-        <h1><a href="#">COOP<span>Database</span></a></h1>
+        <h1><a href="../student/studenthome.jsp">COOP<span>Database</span></a></h1>
 
         <nav>
             <a href="studenthome.jsp" class="selected">Home</a>
@@ -103,5 +106,60 @@
     <br />
     <hr />
 
+
+<div class="container">
+    <div class="row" style="padding-top: 40px">
+        <div class="col-lg-11">
+            <div class="alert alert-info alert-dismissable">
+                <a class="panel-close close" data-dismiss="alert"></a>
+                <i class="fa fa-coffee"></i>
+                Welcome to your dashboard, ${currentUser.getfName()}.
+                Here you will see the top 5 job postings and the top 5 companies!
+            </div>
+            <h2>Top Jobs</h2>
+            <hr class="w-100">
+            <div id="" style="overflow-y: auto; height:500px">
+                <%
+                    for (JobBean job : jobList) {
+                %>
+
+                <a href="#">
+                    <div class="card w-100">
+
+                        <div class="card-block job-post">
+                            <h4 class="card-title "><a href="../jobs/jobpost.jsp?jobid=<%=job.getJobId()%>"
+                                                       class="title-link"><%=job.getJobName()%>
+                            </a></h4>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-text "><%=companyBean.getCompanyById(job.getCompanyId()).getcName()%>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p class="card-text "><%=job.getNumPositions()%> position(s)</p>
+                                </div>
+                                <div class="col">
+                                    <p class="card-text ">Rate of pay: $<%=job.getRateOfPay()%>
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <p class="card-text ">Closing date: <%=job.getClosingDate()%>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </a>
+
+                <%
+                    }%>
+            </div>
+            <hr class="w-100">
+        </div>
+
+    </div>
+</div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package control;
 
 import connection.DataAccess;
+import dbbeans.AppliedToBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +18,9 @@ public class ApplyToJobControl  extends HttpServlet {
     private HttpSession session;
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println( request.getParameter("jobIDInput"));
+
+
+        AppliedToBean.applyTo(request.getParameter("userIDInput"),request.getParameter("jobIDInput"));
 
         response.sendRedirect("jobs/jobpost.jsp?jobid=" + request.getParameter("jobIDInput"));
 

@@ -49,18 +49,17 @@ public class AppliedToDAO {
 
     public static void applyToJob(String userid, String jobid){
         java.sql.Date timeNow = new Date(Calendar.getInstance().getTimeInMillis());
-        System.out.println(timeNow.toString());
-//        db.openConnection();
-//        connection = db.getConnection();
-//        try {
-//            st = connection.createStatement();
-//            rs = st.executeQuery("INSERT INTO applied_to VALUES (" + userid + ", " + jobid + ", " + timeNow + ");");
-//            rs.close();
-//            st.close();
-//            connection.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
+        System.out.println(userid);
+        db.openConnection();
+        connection = db.getConnection();
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("INSERT INTO \"Proj\".APPLIES_TO VALUES ('"  + jobid + "', '" + userid + "', '" + timeNow + "');");
+            st.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 }

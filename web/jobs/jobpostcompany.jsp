@@ -43,6 +43,7 @@
         <nav>
             <a href="../company/companyhome.jsp">Home</a>
             <a href="../company/companyprofile.jsp">Profile</a>
+            <a href="../company/companyaddjob.jsp">Add Job</a>
             <a href="../session/goodbye.jsp">Logout</a>
         </nav>
     </div>

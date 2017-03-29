@@ -14,9 +14,27 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <title>Profile of ${currentCompany.getcName()}</title>
 </head>
 <body>
+<!-- HEADER CODE - DO NOT REMOVE -->
+<header class="header-basic">
+
+    <div class="header-limiter">
+
+        <h1><a href="#">COOP<span>Database</span></a></h1>
+
+        <nav>
+            <a href="companyhome.jsp" class="selected">Home</a>
+            <a href="companyprofile.jsp">Profile</a>
+            <a href="../session/goodbye.jsp">Logout</a>
+        </nav>
+    </div>
+
+</header>
+<!-- HEADER CODE - DO NOT REMOVE -->
 <div class="container">
     <h1>Edit Company</h1>
     <hr>

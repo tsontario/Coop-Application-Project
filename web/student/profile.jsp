@@ -69,19 +69,19 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">First name:</label>
                     <div class="col-lg-8">
-                        <input name="firstName" class="form-control" type="text" value=${currentUser.getfName()}>
+                        <input name="firstName" class="form-control" type="text" value=${currentUser.getfName()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Last name:</label>
                     <div class="col-lg-8">
-                        <input name="lastName" class="form-control" type="text" value=${currentUser.getlName()}>
+                        <input name="lastName" class="form-control" type="text" value=${currentUser.getlName()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Program Code:</label>
                     <div class="col-lg-8">
-                        <select name="programCode" class="form-control">
+                        <select name="programCode" class="form-control" required>
                             <% for (ProgramBean program : programList) {
                                 String p = program.getProgramCode();
                                 if (p.equals(user.getProgramCode())){%>
@@ -96,28 +96,28 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Email:</label>
                     <div class="col-lg-8">
-                        <input name="email" class="form-control" type="text"
-                               value=${currentUser.getEmail()} readonly="true">
+                        <input name="email" class="form-control" type="email"
+                               value=${currentUser.getEmail()} readonly="true" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Username:</label>
                     <div class="col-md-8">
-                        <input name="username" readonly="true" class="form-control" type="text"
-                               value=${currentUser.getUsername()}>
+                        <input name="username" readonly class="form-control" type="text"
+                               value=${currentUser.getUsername()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
-                        <input name="password" class="form-control" type="password" value=${currentUser.getPassword()}>
+                        <input name="password" class="form-control" type="password" value=${currentUser.getPassword()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Confirm password:</label>
                     <div class="col-md-8">
                         <input name="passwordcheck" class="form-control" type="password"
-                               value=${currentUser.getPassword()}>
+                               value=${currentUser.getPassword()} required>
                     </div>
                 </div>
                 <div class="form-group">

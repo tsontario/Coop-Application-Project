@@ -17,8 +17,8 @@
     <div class="form">
         <form class="login-form" action="CompanyLoginControl" method="POST">
             <p>Company Login</p>
-            <input type="text" name="cname" placeholder="username"/>
-            <input type="password" name="cpassword" placeholder="password"/>
+            <input type="text" name="cname" placeholder="username" required/>
+            <input type="password" name="cpassword" placeholder="password" required/>
             <button type="submit">login</button>
             <p class="message">Not registered? <a href="company/companyregister.jsp">Create an account</a></p>
             <p class="message">Student? <a href="index.jsp">Login here</a></p>

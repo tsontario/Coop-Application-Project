@@ -1,8 +1,9 @@
-<%@ page import="dbbeans.CompanyBean" %><%--
+<%@ page import="dbbeans.CompanyBean" %>
+<%--
   Created by IntelliJ IDEA.
   User: willieausrotas
-  Date: 2017-03-28
-  Time: 5:36 PM
+  Date: 2017-03-29
+  Time: 1:35 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -28,8 +29,8 @@
 
         <nav>
             <a href="companyhome.jsp">Home</a>
-            <a href="companyprofile.jsp" class="selected">Profile</a>
-            <a href="companyaddjob.jsp">Add Job</a>
+            <a href="companyprofile.jsp">Profile</a>
+            <a href="companyaddjob.jsp" class="selected">Add Job</a>
             <a href="../session/goodbye.jsp">Logout</a>
         </nav>
     </div>
@@ -46,51 +47,59 @@
             <div class="alert alert-info alert-dismissable">
                 <a class="panel-close close" data-dismiss="alert">×</a>
                 <i class="fa fa-coffee"></i>
-                Welcome ${currentCompany.getcName()}. Here you can edit any information you need to on your profile.
+                Welcome ${currentCompany.getcName()}. Here you can add jobs to be posted. They will be posted once
+                approved by an admin.
             </div>
-            <h3>Company info</h3>
+            <h3>Job info</h3>
 
-            <form action="CompanyUpdateControl" method="POST" class="form-horizontal" role="form">
+            <form action="CompanyAddJobControl" method="POST" class="form-horizontal" role="form">
                 <input name="companyid" hidden="hidden" readonly="true" type="text"
                        value=${currentCompany.getCompanyId()}>
+                <input name="companyname" hidden="hidden" readonly="true" type="text"
+                       value="${currentCompany.getcName()}">
                 <div class="form-group">
-                    <label class="col-lg-3 control-label">Company Name:</label>
+                    <label class="col-lg-3 control-label">Job Name:</label>
                     <div class="col-lg-8">
-                        <input name="cName" class="form-control" type="text" value=${currentCompany.getcName()}>
+                        <input name="jobName" class="form-control" type="text" placeholder="Job Name" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Job Level:</label>
+                    <div class="col-lg-8">
+                        <input name="jobLevel" class="form-control" type="number" placeholder="2" value="">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Location:</label>
                     <div class="col-lg-8">
-                        <input name="location" class="form-control" type="text" value=${currentCompany.getLocation()}>
+                        <input name="location" class="form-control" type="text" placeholder="Location" value="">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-lg-3 control-label">Company Size:</label>
+                    <label class="col-lg-3 control-label">Positions:</label>
                     <div class="col-lg-8">
-                        <input name="size" class="form-control" type="text"
-                               value=${currentCompany.getCompanySize()}>
+                        <input name="positions" class="form-control" type="number" placeholder="3"
+                               value="">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Rating:</label>
+                    <label class="col-md-3 control-label">Rate of Pay:</label>
                     <div class="col-md-8">
-                        <input name="rating" class="form-control" readonly="true" type="text"
-                               value=${currentCompany.getRating()}>
+                        <input name="rateOfPay" class="form-control" type="number" placeholder="15.5"
+                               value="">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Password:</label>
+                    <label class="col-md-3 control-label">Days to be open:</label>
                     <div class="col-md-8">
-                        <input name="password" class="form-control" type="password"
-                               value=${currentCompany.getPassword()}>
+                        <input name="daysOpen" class="form-control" type="number" placeholder="10"
+                               value="">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-3 control-label">Confirm password:</label>
+                    <label class="col-md-3 control-label">Description</label>
                     <div class="col-md-8">
-                        <input name="passwordcheck" class="form-control" type="password"
-                               value=${currentCompany.getPassword()}>
+                        <textarea name="description" class="form-control" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="form-group">

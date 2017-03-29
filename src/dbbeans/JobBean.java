@@ -134,4 +134,8 @@ public class JobBean implements Serializable {
     public void setLocation(String location) {
         this.location = location;
     }
+
+    public void jobAdd(JobBean jobBean) {
+        JobDAO.addJob(jobBean);
+    }
 }

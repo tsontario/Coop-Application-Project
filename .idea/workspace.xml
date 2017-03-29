@@ -2,51 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d28f5a64-fcb1-4bf1-b076-7f0a8e281294" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/control/DeleteJobControl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/companyApplicant.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/jobs/jobpostcompany.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/postgresql_42_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/js/joblist.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/CompanyDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/CompanyDAO.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/company/companyreviewresume.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/JobDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/JobDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/connection/DataAccess.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/connection/DataAccess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/connection/Password.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/connection/Password.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/control/StudentRegisterControl.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/control/StudentRegisterControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/control/UpdateControl.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/control/UpdateControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/dbbeans/CompanyBean.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/dbbeans/CompanyBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/dbbeans/JobBean.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/dbbeans/JobBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/dbbeans/UserBean.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/dbbeans/UserBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CSI2132/connection/Password.class" afterPath="$PROJECT_DIR$/out/production/CSI2132/connection/Password.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CSI2132/dbbeans/CompanyBean.class" afterPath="$PROJECT_DIR$/out/production/CSI2132/dbbeans/CompanyBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CSI2132/dbbeans/JobBean.class" afterPath="$PROJECT_DIR$/out/production/CSI2132/dbbeans/JobBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CSI2132/dbbeans/UserBean.class" afterPath="$PROJECT_DIR$/out/production/CSI2132/dbbeans/UserBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/company/companyhome.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/company/companyhome.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/company/companyregister.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/company/companyregister.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/css/modPage.css" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/css/modPage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/jobs/searchjobs.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/jobs/searchjobs.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/session/goodbye.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/session/goodbye.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/admin.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/mod.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/mod.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/profile.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/profile.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/resume/resumereview.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/resume/resumereview.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/studenthome.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/studenthome.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/studentregister.jsp" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/student/studentregister.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAO/AppliedToDAO.java" afterPath="$PROJECT_DIR$/src/DAO/AppliedToDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAO/JobDAO.java" afterPath="$PROJECT_DIR$/src/DAO/JobDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/ApplyToJobControl.java" afterPath="$PROJECT_DIR$/src/control/ApplyToJobControl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dbbeans/AppliedToBean.java" afterPath="$PROJECT_DIR$/src/dbbeans/AppliedToBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dbbeans/JobBean.java" afterPath="$PROJECT_DIR$/src/dbbeans/JobBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dbbeans/UserBean.java" afterPath="$PROJECT_DIR$/src/dbbeans/UserBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAO/ResumeDAO.java" afterPath="$PROJECT_DIR$/src/DAO/ResumeDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dbbeans/ResumeBean.java" afterPath="$PROJECT_DIR$/src/dbbeans/ResumeBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/company/companyaddjob.jsp" afterPath="$PROJECT_DIR$/web/company/companyaddjob.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/company/companyhome.jsp" afterPath="$PROJECT_DIR$/web/company/companyhome.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/modPage.css" afterPath="$PROJECT_DIR$/web/css/modPage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jobs/jobpost.jsp" afterPath="$PROJECT_DIR$/web/jobs/jobpost.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jobs/jobpostcompany.jsp" afterPath="$PROJECT_DIR$/web/jobs/jobpostcompany.jsp" />
     </list>
     <ignored path="CSI2132.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,41 +32,56 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="CSI2132" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="studentregister.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/student/studentregister.jsp">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="companyreviewresume.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/company/companyreviewresume.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="458">
+              <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jobpostcompany.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jobpostcompany.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/jobs/jobpostcompany.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="144" column="22" selection-start-line="144" selection-start-column="22" selection-end-line="144" selection-end-column="22" />
+            <state relative-caret-position="405">
+              <caret line="162" column="83" selection-start-line="162" selection-start-column="83" selection-end-line="162" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dbbeans/UserBean.java">
+      <file leaf-file-name="AppliedToBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dbbeans/AppliedToBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="128" column="15" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="15" />
-              <folding>
-                <element signature="e#2787#2788#0" expanded="true" />
-                <element signature="e#2831#2832#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="companyaddjob.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/company/companyaddjob.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="87" column="79" selection-start-line="87" selection-start-column="79" selection-end-line="87" selection-end-column="79" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,49 +89,19 @@
       <file leaf-file-name="mod.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/student/mod.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+            <state relative-caret-position="465">
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="79" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modPage.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/modPage.css">
+      <file leaf-file-name="CompanyAddJobControl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/control/CompanyAddJobControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+            <state relative-caret-position="-52">
+              <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="30" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="companyApplicant.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/companyApplicant.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
-              <folding>
-                <marker date="1490764299000" expanded="true" signature="605:652" ph="SELECT * FRO... suser" />
-                <marker date="1490764299000" expanded="true" signature="1807:1930" ph="SELECT * FRO... suser" />
-                <marker date="1490764299000" expanded="true" signature="2776:2884" ph="SELECT usern... admin" />
-                <marker date="1490764299000" expanded="true" signature="3523:3623" ph="SELECT usern... moderator" />
-                <marker date="1490764299000" expanded="true" signature="4257:4564" ph="UPDATE \&quot;Pro... " />
-                <marker date="1490764299000" expanded="true" signature="4977:5073" ph="SELECT usern... suser" />
-                <marker date="1490764299000" expanded="true" signature="5494:5581" ph="SELECT email... suser" />
-                <marker date="1490764299000" expanded="true" signature="6001:6542" ph="INSERT INTO \&quot;Proj\&quot;.suser... " />
-                <marker date="1490764299000" expanded="true" signature="6923:6951" ph="SELECT usern... suser" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -154,36 +109,45 @@
       <file leaf-file-name="companyhome.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/company/companyhome.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="94" column="26" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+            <state relative-caret-position="165">
+              <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JobBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dbbeans/JobBean.java">
+      <file leaf-file-name="ResumeBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dbbeans/ResumeBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="127" column="30" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+            <state relative-caret-position="533">
+              <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
               <folding>
-                <element signature="e#2593#2594#0" expanded="true" />
-                <element signature="e#2655#2656#0" expanded="true" />
-                <element signature="e#2701#2702#0" expanded="true" />
-                <element signature="e#2740#2741#0" expanded="true" />
+                <element signature="e#1083#1084#0" expanded="true" />
+                <element signature="e#1145#1146#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteJobControl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/control/DeleteJobControl.java">
+      <file leaf-file-name="ResumeDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DAO/ResumeDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+            <state relative-caret-position="465">
+              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1490798300000" expanded="true" signature="563:755" ph="SELECT resum... resume" />
+                <marker date="1490798300000" expanded="true" signature="1667:1867" ph="SELECT resum... resume" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resumereview.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/student/resume/resumereview.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1395">
+              <caret line="93" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,9 +157,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -221,7 +185,6 @@
         <option value="$PROJECT_DIR$/web/student/profile.jsp" />
         <option value="$PROJECT_DIR$/web/student/mod.jsp" />
         <option value="$PROJECT_DIR$/web/student/admin.jsp" />
-        <option value="$PROJECT_DIR$/web/company/companyprofile.jsp" />
         <option value="$PROJECT_DIR$/web/student/resume/resumereview.jsp" />
         <option value="$PROJECT_DIR$/src/control/StudentRegisterControl.java" />
         <option value="$PROJECT_DIR$/web/student/studenthome.jsp" />
@@ -231,15 +194,25 @@
         <option value="$PROJECT_DIR$/web/jobs/jobpost.jsp" />
         <option value="$PROJECT_DIR$/src/dbbeans/AppliedToBean.java" />
         <option value="$PROJECT_DIR$/src/DAO/AppliedToDAO.java" />
-        <option value="$PROJECT_DIR$/src/dbbeans/JobBean.java" />
         <option value="$PROJECT_DIR$/src/control/DeleteJobControl.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/DAO/JobDAO.java" />
         <option value="$PROJECT_DIR$/src/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/web/css/modPage.css" />
         <option value="$PROJECT_DIR$/web/css/companyApplicant.css" />
+        <option value="$PROJECT_DIR$/web/company/companyprofile.jsp" />
+        <option value="$PROJECT_DIR$/src/control/CompanyAddJob.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/dbbeans/JobBean.java" />
+        <option value="$PROJECT_DIR$/src/control/CompanyAddJobControl.java" />
+        <option value="$PROJECT_DIR$/src/DAO/JobDAO.java" />
+        <option value="$PROJECT_DIR$/SQLScripts/tablesStep3.sql" />
+        <option value="$PROJECT_DIR$/web/company/companyaddjob.jsp" />
+        <option value="$PROJECT_DIR$/src/DAO/JobApprovalDAO.java" />
         <option value="$PROJECT_DIR$/web/company/companyhome.jsp" />
+        <option value="$PROJECT_DIR$/src/dbbeans/JobApprovalBean.java" />
+        <option value="$PROJECT_DIR$/src/DAO/ResumeDAO.java" />
+        <option value="$PROJECT_DIR$/src/dbbeans/ResumeBean.java" />
         <option value="$PROJECT_DIR$/web/jobs/jobpostcompany.jsp" />
+        <option value="$PROJECT_DIR$/web/company/companyreviewresume.jsp" />
       </list>
     </option>
   </component>
@@ -286,7 +259,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,6 +327,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSI2132" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSI2132" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resume" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -477,14 +474,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSI2132" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSI2132" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SQLScripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -733,6 +742,7 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -931,6 +941,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1067,6 +1083,7 @@
       <option name="presentableId" value="Default" />
       <updated>1490742928095</updated>
       <workItem from="1490742929480" duration="18606000" />
+      <workItem from="1490765347600" duration="10296000" />
     </task>
     <task id="LOCAL-00001" summary="Changed signout page to redirect to login page.">
       <created>1490745867640</created>
@@ -1089,44 +1106,65 @@
       <option name="project" value="LOCAL" />
       <updated>1490752760189</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Companies can now add jobs and they pend approval.">
+      <created>1490769008348</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1490769008348</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated table creation to modify job approval constraints.">
+      <created>1490796146029</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1490796146029</updated>
+    </task>
+    <task id="LOCAL-00006" summary="When viewing a job posting, shows if it is approved or not.">
+      <created>1490797713677</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1490797713677</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18606000" />
+    <option name="totallyTimeSpent" value="28902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1146,7 +1184,10 @@
     <MESSAGE value="Changed signout page to redirect to login page." />
     <MESSAGE value="Add a banner to all pages. Fixed some minor bugs." />
     <MESSAGE value="Add banner to job post. Made jobpost open in same page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add banner to job post. Made jobpost open in same page." />
+    <MESSAGE value="Companies can now add jobs and they pend approval." />
+    <MESSAGE value="Updated table creation to modify job approval constraints." />
+    <MESSAGE value="When viewing a job posting, shows if it is approved or not." />
+    <option name="LAST_COMMIT_MESSAGE" value="When viewing a job posting, shows if it is approved or not." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1160,6 +1201,63 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/css/companyApplicant.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3375">
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding>
+            <marker date="1490765340000" expanded="true" signature="575:622" ph="SELECT * FRO... suser" />
+            <marker date="1490765340000" expanded="true" signature="1777:1900" ph="SELECT * FRO... suser" />
+            <marker date="1490765340000" expanded="true" signature="2746:2854" ph="SELECT usern... admin" />
+            <marker date="1490765340000" expanded="true" signature="3493:3593" ph="SELECT usern... moderator" />
+            <marker date="1490765340000" expanded="true" signature="4227:4534" ph="UPDATE \&quot;Pro... " />
+            <marker date="1490765340000" expanded="true" signature="4947:5043" ph="SELECT usern... suser" />
+            <marker date="1490765340000" expanded="true" signature="5464:5551" ph="SELECT email... suser" />
+            <marker date="1490765340000" expanded="true" signature="5971:6512" ph="INSERT INTO \&quot;Proj\&quot;.suser... " />
+            <marker date="1490765340000" expanded="true" signature="6894:6922" ph="SELECT * FRO... suser" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/company/companyhome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbbeans/JobBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="127" column="5" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
+          <folding>
+            <element signature="e#2585#2586#0" expanded="true" />
+            <element signature="e#2619#2620#0" expanded="true" />
+            <element signature="e#2816#2817#0" expanded="true" />
+            <element signature="e#2854#2855#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/DeleteJobControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/indexCompany.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1172,7 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,22 +1278,6 @@
         <state relative-caret-position="-480">
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/CompanyDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="145" column="13" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
-          <folding>
-            <marker date="1490742629000" expanded="true" signature="696:797" ph="SELECT cname... company" />
-            <marker date="1490742629000" expanded="true" signature="1435:1534" ph="SELECT SUM(r... company" />
-            <marker date="1490742629000" expanded="true" signature="2108:2241" ph="SELECT ratin... company" />
-            <marker date="1490742629000" expanded="true" signature="3119:3244" ph="SELECT * FRO... company" />
-            <marker date="1490742629000" expanded="true" signature="4105:4197" ph="SELECT cname... company" />
-            <marker date="1490742629000" expanded="true" signature="4616:4984" ph="INSERT INTO \&quot;Proj\&quot;.company... " />
-            <marker date="1490742629000" expanded="true" signature="5317:5711" ph="UPDATE \&quot;Pro... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1212,7 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="110" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1242,22 +1322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/company/companyprofile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/control/StudentRegisterControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1265,14 +1329,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student/resume/resumereview.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1300,21 +1356,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/AppliedToDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding>
-            <marker date="1490760109000" expanded="true" signature="759:870" ph="SELECT * FRO... APPLIES_TO" />
-            <marker date="1490760109000" expanded="true" signature="1780:1874" ph="INSERT INTO \&quot;Proj\&quot;.APPLIES_TO... " />
-            <marker date="1490760109000" expanded="true" signature="2320:2333" ph="SELECT * FRO... " />
-            <marker date="1490760109000" expanded="true" signature="2320:2369" ph="SELECT * FRO... applies_to" />
-            <marker date="1490760109000" expanded="true" signature="2320:2396" ph="SELECT * FRO... applies_to" />
-            <marker date="1490760109000" expanded="true" signature="2320:2406" ph="SELECT * FRO... applies_to" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/jobs/jobpost.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
@@ -1331,59 +1372,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/CompanyRegisterControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/CompanyLoginControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbbeans/AppliedToBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/control/ApplyToJobControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="22" column="118" selection-start-line="22" selection-start-column="118" selection-end-line="22" selection-end-column="118" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/JobDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
-          <folding>
-            <marker date="1490762548000" expanded="true" signature="692:889" ph="SELECT jobid... JOB" />
-            <marker date="1490762548000" expanded="true" signature="1741:1997" ph="SELECT jobid... JOB" />
-            <marker date="1490762548000" expanded="true" signature="3172:3454" ph="SELECT jobid... JOB" />
-            <marker date="1490762548000" expanded="true" signature="4639:4878" ph="SELECT jobid... JOB" />
-            <marker date="1490762548000" expanded="true" signature="4639:4912" ph="SELECT jobid... JOB" />
-            <marker date="1490762548000" expanded="true" signature="4639:4913" ph="SELECT jobid... JOB" />
-            <marker date="1490762548000" expanded="true" signature="6047:6086" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1397,68 +1390,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbbeans/JobBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="127" column="30" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
-          <folding>
-            <element signature="e#2593#2594#0" expanded="true" />
-            <element signature="e#2655#2656#0" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-            <element signature="e#2740#2741#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
-          <folding>
-            <marker date="1490764299000" expanded="true" signature="605:652" ph="SELECT * FRO... suser" />
-            <marker date="1490764299000" expanded="true" signature="1807:1930" ph="SELECT * FRO... suser" />
-            <marker date="1490764299000" expanded="true" signature="2776:2884" ph="SELECT usern... admin" />
-            <marker date="1490764299000" expanded="true" signature="3523:3623" ph="SELECT usern... moderator" />
-            <marker date="1490764299000" expanded="true" signature="4257:4564" ph="UPDATE \&quot;Pro... " />
-            <marker date="1490764299000" expanded="true" signature="4977:5073" ph="SELECT usern... suser" />
-            <marker date="1490764299000" expanded="true" signature="5494:5581" ph="SELECT email... suser" />
-            <marker date="1490764299000" expanded="true" signature="6001:6542" ph="INSERT INTO \&quot;Proj\&quot;.suser... " />
-            <marker date="1490764299000" expanded="true" signature="6923:6951" ph="SELECT usern... suser" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dbbeans/UserBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="128" column="15" selection-start-line="128" selection-start-column="15" selection-end-line="128" selection-end-column="15" />
-          <folding>
-            <element signature="e#2787#2788#0" expanded="true" />
-            <element signature="e#2831#2832#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1200">
+          <caret line="128" column="5" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/student/studentregister.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student/mod.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/modPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1471,18 +1414,279 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/company/companyprofile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="46" column="71" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/CompanyLoginControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/CompanyDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-463">
+          <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+          <folding>
+            <marker date="1490742629000" expanded="true" signature="696:797" ph="SELECT cname... company" />
+            <marker date="1490742629000" expanded="true" signature="1435:1534" ph="SELECT SUM(r... company" />
+            <marker date="1490742629000" expanded="true" signature="2108:2241" ph="SELECT ratin... company" />
+            <marker date="1490742629000" expanded="true" signature="3119:3244" ph="SELECT * FRO... company" />
+            <marker date="1490742629000" expanded="true" signature="4105:4197" ph="SELECT cname... company" />
+            <marker date="1490742629000" expanded="true" signature="4616:4984" ph="INSERT INTO \&quot;Proj\&quot;.company... " />
+            <marker date="1490742629000" expanded="true" signature="5317:5711" ph="UPDATE \&quot;Pro... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding>
+            <marker date="1490765340000" expanded="true" signature="575:622" ph="SELECT * FRO... suser" />
+            <marker date="1490765340000" expanded="true" signature="1777:1900" ph="SELECT * FRO... suser" />
+            <marker date="1490765340000" expanded="true" signature="2746:2854" ph="SELECT usern... admin" />
+            <marker date="1490765340000" expanded="true" signature="3493:3593" ph="SELECT usern... moderator" />
+            <marker date="1490765340000" expanded="true" signature="4227:4534" ph="UPDATE \&quot;Pro... " />
+            <marker date="1490765340000" expanded="true" signature="4947:5043" ph="SELECT usern... suser" />
+            <marker date="1490765340000" expanded="true" signature="5464:5551" ph="SELECT email... suser" />
+            <marker date="1490765340000" expanded="true" signature="5971:6512" ph="INSERT INTO \&quot;Proj\&quot;.suser... " />
+            <marker date="1490765340000" expanded="true" signature="6894:6922" ph="SELECT * FRO... suser" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="85" column="30" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbbeans/JobBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="137" column="11" selection-start-line="137" selection-start-column="11" selection-end-line="137" selection-end-column="11" />
+          <folding>
+            <element signature="e#2585#2586#0" expanded="true" />
+            <element signature="e#2619#2620#0" expanded="true" />
+            <element signature="e#2816#2817#0" expanded="true" />
+            <element signature="e#2854#2855#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/CompanyUpdateControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="76" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/CompanyRegisterControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-202">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLScripts/selectScripts.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLScripts/tablesStep3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLScripts/valuesStep3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/JobDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="150" column="46" selection-start-line="150" selection-start-column="46" selection-end-line="150" selection-end-column="46" />
+          <folding>
+            <marker date="1490795797000" expanded="true" signature="692:889" ph="SELECT jobid... JOB" />
+            <marker date="1490795797000" expanded="true" signature="1741:1997" ph="SELECT jobid... JOB" />
+            <marker date="1490795797000" expanded="true" signature="3172:3454" ph="SELECT jobid... JOB" />
+            <marker date="1490795797000" expanded="true" signature="4639:4913" ph="SELECT jobid... JOB" />
+            <marker date="1490795797000" expanded="true" signature="6049:6088" ph="DELETE FROM " />
+            <marker date="1490795797000" expanded="true" signature="6049:6101" ph="DELETE FROM " />
+            <marker date="1490795797000" expanded="true" signature="6425:6983" ph="INSERT INTO \&quot;Proj\&quot;.job... " />
+            <marker date="1490795797000" expanded="true" signature="7022:7114" ph="SELECT jobid... job" />
+            <marker date="1490795797000" expanded="true" signature="7212:7306" ph="INSERT INTO \&quot;Proj\&quot;.job_approval... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbbeans/AppliedToBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/AppliedToDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1490765340000" expanded="true" signature="617:728" ph="SELECT * FRO... APPLIES_TO" />
+            <marker date="1490765340000" expanded="true" signature="1641:1735" ph="INSERT INTO \&quot;Proj\&quot;.APPLIES_TO... " />
+            <marker date="1490765340000" expanded="true" signature="2183:2277" ph="SELECT * FRO... applies_to" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/control/CompanyAddJobControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/company/companyhome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="94" column="26" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+        <state relative-caret-position="165">
+          <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student/resume/resumereview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="93" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/JobApprovalDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1490797713000" expanded="true" signature="625:651" ph="SELECT appro... " />
+            <marker date="1490797713000" expanded="true" signature="625:652" ph="SELECT appro... " />
+            <marker date="1490797713000" expanded="true" signature="625:655" ph="SELECT appro... \&quot;Proj\&quot;." />
+            <marker date="1490797713000" expanded="true" signature="625:681" ph="SELECT appro... job_approval" />
+            <marker date="1490797713000" expanded="true" signature="625:682" ph="SELECT appro... job_approval" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbbeans/JobApprovalBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+          <folding>
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/modPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/ResumeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+          <folding>
+            <marker date="1490798300000" expanded="true" signature="563:755" ph="SELECT resum... resume" />
+            <marker date="1490798300000" expanded="true" signature="1667:1867" ph="SELECT resum... resume" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student/mod.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="79" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbbeans/ResumeBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+          <folding>
+            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/company/companyaddjob.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="87" column="79" selection-start-line="87" selection-start-column="79" selection-end-line="87" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/jobs/jobpostcompany.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="144" column="22" selection-start-line="144" selection-start-column="22" selection-end-line="144" selection-end-column="22" />
+        <state relative-caret-position="405">
+          <caret line="162" column="83" selection-start-line="162" selection-start-column="83" selection-end-line="162" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/company/companyreviewresume.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
           <folding />
         </state>
       </provider>

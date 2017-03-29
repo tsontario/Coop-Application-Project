@@ -85,7 +85,7 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Rate of Pay:</label>
                     <div class="col-md-8">
-                        <input name="rateOfPay" class="form-control" type="number" placeholder="15.5"
+                        <input name="rateOfPay" class="form-control" type="text" placeholder="15.5"
                                value="">
                     </div>
                 </div>

@@ -17,6 +17,14 @@ public class ResumeBean implements Serializable {
 
     }
 
+    public static ResumeBean getResumeById(int id) {
+        return ResumeDAO.getResumeById(id);
+    }
+
+    public static ResumeBean getResumeByUsername(String username) {
+        return ResumeDAO.getResumeByUsername(username);
+    }
+
     public int getResumeId() {
         return resumeId;
     }
@@ -47,9 +55,5 @@ public class ResumeBean implements Serializable {
 
     public void setResume(String resume) {
         this.resume = resume;
-    }
-
-    public static ResumeBean getResumeById(int id) {
-        return ResumeDAO.getResumeById(id);
     }
 }

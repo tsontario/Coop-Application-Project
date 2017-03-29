@@ -58,7 +58,6 @@
         <servlet-name>CompanyRegisterControl</servlet-name>
         <url-pattern>/CompanyRegisterControl</url-pattern>
     </servlet-mapping>
-
     <servlet>
         <servlet-name>CompanyUpdateControl</servlet-name>
         <servlet-class>control.CompanyUpdateControl</servlet-class>

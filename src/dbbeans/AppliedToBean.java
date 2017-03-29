@@ -19,10 +19,11 @@ public class AppliedToBean {
         AppliedToDAO.applyToJob(userid, jobid);
     }
 
+    public static void unApplyToJob(String userid, int jobid){ AppliedToDAO.unApplyToJob(userid,jobid);}
+
     public static AppliedToBean getStudentInfo(String username, int jobid) {
         return AppliedToDAO.getStudentInfo(username, jobid);
     }
-
     public int getJobid() {
         return jobid;
     }

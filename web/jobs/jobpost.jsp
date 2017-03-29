@@ -10,6 +10,7 @@
 <%@ page import="dbbeans.JobBean" %>
 <%@ page import="dbbeans.UserBean" %>
 <%
+    JobBean job = new JobBean();
     UserBean user = (UserBean) request.getSession().getAttribute("currentUser");
     if(user == null){
         response.sendRedirect("../index.jsp");
@@ -17,8 +18,9 @@
     String jobid = request.getParameter("jobid");
     if(jobid == null) {
         response.sendRedirect("searchjobs.jsp");
+    } else {
+        job = JobBean.getJobByID(Integer.parseInt(jobid));
     }
-    JobBean job = JobBean.getJobByID(Integer.parseInt(jobid));
 
 
 
@@ -45,8 +47,8 @@
             <a href="../student/studenthome.jsp">Home</a>
             <a href="../student/profile.jsp">Profile</a>
             <a href="#">Resume</a>
-            <a href="../jobs/searchjobs.jsp">Jobs</a>
-            <a href="#">Write Review</a>
+            <a href="../jobs/searchjobs.jsp" class="selected">Jobs</a>
+            <a href="../reviews/reviewlist.jsp">Write Review</a>
             <% if (user != null) {
                 if (user.isAdmin(user.getUsername())) { %>
             <a href="../student/admin.jsp">Admin Panel</a>
@@ -101,7 +103,7 @@
            </div>
             <div class="row" style="padding-top: 30px; padding-bottom: 20px">
                 <div class="col">
-                    <% if (AppliedToBean.isAppliedTo(user.getUsername(), Integer.parseInt(jobid)) == false) {%>
+                <% if(AppliedToBean.isAppliedTo(user.getUsername(),Integer.parseInt(jobid)) == false){%>
                     <%=
                         "<form id=\"applyToCompany\" action=\"../ApplyToJobControl\" method=\"POST\">" +
                             "<input type=\"text\" id=\"jobIDInput\" hidden=\"hidden\" name=\"jobIDInput\" value=\"" + job.getJobId() + "\">" +
@@ -111,15 +113,18 @@
                     %>
                 <% } else { %>
                     <%=
-                        "<button type=\"button\" disabled class=\"btn btn-primary\">Applied To Job Already</button>"
+                        "<form id=\"unApplyToCompany\" action=\"../UnApplyToJobControl\" method=\"POST\">" +
+                            "<input type=\"text\" id=\"jobIDInput2\" hidden=\"hidden\" name=\"jobIDInput2\" value=\"" + job.getJobId() + "\">" +
+                            "<input type=\"text\" id=\"userIDInput2\" hidden=\"hidden\" name=\"userIDInput2\" value=\"" + user.getUsername() + "\">" +
+                            "<button type=\"submit\" class=\"btn btn-danger\">Unapply To Job</button>" +
+                        "</form>"
                     %>
                 <% } %>
                 </div>
             </div>
         </div>
-
         <div class="col-2"></div>
     </div>
-    <%=job.getJobId()%>
+    <hr>
 </body>
 </html>

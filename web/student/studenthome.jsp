@@ -40,10 +40,10 @@
             <a href="../jobs/searchjobs.jsp">Jobs</a>
             <a href="../reviews/reviewlist.jsp">Write Review</a>
             <% if (user != null) {
-                if (user.isAdmin(user.getUsername())) { %>
+                if (UserBean.isAdmin(user.getUsername())) { %>
             <a href="admin.jsp">Admin Panel</a>
             <% } %>
-            <% if (user.isModerator(user.getUsername())) { %>
+            <% if (UserBean.isModerator(user.getUsername())) { %>
             <a href="mod.jsp">Moderator Panel</a>
             <% }
             }%>

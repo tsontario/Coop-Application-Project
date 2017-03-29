@@ -1,0 +1,1 @@
+-- Can not delete admin or mod if there is only 1 left

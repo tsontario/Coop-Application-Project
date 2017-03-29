@@ -3,10 +3,7 @@ package DAO;
 import connection.DataAccess;
 import dbbeans.JobBean;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 /**
@@ -180,5 +177,35 @@ public class JobDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<JobBean> getJobsByCompany(int companyId) {
+        DataAccess.openConnection();
+        ArrayList<JobBean> jobList = new ArrayList<>();
+
+        try {
+            connection = DataAccess.getConnection();
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT * FROM \"Proj\".job where companyid = " + companyId);
+            while (rs.next()) {
+                JobBean job = new JobBean();
+                job.setJobName(rs.getString("jobname"));
+                job.setJobId(rs.getInt("jobid"));
+                job.setJobLevel(rs.getInt("joblevel"));
+                job.setRateOfPay(rs.getDouble("rateofpay"));
+                job.setCompanyId(rs.getString("companyid"));
+                job.setNumPositions(rs.getInt("numpositions"));
+                job.setClosingDate(rs.getDate("closingdate").toString());
+                job.setPostingDate(rs.getDate("postingdate").toString());
+                job.setCName(rs.getString("description"));
+                jobList.add(job);
+            }
+            rs.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return jobList;
     }
 }

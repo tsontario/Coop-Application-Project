@@ -138,4 +138,8 @@ public class JobBean implements Serializable {
         JobDAO.addJob(jobBean);
 
     }
+
+    public static ArrayList<JobBean> getJobsByCompany(int companyId) {
+        return JobDAO.getJobsByCompany(companyId);
+    }
 }

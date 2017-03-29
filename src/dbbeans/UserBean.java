@@ -111,11 +111,11 @@ public class UserBean implements Serializable {
         return UserDAO.login(userBean);
     }
 
-    public boolean isAdmin(String username) {
+    public static boolean isAdmin(String username) {
         return UserDAO.isAdmin(username);
     }
 
-    public boolean isModerator(String username) {
+    public static boolean isModerator(String username) {
         return UserDAO.isModerator(username);
     }
 
@@ -126,5 +126,26 @@ public class UserBean implements Serializable {
 
     public void insertIntoDB() {
         UserDAO.insertIntoDB(this);
+    }
+
+    public static void executeAction(String action, String id) {
+        if (action == null) {
+            return;
+        }
+        else if (action.equals("makeadmin")) {
+            UserDAO.makeAdminById(id);
+        }
+        else if (action.equals("makemoderator")) {
+            UserDAO.makeModeratorById(id);
+        }
+        else if (action.equals("delete")) {
+            UserDAO.deleteUserById(id);
+        }
+        else if (action.equals("removemoderator")) {
+            UserDAO.deleteModeratorById(id);
+        }
+        else if (action.equals("removeadmin")) {
+            UserDAO.deleteAdminById(id);
+        }
     }
 }

@@ -3,6 +3,7 @@ package DAO;
 import connection.DataAccess;
 import dbbeans.UserBean;
 
+import javax.xml.crypto.Data;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -13,6 +14,7 @@ public class UserDAO {
 
     static private Connection connection;
     static private Statement st;
+    static private PreparedStatement pst;
     static private ResultSet rs;
 
 
@@ -228,5 +230,103 @@ public class UserDAO {
         }
 
         return users;
+    }
+
+    public static void deleteUserById(String id) {
+
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            pst = connection.prepareStatement("DELETE FROM \"Proj\".suser WHERE username = ?;");
+            pst.setString(1, id);
+            System.out.println(pst.toString());
+
+            rs = pst.executeQuery();
+
+
+            connection.close();
+            DataAccess.closeConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void makeModeratorById(String id) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            pst = connection.prepareStatement("INSERT INTO \"Proj\".moderator SELECT username FROM \"Proj\".suser WHERE " +
+                    "username = ?");
+
+            pst.setString(1, id);
+            pst.executeUpdate();
+
+            connection.close();
+            DataAccess.closeConnection();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void makeAdminById(String id) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            pst = connection.prepareStatement("INSERT INTO \"Proj\".admin SELECT username FROM \"Proj\".suser WHERE " +
+                    "username = ?");
+
+            pst.setString(1, id);
+            pst.executeUpdate();
+
+            connection.close();
+            DataAccess.closeConnection();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteAdminById(String id) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            pst = connection.prepareStatement("DELETE FROM \"Proj\".admin WHERE username = ? RETURNING username");
+            pst.setString(1, id);
+
+            rs = pst.executeQuery();
+            if (rs.next()) {
+                System.out.println("Deleted " + rs.getString("username"));
+            }
+
+            connection.close();
+            DataAccess.closeConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteModeratorById(String id) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            pst = connection.prepareStatement("DELETE FROM \"Proj\".moderator WHERE username = ? RETURNING username");
+            pst.setString(1, id);
+
+            rs = pst.executeQuery();
+            if (rs.next()) {
+                System.out.println("Deleted " + rs.getString("username"));
+            }
+
+            connection.close();
+            DataAccess.closeConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

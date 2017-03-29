@@ -101,7 +101,7 @@
            </div>
             <div class="row" style="padding-top: 30px; padding-bottom: 20px">
                 <div class="col">
-                <% if(AppliedToBean.isAppliedTo(user.getUsername(),jobid) == false){%>
+                    <% if (AppliedToBean.isAppliedTo(user.getUsername(), Integer.parseInt(jobid)) == false) {%>
                     <%=
                         "<form id=\"applyToCompany\" action=\"../ApplyToJobControl\" method=\"POST\">" +
                             "<input type=\"text\" id=\"jobIDInput\" hidden=\"hidden\" name=\"jobIDInput\" value=\"" + job.getJobId() + "\">" +

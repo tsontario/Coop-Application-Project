@@ -1,7 +1,7 @@
-<%@ page import="dbbeans.JobBean" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="dbbeans.CompanyBean" %>
+<%@ page import="dbbeans.JobBean" %>
 <%@ page import="dbbeans.UserBean" %>
+<%@ page import="java.util.ArrayList" %>
 <%--
   Created by IntelliJ IDEA.
   User: timothysmith
@@ -22,8 +22,38 @@
 <head>
     <title>Welcome</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<!-- HEADER CODE - DO NOT REMOVE -->
+<header class="header-basic">
+
+    <div class="header-limiter">
+
+        <h1><a href="#">COOP<span>Database</span></a></h1>
+
+        <nav>
+            <a href="studenthome.jsp" class="selected">Home</a>
+            <a href="profile.jsp">Profile</a>
+            <a href="#">Resume</a>
+            <a href="../jobs/searchjobs.jsp">Jobs</a>
+            <a href="#">Write Review</a>
+            <% if (user != null) {
+                if (user.isAdmin(user.getUsername())) { %>
+            <a href="admin.jsp">Admin Panel</a>
+            <% } %>
+            <% if (user.isModerator(user.getUsername())) { %>
+            <a href="mod.jsp">Moderator Panel</a>
+            <% }
+            }%>
+            <a href="../session/goodbye.jsp">Logout</a>
+        </nav>
+    </div>
+
+</header>
+<!-- HEADER CODE - DO NOT REMOVE -->
+
 
     <p>Hello ${currentUser.getfName()}, welcome to your home page!</p>
 
@@ -72,21 +102,6 @@
     </table>
     <br />
     <hr />
-    <nr />
-    <h2>Select an option: </h2>
 
-    <% if (user != null) {
-            if (user.isAdmin(user.getUsername())) { %>
-            <a href="admin.jsp"><button>Admin Panel</button></a>
-        <% } %>
-        <% if (user.isModerator(user.getUsername())) { %>
-            <a href="mod.jsp"><button>Moderator Panel</button></a>
-        <% }
-    }%>
-        <a href="profile.jsp"><button>Edit Profile</button></a>
-        <a href="#"><button>My Resume</button></a>
-        <a href="../jobs/searchjobs.jsp"><button>Browse Jobs</button></a>
-        <a href="#"><button>Write a Review</button></a>
-        <a href="../session/goodbye.jsp"><button>Logout</button></a>
 </body>
 </html>

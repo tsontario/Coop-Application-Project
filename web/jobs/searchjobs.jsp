@@ -23,6 +23,7 @@
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.css">
 <link rel="stylesheet" type="text/css" href="../css/joblist.css">
+<link rel="stylesheet" type="text/css" href="../css/jobpost.css">
 <link rel="stylesheet" href="../css/header.css">
 <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 <head>
@@ -41,7 +42,7 @@
             <a href="../student/profile.jsp">Profile</a>
             <a href="#">Resume</a>
             <a href="../jobs/searchjobs.jsp" class="selected">Jobs</a>
-            <a href="#">Write Review</a>
+            <a href="../reviews/reviewlist.jsp">Write Review</a>
             <% if (user != null) {
                 if (user.isAdmin(user.getUsername())) { %>
             <a href="../student/admin.jsp">Admin Panel</a>
@@ -56,13 +57,12 @@
 
 </header>
 <!-- HEADER CODE - DO NOT REMOVE -->
-<div class="row" style="padding-top: 40px">
-<div class="col-3"></div>
 
-    <div class="col-8">
+    <div class="col-10"  style="padding-top: 40px">
         <h2>Job Postings</h2>
         <hr class="w-100">
         <% for (JobBean job : jobList) { %>
+        <% if(user.getLevel() == job.getJobLevel()){%>
         <a href="#">
             <div class="card w-100">
                 <div class="card-block job-post">
@@ -78,6 +78,9 @@
                             <p class="card-text "><%=job.getNumPositions()%> position(s)</p>
                         </div>
                         <div class="col">
+                            <p class="card-text ">Job Level: <%=job.getJobLevel()%></p>
+                        </div>
+                        <div class="col">
                             <p class="card-text ">Rate of pay: $<%=job.getRateOfPay()%></p>
                         </div>
                         <div class="col">
@@ -88,9 +91,10 @@
             </div>
         </a>
         <% } %>
+        <% } %>
     </div>
 
-</div>
+<hr>
 </body>
 
 </html>

@@ -117,7 +117,7 @@ public class JobBean implements Serializable {
         return JobDAO.listTopFiveJobs();
     }
     public static ArrayList<JobBean> getAllJobs(){
-        return JobDAO.getAllJobListings();
+        return JobDAO.getAllValidJobListing();
     }
     public static JobBean getJobByID(int id) {return JobDAO.getJobByID(id);}
 }

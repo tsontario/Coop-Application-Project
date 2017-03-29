@@ -52,9 +52,9 @@ public class CompanyDAO {
 
         try {
             st = connection.createStatement();
-            rs = st.executeQuery("SELECT SUM(rating), COUNT(rating) " +
-                    "FROM \"Proj\".company WHERE companyid = "
-                    + id + ";");
+            rs = st.executeQuery("SELECT SUM(companyrating), COUNT(companyrating) " +
+                    "FROM \"Proj\".COMPANY_REVIEW WHERE companyid = '"
+                    + id + "';");
             if (rs.next()) {
                 averageRating = rs.getDouble(1) / rs.getDouble(2);
             }
@@ -63,6 +63,26 @@ public class CompanyDAO {
             e.printStackTrace();
         }
         return averageRating;
+    }
+
+    public static int numReviews(int id) {
+        int rating = 0;
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT COUNT(companyrating) " +
+                    "FROM \"Proj\".COMPANY_REVIEW WHERE companyid = '"
+                    + id + "';");
+            if (rs.next()) {
+                rating = rs.getInt(1);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return rating;
     }
 
     public static ArrayList<CompanyBean> listTopFiveCompanies() {

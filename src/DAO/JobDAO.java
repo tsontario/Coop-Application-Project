@@ -47,16 +47,18 @@ public class JobDAO {
         return jobList;
     }
 
-    public static ArrayList<JobBean> getAllJobListings() {
+    public static ArrayList<JobBean> getAllValidJobListing() {
         ArrayList<JobBean> jobList = new ArrayList<>();
         db.openConnection();
         connection = db.getConnection();
 
         try {
             st = connection.createStatement();
-            rs = st.executeQuery("SELECT  jobid, jobname, joblevel, rateofpay, job.companyid, " +
+            rs = st.executeQuery("SELECT  job.jobid, jobname, joblevel, rateofpay, job.companyid, " +
                             "numpositions, closingdate, postingdate, cname, location " +
-                    "FROM \"Proj\".JOB INNER JOIN \"Proj\".COMPANY ON job.companyid = company.companyid");
+                    "FROM \"Proj\".JOB INNER JOIN \"Proj\".COMPANY ON job.companyid = company.companyid " +
+                    "INNER JOIN \"Proj\".JOB_APPROVAL ON job.jobid = job_approval.jobid " +
+                    "WHERE job.closingdate > CURRENT_DATE;");
             while (rs.next()) {
                 JobBean job = new JobBean();
                 job.setJobName(rs.getString("jobname"));

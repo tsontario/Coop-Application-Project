@@ -85,4 +85,12 @@
         <servlet-name>CompanyAddJobControl</servlet-name>
         <url-pattern>/company/CompanyAddJobControl</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>UnApplyToJobControl</servlet-name>
+        <servlet-class>control.UnApplyToJobControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UnApplyToJobControl</servlet-name>
+        <url-pattern>/UnApplyToJobControl</url-pattern>
+    </servlet-mapping>
 </web-app>

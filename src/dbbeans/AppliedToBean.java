@@ -22,7 +22,6 @@ public class AppliedToBean {
     public static AppliedToBean getStudentInfo(String username, int jobid) {
         return AppliedToDAO.getStudentInfo(username, jobid);
     }
-
     public int getJobid() {
         return jobid;
     }

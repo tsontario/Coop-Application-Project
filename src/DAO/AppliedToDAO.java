@@ -15,7 +15,7 @@ public class AppliedToDAO {
     static Statement st;
     static ResultSet rs;
 
-    public static boolean checkIfUserApplied(String userid, int jobid) {
+    public static boolean checkIfUserApplied(String userid, int jobid){
 
         db.openConnection();
         connection = db.getConnection();
@@ -35,6 +35,7 @@ public class AppliedToDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         if (appliedTo.getJobid() == 0 || appliedTo.getUserid() == null) {
             return false;
         } else {
@@ -43,9 +44,9 @@ public class AppliedToDAO {
     }
 
 
+
     public static void applyToJob(String userid, int jobid) {
         java.sql.Date timeNow = new Date(Calendar.getInstance().getTimeInMillis());
-        System.out.println(userid);
         db.openConnection();
         connection = db.getConnection();
         try {
@@ -59,6 +60,20 @@ public class AppliedToDAO {
 
     }
 
+    public static void unApplyToJob(String userid, int jobid){
+        db.openConnection();
+        connection = db.getConnection();
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("DELETE FROM \"Proj\".APPLIES_TO WHERE userid='" + userid + "' AND jobid="+ jobid + ";");
+            st.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+  
     public static AppliedToBean getStudentInfo(String username, int jobid) {
         AppliedToBean appliedToBean = new AppliedToBean();
         db.openConnection();
@@ -77,7 +92,7 @@ public class AppliedToDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+      
         return appliedToBean;
     }
 }

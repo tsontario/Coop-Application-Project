@@ -135,7 +135,15 @@ public class JobBean implements Serializable {
         this.location = location;
     }
 
+
+    public static ArrayList<JobBean> listTopFiveJobs() {
+        return JobDAO.listTopFiveJobs();
+    }
+    public static ArrayList<JobBean> getAllJobs(){
+        return JobDAO.getAllValidJobListing();
+
     public void jobAdd(JobBean jobBean) {
         JobDAO.addJob(jobBean);
+
     }
 }

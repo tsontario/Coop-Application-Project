@@ -39,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>StudentRegisterControl</servlet-name>
         <url-pattern>/StudentRegisterControl</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ApplyToJobControl</servlet-name>
+        <servlet-class>control.ApplyToJobControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApplyToJobControl</servlet-name>
+        <url-pattern>/ApplyToJobControl</url-pattern>
     </servlet-mapping>
 </web-app>

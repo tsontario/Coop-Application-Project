@@ -119,4 +119,5 @@ public class JobBean implements Serializable {
     public static ArrayList<JobBean> getAllJobs(){
         return JobDAO.getAllJobListings();
     }
+    public static JobBean getJobByID(int id) {return JobDAO.getJobByID(id);}
 }

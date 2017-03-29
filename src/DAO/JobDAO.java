@@ -79,4 +79,34 @@ public class JobDAO {
         }
         return jobList;
     }
+
+    public static JobBean getJobByID(int id){
+        JobBean job = new JobBean();
+        db.openConnection();
+        connection = db.getConnection();
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT  jobid, jobname, joblevel, rateofpay, job.companyid, " +
+                    "numpositions, closingdate, postingdate, cname, location, job.description " +
+                    "FROM \"Proj\".JOB INNER JOIN \"Proj\".COMPANY ON job.companyid = company.companyid WHERE job.jobid=" + id);
+            rs.next();
+                job.setJobName(rs.getString("jobname"));
+                job.setJobId(rs.getInt("jobid"));
+                job.setJobLevel(rs.getInt("joblevel"));
+                job.setRateOfPay(rs.getDouble("rateofpay"));
+                job.setCompanyId(rs.getString("companyid"));
+                job.setNumPositions(rs.getInt("numpositions"));
+                job.setClosingDate(rs.getDate("closingdate").toString());
+                job.setPostingDate(rs.getDate("postingdate").toString());
+                job.setCName(rs.getString("cname"));
+                job.setLocation(rs.getString("location"));
+                job.setDescription(rs.getString("description"));
+            rs.close();
+            st.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return job;
+    }
 }

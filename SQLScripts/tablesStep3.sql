@@ -64,7 +64,7 @@ CREATE TABLE Job(
 	ClosingDate DATE,
 	PostingDate DATE,
 	Primary Key (JobID),
-	Foreign Key (CompanyId) REFERENCES Company(CompanyId) ON DELETE RESTRICT ON UPDATE CASCADE
+	Foreign Key (CompanyId) REFERENCES Company(CompanyId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Job_Approval(

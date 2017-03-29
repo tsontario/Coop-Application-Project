@@ -15,7 +15,9 @@
     ArrayList<CompanyBean> companyList = CompanyBean.listTopFiveCompanies();
     CompanyBean companyBean = new CompanyBean();
     UserBean user = (UserBean) request.getSession().getAttribute("currentUser");
-    if (user == null) {response.sendRedirect("sessionended.jsp"); }
+    if (user == null) {
+        response.sendRedirect("sessionended.jsp");
+    }
 %>
 
 <html>
@@ -26,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.css">
     <link rel="stylesheet" type="text/css" href="../css/joblist.css">
+    <link rel="stylesheet" type="text/css" href="../css/homePageList.css">
     <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -57,68 +60,44 @@
 </header>
 <!-- HEADER CODE - DO NOT REMOVE -->
 
+<br/>
+<hr/>
+<br/>
 
-    <p>Hello ${currentUser.getfName()}, welcome to your home page!</p>
-
-    <br />
-
-    <h2>Top Jobs</h2>
-    <table id="top5_jobs">
-        <tr>
-            <th>Job Title</th>
-            <th>Job Level</th>
-            <th>Company</th>
-            <th>Salary</th>
-        </tr>
-        <% for (JobBean job : jobList) { %>
-            <%=
-                "<tr>" +
-                    "<td>" + job.getJobName() + "</td>" +
-                    "<td>" + job.getJobLevel() + "</td>" +
-                    "<td>" + companyBean.getCompanyById(job.getCompanyId()).getcName() + "</td>" +
-                    "<td>" + job.getRateOfPay() + "</td>" +
-                "</tr>"
-            %>
-        <% } %>
-    </table>
-
-    <br />
-    <hr />
-    <br />
-
-    <h2>Top Companies</h2>
-    <table id="top5_companies">
-        <tr>
-            <th>Company</th>
-            <th>Location</th>
-            <th>Average Rating</th>
-        </tr>
-        <% for (CompanyBean company : companyList) { %>
-            <%=
-                "<tr>" +
-                    "<td>" + company.getcName() + "</td>" +
-                    "<td>" + company.getLocation() + "</td>" +
-                    "<td>" + company.getAverageRating(company.getCompanyId()) + "</td>" +
-                "</tr>"
-            %>
-        <% } %>
-    </table>
-    <br />
-    <hr />
+<h2>Top Companies</h2>
+<table id="top5_companies">
+    <tr>
+        <th>Company</th>
+        <th>Location</th>
+        <th>Average Rating</th>
+    </tr>
+    <% for (CompanyBean company : companyList) { %>
+    <%=
+    "<tr>" +
+            "<td>" + company.getcName() + "</td>" +
+            "<td>" + company.getLocation() + "</td>" +
+            "<td>" + company.getAverageRating(company.getCompanyId()) + "</td>" +
+            "</tr>"
+    %>
+    <% } %>
+</table>
+<br/>
+<hr/>
 
 
-<div class="container">
+
     <div class="row" style="padding-top: 40px">
-        <div class="col-lg-11">
-            <div class="alert alert-info alert-dismissable">
-                <a class="panel-close close" data-dismiss="alert"></a>
-                <i class="fa fa-coffee"></i>
-                Welcome to your dashboard, ${currentUser.getfName()}.
-                Here you will see the top 5 job postings and the top 5 companies!
-            </div>
+        <div class="alert alert-info alert-dismissable " style="text-align: center;margin-left: 20em">
+            <a class="panel-close close" data-dismiss="alert"></a>
+            <i class="fa fa-coffee"></i>
+            Welcome to your dashboard, ${currentUser.getfName()}.
+            Here you will see the top 5 job postings and the top 5 companies!
+        </div>
+        <div class="col-lg-7" style="margin-left: 50px;">
+
             <h2>Top Jobs</h2>
             <hr class="w-100">
-            <div id="" style="overflow-y: auto; height:500px">
+            <div id="" style="overflow-y: auto; height:400px">
                 <%
                     for (JobBean job : jobList) {
                 %>
@@ -158,6 +137,18 @@
             </div>
             <hr class="w-100">
         </div>
+        <div class="col-lg-3">
+            <div>
+                <h2>Top Companies</h2>
+                <hr class="w-100">
+                <ul>
+                    <% for (CompanyBean company : companyList) { %>
+                    <%=
+                    "<li><a href=\"#\">" + company.getcName() + "</a></li>"
+                    %>
+                    <% } %>
+                </ul>
+            </div>
 
     </div>
 </div>

@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6feed2a1-a650-41de-a312-797205099099" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/UserDAO.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/homePageList.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/JobDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/JobDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAO/JobDAO.java" afterPath="$PROJECT_DIR$/src/DAO/JobDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jobs/jobpost.jsp" afterPath="$PROJECT_DIR$/web/jobs/jobpost.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jobs/jobpostcompany.jsp" afterPath="$PROJECT_DIR$/web/jobs/jobpostcompany.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jobs/searchjobs.jsp" afterPath="$PROJECT_DIR$/web/jobs/searchjobs.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/reviews/reviewlist.jsp" afterPath="$PROJECT_DIR$/web/reviews/reviewlist.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/reviews/viewcompanyreview.jsp" afterPath="$PROJECT_DIR$/web/reviews/viewcompanyreview.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student/admin.jsp" afterPath="$PROJECT_DIR$/web/student/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student/mod.jsp" afterPath="$PROJECT_DIR$/web/student/mod.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student/profile.jsp" afterPath="$PROJECT_DIR$/web/student/profile.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student/resume/resumereview.jsp" afterPath="$PROJECT_DIR$/web/student/resume/resumereview.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQLScripts/tablesStep3.sql" afterPath="$PROJECT_DIR$/SQLScripts/tablesStep3.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student/studenthome.jsp" afterPath="$PROJECT_DIR$/web/student/studenthome.jsp" />
     </list>
     <ignored path="CSI2132.iws" />
@@ -56,26 +48,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="valuesStep3.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLScripts/valuesStep3.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tablesStep3.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SQLScripts/tablesStep3.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="searchjobs.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/jobs/searchjobs.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,8 +71,20 @@
       <file leaf-file-name="studenthome.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/student/studenthome.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="134" column="120" selection-start-line="134" selection-start-column="120" selection-end-line="134" selection-end-column="120" />
+            <state relative-caret-position="518">
+              <caret line="146" column="43" selection-start-line="146" selection-start-column="43" selection-end-line="146" selection-end-column="43" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homePageList.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/css/homePageList.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -109,8 +93,8 @@
       <file leaf-file-name="CompanyBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-135">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="308">
+              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -150,6 +134,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -185,8 +176,10 @@
         <option value="$PROJECT_DIR$/web/jobs/searchjobs.jsp" />
         <option value="$PROJECT_DIR$/web/jobs/jobpostcompany.jsp" />
         <option value="$PROJECT_DIR$/src/DAO/JobDAO.java" />
-        <option value="$PROJECT_DIR$/web/student/studenthome.jsp" />
         <option value="$PROJECT_DIR$/web/jobs/jobpost.jsp" />
+        <option value="$PROJECT_DIR$/SQLScripts/tablesStep3.sql" />
+        <option value="$PROJECT_DIR$/web/student/studenthome.jsp" />
+        <option value="$PROJECT_DIR$/web/css/homePageList.css" />
       </list>
     </option>
   </component>
@@ -376,6 +369,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSI2132" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSI2132" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="company" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -479,6 +490,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.76">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
@@ -1012,6 +1024,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6feed2a1-a650-41de-a312-797205099099" name="Default" comment="" />
@@ -1019,7 +1034,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1490816810392</updated>
-      <workItem from="1490816811793" duration="6602000" />
+      <workItem from="1490816811793" duration="9947000" />
     </task>
     <task id="LOCAL-00001" summary="Added keyword &quot;required&quot; to all fields.">
       <created>1490818010479</created>
@@ -1042,15 +1057,22 @@
       <option name="project" value="LOCAL" />
       <updated>1490820487142</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Change banner, and half of student home page is done.">
+      <created>1490823501649</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1490823501649</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6602000" />
+    <option name="totallyTimeSpent" value="9947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1066,7 +1088,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1098,7 +1120,8 @@
     <MESSAGE value="Added keyword &quot;required&quot; to all fields." />
     <MESSAGE value="Edited small thing in job search." />
     <MESSAGE value="Edited Profile so you can now change your level." />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited Profile so you can now change your level." />
+    <MESSAGE value="Change banner, and half of student home page is done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change banner, and half of student home page is done." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1349,30 +1372,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/company/companyhome.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="26" selection-end-column="69" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbbeans/JobBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="887">
-          <caret line="131" column="31" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
-          <folding>
-            <element signature="e#2625#2626#0" expanded="true" />
-            <element signature="e#2672#2673#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1393,10 +1397,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/student/studenthome.jsp">
+    <entry file="file://$PROJECT_DIR$/SQLScripts/valuesStep3.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="134" column="120" selection-start-line="134" selection-start-column="120" selection-end-line="134" selection-end-column="120" />
+        <state relative-caret-position="422">
+          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLScripts/tablesStep3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1409,18 +1421,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SQLScripts/valuesStep3.sql">
+    <entry file="file://$PROJECT_DIR$/src/dbbeans/CompanyBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+        <state relative-caret-position="308">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SQLScripts/tablesStep3.sql">
+    <entry file="file://$PROJECT_DIR$/src/dbbeans/JobBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+        <state relative-caret-position="887">
+          <caret line="131" column="31" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
+          <folding>
+            <element signature="e#2625#2626#0" expanded="true" />
+            <element signature="e#2672#2673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student/studenthome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="146" column="43" selection-start-line="146" selection-start-column="43" selection-end-line="146" selection-end-column="43" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/homePageList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
           <folding />
         </state>
       </provider>

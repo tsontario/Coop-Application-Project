@@ -25,14 +25,14 @@ INSERT INTO Company(CompanySize, Location, Rating, Cname, Password) VALUES
 	(10000, 'Google', -1, 'Silicon Valley', 'passw0rd')
 ;
 
-INSERT INTO Company_Review VALUES
-	(1, 'tsmit094', 1, 
+INSERT INTO Company_Review (username, companyid, interviewexperience, onthejobexperience, salaryexperience, timestamp, companyrating) VALUES
+	('tsmit094', 1,
 		'Interviews took way too long and I didn''t even know I had the job until my last day of exams. I felt they 
 		could have let me know a bit sooner',
 		'On the job experience was really great. Everyone was helping me to succeed and I felt I could ask as many questions 
 		as I needed to accomplish my work. 10/10 would definitely recomment',
 		'Salary was nothing spectacular but was definitely better than my friends who got jobs through FSWEP for the summer',
-	current_date)
+	current_date, 5)
 ;
 
 INSERT INTO Job(joblevel, jobname, companyid, description, numpositions,rateofpay,closingdate,postingdate) VALUES

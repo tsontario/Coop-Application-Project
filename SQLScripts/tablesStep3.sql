@@ -38,7 +38,7 @@ CREATE TABLE Company(
 );
 
 CREATE TABLE Company_Review(
-	ReviewID INTEGER,
+	ReviewID SERIAL,
 	Username VARCHAR(20),
 	CompanyID INTEGER,
 	InterviewExperience TEXT,

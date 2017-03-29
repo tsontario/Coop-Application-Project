@@ -20,21 +20,30 @@ public class ResumeReviewDAO {
         DataAccess.openConnection();
         connection = DataAccess.getConnection();
 
+        int resumeid = resumeReviewBean.getResumeId();
+        int resumeVersion = resumeReviewBean.getResumeVersion();
+        String moderatorUsername = resumeReviewBean.getModerator().getUsername();
+        String moderatorComments = resumeReviewBean.getComments();
+
         try {
 
             String insertSQL = "INSERT INTO \"Proj\".resume_review (resumeid, resumeversion, moderator, resumecomments)" +
-                    " VALUES (?, ?, ?, ?) RETURNING resumeid";
+                    " VALUES (?, ?, ?, ?) RETURNING reviewid";
             PreparedStatement pst = connection.prepareStatement(insertSQL);
 
-            pst.setInt(1, resumeReviewBean.getResumeId());
-            pst.setInt(2, resumeReviewBean.getResumeVersion());
-            pst.setString(3, resumeReviewBean.getModerator().getUsername());
-            pst.setString(4, resumeReviewBean.getComments());
+            pst.setInt(1, resumeid);
+            pst.setInt(2, resumeVersion);
+            pst.setString(3, moderatorUsername);
+            pst.setString(4, moderatorComments);
 
-            int reviewId = pst.executeUpdate();
-
-            resumeReviewBean.setReviewId(reviewId);
-            System.out.println(resumeReviewBean);
+            rs = pst.executeQuery();
+            if (rs.next()) {
+                resumeReviewBean.setReviewId(rs.getInt("reviewid"));
+                ResumeReviewRequestDAO.deleteRequestById(resumeid, resumeVersion);
+            }
+            else {
+                return null;
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();

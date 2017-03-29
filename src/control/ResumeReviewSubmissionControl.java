@@ -2,6 +2,7 @@ package control;
 
 import dbbeans.ResumeBean;
 import dbbeans.ResumeReviewBean;
+import dbbeans.ResumeReviewRequestBean;
 import dbbeans.UserBean;
 
 import javax.servlet.ServletException;
@@ -26,15 +27,26 @@ public class ResumeReviewSubmissionControl extends HttpServlet {
         ResumeBean resumeBean = (ResumeBean) session.getAttribute("resume");
         ResumeReviewBean resumeReviewBean = new ResumeReviewBean();
 
+
         resumeReviewBean.setModerator(moderator);
+        resumeReviewBean.setComments(request.getParameter("comments"));
+        // Check if any comments actually made
+        if (resumeReviewBean.getComments().trim().length() == 0) {
+            response.sendRedirect("./resumereviewerror.jsp");
+            return;
+        }
+
         resumeReviewBean.setResumeId(resumeBean.getResumeId());
         resumeReviewBean.setResumeVersion(resumeBean.getVersionNo());
-        resumeReviewBean.setComments(request.getParameter("comments"));
 
+        // INSERT into DB
         resumeReviewBean = resumeReviewBean.insertReviewToDb();
+        // Now DELETE from review_request table
+        int resumeId = resumeBean.getResumeId();
+        int resumeVersion = resumeBean.getVersionNo();
+        ResumeReviewRequestBean.deleteById(resumeId, resumeVersion);
 
         session.setAttribute("resumereview", resumeReviewBean);
-
         response.sendRedirect("./resumereviewsuccess.jsp");
 
     }

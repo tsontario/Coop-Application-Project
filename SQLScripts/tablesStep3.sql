@@ -115,7 +115,7 @@ CREATE TABLE Resume_Review_Request(
 	RequesterID VARCHAR(20),
 	ResumeID INTEGER,
 	VersionNo INTEGER,
-	Primary Key (RequesterID, ResumeId, VersionNo),
+	Primary Key (ResumeId, VersionNo),
 	Foreign Key (RequesterID) REFERENCES sUser(Username) ON DELETE CASCADE ON UPDATE CASCADE,
 	Foreign Key (ResumeID, VersionNo) REFERENCES Resume(ResumeID, VersionNo) ON DELETE CASCADE ON UPDATE CASCADE
 );

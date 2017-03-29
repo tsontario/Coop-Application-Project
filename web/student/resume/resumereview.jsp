@@ -8,13 +8,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    int id = Integer.parseInt(request.getParameter("resumeid"));
-    ResumeBean resumeBean = ResumeBean.getResumeById(id);
-    UserBean resumeAuthor = UserBean.getUserById(resumeBean.getUsername());
     UserBean user = (UserBean) request.getSession().getAttribute("currentUser");
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
     }
+    int id = Integer.parseInt(request.getParameter("resumeid"));
+    ResumeBean resumeBean = ResumeBean.getResumeById(id);
+    UserBean resumeAuthor = UserBean.getUserById(resumeBean.getUsername());
     request.getSession().setAttribute("moderator", user);
     request.getSession().setAttribute("resume", resumeBean);
 %>

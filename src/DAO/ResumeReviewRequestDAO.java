@@ -3,10 +3,7 @@ package DAO;
 import connection.DataAccess;
 import dbbeans.ResumeReviewRequestBean;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 /**
@@ -42,5 +39,45 @@ public class ResumeReviewRequestDAO {
         }
 
         return reviewRequestList;
+    }
+
+    public static void deleteRequestById(int resumeid, int resumeVersion) {
+
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(
+                    "DELETE FROM \"Proj\".resume_review_request WHERE resumeid = ? AND versionno = ?"
+            );
+            pst.setInt(1, resumeid);
+            pst.setInt(2, resumeVersion);
+            pst.executeUpdate();
+            connection.close();
+            DataAccess.closeConnection();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteById(int resumeId, int resumeVersion) {
+
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(
+                    "DELETE FROM \"Proj\".resume_review_request WHERE resumeid = ? AND versionno = ?");
+            pst.setInt(1, resumeId);
+            pst.setInt(2, resumeVersion);
+            pst.executeUpdate();
+            connection.close();
+            System.out.println("ID: " + resumeId + " Version" + resumeVersion);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        DataAccess.closeConnection();
     }
 }

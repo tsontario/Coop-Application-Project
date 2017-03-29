@@ -26,7 +26,7 @@ public class UpdateControl extends HttpServlet {
 
         String fName = req.getParameter("firstName");
         String lName = req.getParameter("lastName");
-
+        int level = Integer.parseInt(req.getParameter("level"));
 
         String password = req.getParameter("password");
         String passwordCheck = req.getParameter("passwordcheck");
@@ -52,6 +52,7 @@ public class UpdateControl extends HttpServlet {
         userBean.setPassword(req.getParameter("password"));
         userBean.setProgramCode(req.getParameter("programCode"));
         userBean.setUsername(req.getParameter("username"));
+        userBean.setLevel(level);
 
 
         db = new DataAccess();

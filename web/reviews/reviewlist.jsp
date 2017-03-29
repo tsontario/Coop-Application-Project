@@ -5,11 +5,11 @@
   Time: 23:25
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="DAO.CompanyDAO" %>
+<%@ page import="dbbeans.CompanyBean" %>
+<%@ page import="dbbeans.CompanyReviewBean" %>
 <%@ page import="dbbeans.UserBean" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="dbbeans.CompanyReviewBean" %>
-<%@ page import="dbbeans.CompanyBean" %>
-<%@ page import="DAO.CompanyDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     UserBean user = (UserBean) request.getSession().getAttribute("currentUser");
@@ -34,7 +34,7 @@
 
         <div class="header-limiter">
 
-            <h1><a href="#">COOP<span>Database</span></a></h1>
+            <h1><a href="../student/studenthome.jsp">COOP<span>Database</span></a></h1>
 
             <nav>
                 <a href="../student/studenthome.jsp">Home</a>

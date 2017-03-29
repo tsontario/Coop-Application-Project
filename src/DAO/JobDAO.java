@@ -23,15 +23,18 @@ public class JobDAO {
 
         try {
             st = connection.createStatement();
-            rs = st.executeQuery("SELECT jobid, jobname, joblevel, rateofpay, companyid " +
+            rs = st.executeQuery("SELECT jobid, jobname, joblevel, rateofpay, companyid, numpositions, closingdate " +
                     "FROM \"Proj\".JOB  NATURAL JOIN \"Proj\".APPLIES_TO " +
                     "GROUP BY jobid ORDER BY count(jobid) DESC;");
             while (rs.next()) {
                 JobBean job = new JobBean();
+                job.setJobId(rs.getInt("jobid"));
                 job.setJobName(rs.getString("jobname"));
                 job.setJobLevel(rs.getInt("joblevel"));
                 job.setRateOfPay(rs.getDouble("rateofpay"));
                 job.setCompanyId(rs.getString("companyid"));
+                job.setNumPositions(rs.getInt("numpositions"));
+                job.setClosingDate(rs.getString("closingdate"));
                 jobList.add(job);
             }
                 rs.close();

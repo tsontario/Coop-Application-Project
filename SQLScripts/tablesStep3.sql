@@ -1,3 +1,4 @@
+
 CREATE TABLE Program(
 	ProgramName VARCHAR(50) UNIQUE,
 	ProgramCode VARCHAR(3),
@@ -78,7 +79,7 @@ CREATE TABLE Applies_To(
 	UserID VARCHAR(20),
 	TimeStamp DATE,
 	PRIMARY KEY(JobID, UserID),
-	Foreign Key(JobID) REFERENCES Job(JobID) ON DELETE RESTRICT ON UPDATE CASCADE,
+	Foreign Key(JobID) REFERENCES Job(JobID) ON DELETE CASCADE ON UPDATE CASCADE,
 	Foreign Key(UserID) REFERENCES sUser(Username) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -91,7 +92,7 @@ CREATE TABLE Offered_To(
 );
 
 CREATE TABLE Resume(
-	ResumeID INTEGER,
+	ResumeID SERIAL,
 	VersionNo INTEGER,
 	Username VARCHAR(20),
 	Resume TEXT,
@@ -100,7 +101,7 @@ CREATE TABLE Resume(
 );
 
 CREATE TABLE Resume_Review(
-	ReviewID       INTEGER UNIQUE,
+	ReviewID       SERIAL,
 	ResumeVersion  INTEGER,
 	Moderator      VARCHAR(20),
 	ResumeID       INTEGER,
@@ -126,6 +127,7 @@ CREATE TABLE Upvote(
 	Foreign Key (Username) REFERENCES sUser(Username) ON DELETE CASCADE ON UPDATE CASCADE,
 	Foreign Key (ReviewID) REFERENCES Company_Review(ReviewID) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
 
 #Dropping using cascade.
 DROP TABLE Program CASCADE;

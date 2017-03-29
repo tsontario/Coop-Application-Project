@@ -12,6 +12,9 @@
     <title>Thanks for visiting!</title>
 </head>
 <body>
-<h1>You have logged out. Thank you for visiting.</h1>
+    <h2>You have been logged out. Redirecting in 5 seconds...</h2>
 </body>
 </html>
+<%
+    response.sendRedirect("/index.jsp");
+%>

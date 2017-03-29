@@ -38,6 +38,7 @@
         <nav>
             <a href="companyhome.jsp" class="selected">Home</a>
             <a href="companyprofile.jsp">Profile</a>
+            <a href="companyaddjob.jsp">Add Job</a>
             <a href="../session/goodbye.jsp">Logout</a>
         </nav>
     </div>
@@ -51,7 +52,7 @@
                 <a class="panel-close close" data-dismiss="alert"></a>
                 <i class="fa fa-coffee"></i>
                 Welcome to your dashboard, ${currentCompany.getcName()}.
-                Here you will see your most recent job postings and the most recent applications to your positions.
+                Here you will see your most recent job postings.
             </div>
             <h2>Job Postings</h2>
             <hr class="w-100">

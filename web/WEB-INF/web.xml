@@ -76,4 +76,13 @@
         <servlet-name>DeleteJobControl</servlet-name>
         <url-pattern>/DeleteJobControl</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CompanyAddJobControl</servlet-name>
+        <servlet-class>control.CompanyAddJobControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CompanyAddJobControl</servlet-name>
+        <url-pattern>/company/CompanyAddJobControl</url-pattern>
+    </servlet-mapping>
 </web-app>

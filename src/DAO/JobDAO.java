@@ -155,4 +155,28 @@ public class JobDAO {
             e.printStackTrace();
         }
     }
+
+    public static void addJob(JobBean jobBean) {
+        db.openConnection();
+        connection = db.getConnection();
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("INSERT INTO \"Proj\".job (joblevel, jobname, companyid, description, numpositions, rateofpay, closingdate, postingdate) VALUES (" +
+                    jobBean.getJobLevel() + ", '" +
+                    jobBean.getJobName() + "', " +
+                    jobBean.getCompanyId() + ", '" +
+                    jobBean.getDescription() + "', " +
+                    jobBean.getNumPositions() + ", " +
+                    jobBean.getRateOfPay() + ", " +
+                    "CURRENT_DATE +" + jobBean.getClosingDate() + ", " +
+                    "CURRENT_DATE );");
+            rs = st.executeQuery("SELECT jobid FROM \"Proj\".job WHERE jobname ='" + jobBean.getJobName() + "' AND companyid =" + jobBean.getCompanyId() + ";");
+            if (rs.next()) {
+                st.executeUpdate("INSERT INTO \"Proj\".job_approval (approved, jobid) VALUES (FALSE, " + rs.getInt("jobid") + ");");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

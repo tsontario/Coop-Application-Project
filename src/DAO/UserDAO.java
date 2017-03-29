@@ -4,7 +4,6 @@ import connection.DataAccess;
 import dbbeans.UserBean;
 
 import java.sql.*;
-import java.util.ArrayList;
 
 /**
  * Created by timothysmith on 2017-03-26.
@@ -160,6 +159,23 @@ public class UserDAO {
             rs = st.executeQuery("SELECT username FROM \"Proj\".suser" +
                     " WHERE username = '" + username + "';");
             if (rs.next()) {
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
+
+    public static boolean isUniqueEmail(String email) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT email FROM \"Proj\".suser" +
+                    " WHERE email = '" + email + "';");
+            if (rs.next()) {
+
                 return false;
             }
         } catch (SQLException e) {

@@ -42,6 +42,15 @@
     </servlet-mapping>
 
     <servlet>
+
+        <servlet-name>ApplyToJobControl</servlet-name>
+        <servlet-class>control.ApplyToJobControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApplyToJobControl</servlet-name>
+        <url-pattern>/ApplyToJobControl</url-pattern>
+    </servlet-mapping>
+  <servlet>
         <servlet-name>CompanyRegisterControl</servlet-name>
         <servlet-class>control.CompanyRegisterControl</servlet-class>
     </servlet>
@@ -57,5 +66,6 @@
     <servlet-mapping>
         <servlet-name>CompanyUpdateControl</servlet-name>
         <url-pattern>/company/CompanyUpdateControl</url-pattern>
+
     </servlet-mapping>
 </web-app>

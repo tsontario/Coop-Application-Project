@@ -83,7 +83,7 @@
                     <div class="form-group">
                         <label for="comments" class="col-lg-3 control-label">Type Your Comments Here:</label>
                         <div class="col-lg-8">
-                            <textarea form="form" class="form-control" id="comments" name="comments" rows="10" value="<%= resumeBean.getResume() %>"></textarea>
+                            <textarea form="form" class="form-control" id="comments" name="comments" rows="10" value="<%= resumeBean.getResume() %>" required></textarea>
                         </div>
                     </div>
                     <div class="form-group">

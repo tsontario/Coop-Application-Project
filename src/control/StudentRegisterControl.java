@@ -16,7 +16,6 @@ import java.io.IOException;
  */
 public class StudentRegisterControl extends HttpServlet {
 
-    private DataAccess db;
     private HttpSession session;
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)

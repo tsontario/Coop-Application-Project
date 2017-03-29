@@ -15,6 +15,8 @@
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
     }
+    request.getSession().setAttribute("moderator", user);
+    request.getSession().setAttribute("resume", resumeBean);
 %>
 <html>
 <head>
@@ -57,30 +59,31 @@
         <div class="row">
             <div class="col-md-9 personal-info">
                 <form id="form" action="ResumeReviewSubmissionControl" method="POST" class="form-horizontal" role="form">
+                    <input type="hidden" name="resumeid" value="<%= resumeBean.getResumeId() %>"/>
                     <div class="form-group">
                         <label for="author" class="col-lg-3 control-label">Author:</label>
                         <div class="col-lg-8">
-                            <input class="form-control" id="author" type="text" value="<%= resumeAuthor.getfName() + " " + resumeAuthor.getlName() %>" disabled />
+                            <input class="form-control" id="author" name="author" type="text" value="<%= resumeAuthor.getfName() + " " + resumeAuthor.getlName() %>" disabled />
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="version" class="col-lg-3 control-label">Current Resume Version:</label>
                         <div class="col-lg-8">
-                            <input class="form-control" id="version" type="text" value="<%= resumeBean.getVersionNo() %>" disabled />
+                            <input class="form-control" id="version" name="version" type="text" value="<%= resumeBean.getVersionNo() %>" disabled />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="content" class="col-lg-3 control-label">Resume:</label>
+                        <label for="resume" class="col-lg-3 control-label">Resume:</label>
                         <div class="col-lg-8">
-                            <textarea form="form" class="form-control" id="content" disabled>
+                            <textarea form="form" class="form-control" id="resume" name="resume" disabled>
                                 <%= resumeBean.getResume() %>
                             </textarea>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="content" class="col-lg-3 control-label">Type Your Comments Here:</label>
+                        <label for="comments" class="col-lg-3 control-label">Type Your Comments Here:</label>
                         <div class="col-lg-8">
-                            <textarea form="form" class="form-control" id="comments" rows="10" value="<%= resumeBean.getResume() %>"></textarea>
+                            <textarea form="form" class="form-control" id="comments" name="comments" rows="10" value="<%= resumeBean.getResume() %>"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -96,7 +99,7 @@
 </body>
 
 <script type="text/javascript">
-    document.getElementById("content").style.height = document.getElementById("content").scrollHeight+'px';
+    document.getElementById("resume").style.height = document.getElementById("content").scrollHeight+'px';
 
 </script>
 </html>

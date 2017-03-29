@@ -7,11 +7,27 @@ import DAO.AppliedToDAO;
  */
 public class AppliedToBean {
 
-    public String getJobid() {
+    private int jobid;
+    private String userid;
+    private String timestamp;
+
+    public static boolean isAppliedTo(String userid, int jobid) {
+        return AppliedToDAO.checkIfUserApplied(userid, jobid);
+    }
+
+    public static void applyTo(String userid, int jobid) {
+        AppliedToDAO.applyToJob(userid, jobid);
+    }
+
+    public static AppliedToBean getStudentInfo(String username, int jobid) {
+        return AppliedToDAO.getStudentInfo(username, jobid);
+    }
+
+    public int getJobid() {
         return jobid;
     }
 
-    public void setJobid(String jobid) {
+    public void setJobid(int jobid) {
         this.jobid = jobid;
     }
 
@@ -30,12 +46,5 @@ public class AppliedToBean {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
-
-    private String jobid;
-    private String userid;
-    private String timestamp;
-
-    public static boolean isAppliedTo(String userid, String jobid){ return AppliedToDAO.checkIfUserApplied(userid,jobid);}
-    public static void applyTo(String userid, String jobid){ AppliedToDAO.applyToJob(userid, jobid);}
 
 }

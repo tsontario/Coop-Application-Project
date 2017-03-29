@@ -4,6 +4,7 @@ import connection.DataAccess;
 import dbbeans.UserBean;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by timothysmith on 2017-03-26.
@@ -202,5 +203,30 @@ public class UserDAO {
             e.printStackTrace();
         }
 
+    }
+
+    public static ArrayList<UserBean> getAllUsers() {
+        ArrayList<UserBean> users = new ArrayList<>();
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT * FROM \"Proj\".suser");
+            while (rs.next()) {
+                UserBean userBean = new UserBean();
+                userBean.setUsername(rs.getString("username"));
+                userBean.setProgramCode(rs.getString("programcode"));
+                userBean.setfName(rs.getString("fname"));
+                userBean.setlName(rs.getString("lname"));
+                userBean.setLevel(rs.getInt("level"));
+                userBean.setEmail(rs.getString("email"));
+                users.add(userBean);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return users;
     }
 }

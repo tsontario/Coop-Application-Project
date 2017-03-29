@@ -140,7 +140,7 @@ public class UserDAO {
             st = connection.createStatement();
 
             st.execute("UPDATE \"Proj\".suser SET username = '" + userBean.getUsername() + "', programcode = '" + userBean.getProgramCode() + "', password = '" + userBean.getPassword() + "', fname = '" + userBean.getfName() +
-                    "', lname = '" + userBean.getlName() + "' WHERE email = '" + userBean.getEmail() + "';");
+                    "', lname = '" + userBean.getlName() + "', level = " + userBean.getLevel() + " WHERE email = '" + userBean.getEmail() + "';");
             st.close();
             connection.close();
 

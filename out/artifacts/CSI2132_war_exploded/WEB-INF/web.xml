@@ -58,6 +58,7 @@
         <servlet-name>CompanyRegisterControl</servlet-name>
         <url-pattern>/CompanyRegisterControl</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>CompanyUpdateControl</servlet-name>
         <servlet-class>control.CompanyUpdateControl</servlet-class>
@@ -91,5 +92,14 @@
     <servlet-mapping>
         <servlet-name>UnApplyToJobControl</servlet-name>
         <url-pattern>/UnApplyToJobControl</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ResumeReviewSubmissionControl</servlet-name>
+        <servlet-class>control.ResumeReviewSubmissionControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResumeReviewSubmissionControl</servlet-name>
+        <url-pattern>/student/resume/ResumeReviewSubmissionControl</url-pattern>
     </servlet-mapping>
 </web-app>

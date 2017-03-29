@@ -94,6 +94,34 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-lg-3 control-label">Level:</label>
+                    <div class="col-lg-8">
+                        <select name="level" class="form-control" required>
+                            <% if (user.getLevel() == 1) { %>
+                            <option selected="1">Year 1</option>
+                            <option value="2">Year 2</option>
+                            <option value="3">Year 3</option>
+                            <option value="4">Year 4</option>
+                            <% } else if (user.getLevel() == 2) { %>
+                            <option value="1">Year 1</option>
+                            <option selected="2">Year 2</option>
+                            <option value="3">Year 3</option>
+                            <option value="4">Year 4</option>
+                            <% } else if (user.getLevel() == 3) { %>
+                            <option value="1">Year 1</option>
+                            <option value="2">Year 2</option>
+                            <option selected="3">Year 3</option>
+                            <option value="4">Year 4</option>
+                            <% } else { %>
+                            <option value="1">Year 1</option>
+                            <option value="2">Year 2</option>
+                            <option value="3">Year 3</option>
+                            <option selected="4">Year 4</option>
+                            <% } %>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-lg-3 control-label">Email:</label>
                     <div class="col-lg-8">
                         <input name="email" class="form-control" type="email"

@@ -70,7 +70,7 @@
                 <a class="panel-close close" data-dismiss="alert"></a>
                 <i class="fa fa-coffee"></i>
                 Looks like there are <%= newJobs %> new jobs available for you!
-                Check them out in the Jobs tab!
+                Check them out in the <a href="../jobs/searchjobs.jsp">Jobs</a> tab!
             </div>
         </div>
     <% } %>

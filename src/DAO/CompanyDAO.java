@@ -105,7 +105,6 @@ public class CompanyDAO {
                 company.setLocation(rs.getString("location"));
                 company.setCompanyId(rs.getInt("companyid"));
                 company.setRating(rs.getDouble("rating"));
-
                 companyList.add(company);
             }
             rs.close();

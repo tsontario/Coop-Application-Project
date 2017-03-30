@@ -120,10 +120,11 @@
                 <h2>Top Companies</h2>
                 <hr class="w-100">
                 <ul>
-                    <% for (CompanyBean company : companyList) { %>
-                    <%=
-                    "<li><a href=\"#\">" + company.getcName() + "</a></li>"
+                    <% for (CompanyBean company : companyList) {
+                        int id = company.getCompanyId();
                     %>
+                    <li><a href="../reviews/viewcompanyreview.jsp?companyid=<%=id%>"><%=company.getcName()%>
+                    </a></li>
                     <% } %>
                 </ul>
             </div>

@@ -203,6 +203,8 @@
         </table>
 
         <hr />
+        <h4>Approved Jobs</h4>
+        <hr class="wr-100" />
         <table>
             <tr>
                 <th>Job Title</th>

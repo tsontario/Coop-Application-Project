@@ -214,7 +214,7 @@ public class CompanyDAO {
         try {
             st = connection.createStatement();
             rs = st.executeQuery(
-                "SELECT cname, location, companyid, companysize FROM \"Proj\".company" );
+                    "SELECT cname, location, companyid, companysize FROM \"Proj\".company ORDER BY cname");
             while (rs.next()) {
                 CompanyBean company = new CompanyBean();
                 company.setcName(rs.getString("cname"));

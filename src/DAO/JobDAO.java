@@ -3,7 +3,10 @@ package DAO;
 import connection.DataAccess;
 import dbbeans.JobBean;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
@@ -260,7 +263,7 @@ public class JobDAO {
             st = connection.createStatement();
             rs = st.executeQuery(
                     "SELECT jobid, jobname, joblevel, rateofpay, companyid, " +
-                            "numpositions, closingdate, postingdate, cname, description FROM \"Proj\".job_approval NATURAL JOIN \"Proj\".job NATURAL JOIN \"Proj\".company WHERE approved = FALSE");
+                            "numpositions, closingdate, postingdate, cname, description FROM \"Proj\".job_approval NATURAL JOIN \"Proj\".job NATURAL JOIN \"Proj\".company WHERE approved = FALSE ORDER BY jobid");
             while (rs.next()) {
                 JobBean job = new JobBean();
                 job.setJobName(rs.getString("jobname"));
@@ -315,7 +318,7 @@ public class JobDAO {
             st = connection.createStatement();
             rs = st.executeQuery(
                     "SELECT jobid, jobname, joblevel, rateofpay, companyid, " +
-                            "numpositions, closingdate, postingdate, cname, description FROM \"Proj\".job_approval NATURAL JOIN \"Proj\".job NATURAL JOIN \"Proj\".company WHERE approved = TRUE");
+                            "numpositions, closingdate, postingdate, cname, description FROM \"Proj\".job_approval NATURAL JOIN \"Proj\".job NATURAL JOIN \"Proj\".company WHERE approved = TRUE ORDER BY jobid");
             while (rs.next()) {
                 JobBean job = new JobBean();
                 job.setJobName(rs.getString("jobname"));

@@ -3,7 +3,6 @@ package DAO;
 import connection.DataAccess;
 import dbbeans.UserBean;
 
-import javax.xml.crypto.Data;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -223,7 +222,7 @@ public class UserDAO {
 
         try {
             st = connection.createStatement();
-            rs = st.executeQuery("SELECT * FROM \"Proj\".suser");
+            rs = st.executeQuery("SELECT * FROM \"Proj\".suser ORDER BY fname");
             while (rs.next()) {
                 UserBean userBean = new UserBean();
                 userBean.setUsername(rs.getString("username"));

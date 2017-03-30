@@ -57,7 +57,7 @@ public class CompanyRegisterControl extends HttpServlet {
         companyBean.setRating(-1);
 
         companyBean.insertIntoDB();
-
+        companyBean = companyBean.login(companyBean);
         session = req.getSession(true);
         session.setAttribute("currentCompany", companyBean);
         resp.sendRedirect("company/companyhome.jsp");

@@ -53,7 +53,7 @@
             <h3>Job info</h3>
 
             <form action="CompanyAddJobControl" method="POST" class="form-horizontal" role="form">
-                <input name="companyid" hidden="hidden" readonly="true" type="text"
+                <input name="companyid" hidden="hidden" readonly type="text"
                        value=${currentCompany.getCompanyId()}>
                 <input name="companyname" hidden="hidden" readonly="true" type="text"
                        value="${currentCompany.getcName()}">

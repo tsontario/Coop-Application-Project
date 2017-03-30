@@ -1,7 +1,7 @@
-<%@ page import="dbbeans.UserBean" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="dbbeans.CompanyBean" %>
 <%@ page import="dbbeans.JobBean" %>
+<%@ page import="dbbeans.UserBean" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -24,8 +24,7 @@
     if (pendingAction != null && pendingAction.equals("true")) {
         if (action.equals("approve")) {
             JobBean.executeAction(action, Integer.parseInt(id));
-        }
-        else if (action.equals("reject")) {
+        } else if (action.equals("reject")) {
             JobBean.executeAction(action, Integer.parseInt(id));
         }
     }
@@ -44,226 +43,272 @@
         response.sendRedirect("sessionended.jsp");
     } %>
 <html>
-    <head>
-        <title>Admin Page: ${currentUser}</title>
-        <link rel="stylesheet" href="../css/header.css">
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-        <script src="../js/jquery-3.2.0.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <style>
-            td {
-                text-align: center;
-            }
-            th, td {
-                border-left: 1px solid black;
-            }
-        </style>
-    </head>
-    <body>
-    <!-- HEADER CODE - DO NOT REMOVE -->
-    <header class="header-basic">
+<head>
+    <title>Admin Page: ${currentUser}</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/adminPage.css">
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <script src="../js/jquery-3.2.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        td {
+            text-align: center;
+        }
 
-        <div class="header-limiter">
+        th, td {
+            border-left: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<!-- HEADER CODE - DO NOT REMOVE -->
+<header class="header-basic">
 
-            <h1><a href="../student/studenthome.jsp">COOP<span>Database</span></a></h1>
+    <div class="header-limiter">
 
-            <nav>
-                <a href="../student/studenthome.jsp">Home</a>
-                <a href="../student/profile.jsp">Profile</a>
-                <a href="#">Resume</a>
-                <a href="../jobs/searchjobs.jsp">Jobs</a>
-                <a href="../reviews/reviewlist.jsp">Write Review</a>
-                <% if (user != null) {
-                    if (user.isAdmin(user.getUsername())) { %>
-                <a href="admin.jsp" class="selected">Admin Panel</a>
-                <% } %>
-                <% if (user.isModerator(user.getUsername())) { %>
-                <a href="mod.jsp">Moderator Panel</a>
-                <% }
-                }%>
-                <a href="../session/goodbye.jsp">Logout</a>
-            </nav>
-        </div>
+        <h1><a href="../student/studenthome.jsp">COOP<span>Database</span></a></h1>
 
-    </header>
-    <!-- HEADER CODE - DO NOT REMOVE -->
+        <nav>
+            <a href="../student/studenthome.jsp">Home</a>
+            <a href="../student/profile.jsp">Profile</a>
+            <a href="#">Resume</a>
+            <a href="../jobs/searchjobs.jsp">Jobs</a>
+            <a href="../reviews/reviewlist.jsp">Write Review</a>
+            <% if (user != null) {
+                if (user.isAdmin(user.getUsername())) { %>
+            <a href="admin.jsp" class="selected">Admin Panel</a>
+            <% } %>
+            <% if (user.isModerator(user.getUsername())) { %>
+            <a href="mod.jsp">Moderator Panel</a>
+            <% }
+            }%>
+            <a href="../session/goodbye.jsp">Logout</a>
+        </nav>
+    </div>
 
-    <div class="container">
+</header>
+<!-- HEADER CODE - DO NOT REMOVE -->
+
+<div class="container">
+    <div class="col-lg-12">
         <h2>Users</h2>
         <hr class="w-100">
-        <table>
+
+        <table class="table-fill">
+            <thead>
             <tr>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Name</th>
-                <th>Level</th>
-                <th>Program</th>
-                <th>Admin</th>
-                <th>Moderator</th>
-                <th>Action</th>
+                <th class="text-center">Username</th>
+                <th class="text-center">Email</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Level</th>
+                <th class="text-center">Program</th>
+                <th class="text-center">Admin Privileges</th>
+                <th class="text-center">Moderator Privileges</th>
+                <th class="text-center">Remove User</th>
             </tr>
-        <% for (UserBean u : allUsers) {%>
+            </thead>
+            <tbody class="table-hover">
+            <% for (UserBean u : allUsers) {%>
             <tr>
-                <td><%= u.getUsername() %></td>
-                <td><%= u.getEmail() %></td>
-                <td><%= u.getfName() + " " + u.getlName() %></td>
-                <td><%= u.getLevel()%></td>
-                <td><%= u.getProgramCode() %></td>
+                <td><%= u.getUsername() %>
+                </td>
+                <td><%= u.getEmail() %>
+                </td>
+                <td><%= u.getfName() + " " + u.getlName() %>
+                </td>
+                <td><%= u.getLevel()%>
+                </td>
+                <td><%= u.getProgramCode() %>
+                </td>
                 <td><%= UserBean.isAdmin(u.getUsername()) ?
                         "<a href=\"admin.jsp?useraction=true&action=removeadmin&id=" +
-                                u.getUsername() + "\"><button>Revoke Admin Privilege</button></a>"
+                                u.getUsername() + "\"><button class=\"btn btn-danger\">Revoke Admin</button></a>"
                         :
                         "<a href=\"admin.jsp?useraction=true&action=makeadmin&id=" +
-                        u.getUsername() + "\"><button>Make Admin</button></a>" %>
+                                u.getUsername() + "\"><button class=\"btn btn-primary\">Grant Admin</button></a>" %>
                 </td>
                 <td><%= UserBean.isModerator(u.getUsername()) ?
                         "<a href=\"admin.jsp?useraction=true&action=removemoderator&id=" +
-                                u.getUsername() + "\"><button>Revoke Mod Privilege</button></a>"
+                                u.getUsername() + "\"><button class=\"btn btn-danger\">Revoke Moderator</button></a>"
                         :
                         "<a href=\"admin.jsp?useraction=true&action=makemoderator&id=" +
-                        u.getUsername() + "\"><button>Make Moderator</button></a>" %></td>
+                                u.getUsername() + "\"><button class=\"btn btn-primary\">Grant Moderator</button></a>" %>
+                </td>
                 <td><a href=admin.jsp?useraction=true&action=delete&id=<%= u.getUsername() %>>
-                    <button>Delete User</button></a>
+                    <button class="btn btn-danger">Delete User</button>
+                </a>
                 </td>
             </tr>
-        <% } %>
+            <% } %>
+            </tbody>
         </table>
 
-        <hr />
+        <hr/>
 
         <h2>Companies</h2>
         <hr class="w-100">
-        <table>
+        <table class="table-fill" class="w-100">
+            <thead>
             <tr>
-                <th>Company Name</th>
-                <th>Company Location</th>
-                <th>Rating</th>
-                <th>Company ID</th>
-                <th># of Employees</th>
-                <th>Jobs Posted</th>
-                <th>Jobs Pending Approval</th>
-                <th>Action</th>
+                <th class="text-center">Company Name</th>
+                <th class="text-center">Company Location</th>
+                <th class="text-center">Rating</th>
+                <th class="text-center">Company ID</th>
+                <th class="text-center"># of Employees</th>
+                <th class="text-center">Jobs Posted</th>
+                <th class="text-center">Jobs Pending Approval</th>
+                <th class="text-center">Remove Company</th>
             </tr>
+            </thead>
+            <tbody class="table-hover">
             <% for (CompanyBean c : allCompanies) {%>
             <tr>
-                <td><%= c.getcName() %></td>
-                <td><%= c.getLocation() %></td>
-                <td><%= c.getRating() %></td>
-                <td><%= c.getCompanyId() %></td>
-                <td><%= c.getCompanySize() %></td>
-                <td><%= (JobBean.getJobsByCompany(c.getCompanyId())).size()%></td>
-                <td><%= (JobBean.getPendingJobsByCompany(c.getCompanyId())).size()%></td>
+                <td><%= c.getcName() %>
+                </td>
+                <td><%= c.getLocation() %>
+                </td>
+                <td><%= c.getRating() %>
+                </td>
+                <td><%= c.getCompanyId() %>
+                </td>
+                <td><%= c.getCompanySize() %>
+                </td>
+                <td><%= (JobBean.getJobsByCompany(c.getCompanyId())).size()%>
+                </td>
+                <td><%= (JobBean.getPendingJobsByCompany(c.getCompanyId())).size()%>
+                </td>
                 <td><a href=admin.jsp?companyaction=true&action=delete&id=<%= c.getCompanyId() %>>
-                    <button>Delete Company</button></a>
+                    <button class="btn btn-danger">Delete Company</button>
+                </a>
                 </td>
             </tr>
             <% } %>
+            </tbody>
         </table>
-        <hr />
+        <hr/>
 
         <h2>Pending Jobs</h2>
         <hr class="w-100">
-        <table>
+        <table class="w-100">
             <tr>
-                <th>Job Title</th>
-                <th>Company</th>
-                <th>Salary</th>
-                <th>Description</th>
-                <th># of Positions</th>
-                <th>Posting Date</th>
-                <th>Closing Date</th>
-                <th>Action</th>
-                <th>Action</th>
+                <th class="text-center">Job Title</th>
+                <th class="text-center">Company</th>
+                <th class="text-center">Salary</th>
+                <th class="text-center">Description</th>
+                <th class="text-center"># of Positions</th>
+                <th class="text-center">Posting Date</th>
+                <th class="text-center">Closing Date</th>
+                <th class="text-center">Approve</th>
+                <th class="text-center">Reject</th>
             </tr>
             <% for (JobBean j : pendingJobs) {%>
             <tr>
-                <td><%= j.getJobName() %></td>
+                <td><%= j.getJobName() %>
+                </td>
                 <td>
                     <%= j.getCName() %>
                 </td>
-                <td><%= j.getRateOfPay() %></td>
+                <td><%= j.getRateOfPay() %>
+                </td>
                 <td>
-                    <button class="desc-toggle" type="button" data-toggle="modal" data-target="#myModal" data-id="<%= j.getDescription() %>">
+                    <button class="desc-toggle btn btn-info" type="button" data-toggle="modal" data-target="#myModal"
+                            data-id="<%= j.getDescription() %>">
                         Description
                     </button>
                 </td>
-                <td><%= j.getNumPositions() %></td>
-                <td><%= j.getPostingDate() %></td>
-                <td> <%=j.getClosingDate() %></td>
-                <td>
-                    <a href="admin.jsp?pendingaction=true&action=approve&id=<%=j.getJobId()%>"><button>Approve</button></a>
+                <td><%= j.getNumPositions() %>
+                </td>
+                <td><%= j.getPostingDate() %>
+                </td>
+                <td><%=j.getClosingDate() %>
                 </td>
                 <td>
-                    <a href="admin.jsp?pendingaction=true&action=reject&id=<%=j.getJobId()%>"><button>Reject</button></a>
+                    <a href="admin.jsp?pendingaction=true&action=approve&id=<%=j.getJobId()%>">
+                        <button class="btn btn-success">Approve</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="admin.jsp?pendingaction=true&action=reject&id=<%=j.getJobId()%>">
+                        <button class="btn btn-danger">Reject</button>
+                    </a>
                 </td>
             </tr>
             <% } %>
         </table>
 
-        <hr />
+        <hr/>
         <h4>Approved Jobs</h4>
-        <hr class="wr-100" />
-        <table>
+        <hr class="wr-100"/>
+        <table class="w-100">
             <tr>
-                <th>Job Title</th>
-                <th>Company</th>
-                <th>Salary</th>
-                <th>Description</th>
-                <th># of Positions</th>
-                <th>Posting Date</th>
-                <th>Closing Date</th>
-                <th>Action</th>
+                <th class="text-center">Job Title</th>
+                <th class="text-center">Company</th>
+                <th class="text-center">Salary</th>
+                <th class="text-center">Description</th>
+                <th class="text-center"># of Positions</th>
+                <th class="text-center">Posting Date</th>
+                <th class="text-center">Closing Date</th>
+                <th class="text-center">Delete</th>
             </tr>
             <% for (JobBean j : approvedJobs) {%>
             <tr>
-                <td><%= j.getJobName() %></td>
+                <td><%= j.getJobName() %>
+                </td>
                 <td>
                     <%= j.getCName() %>
                 </td>
-                <td><%= j.getRateOfPay() %></td>
+                <td><%= j.getRateOfPay() %>
+                </td>
                 <td>
-                    <button class="desc-toggle" type="button" data-toggle="modal" data-target="#myModal" data-id="<%= j.getDescription() %>">
+                    <button class="desc-toggle btn btn-info" type="button" data-toggle="modal" data-target="#myModal"
+                            data-id="<%= j.getDescription() %>">
                         Description
                     </button>
                 </td>
-                <td><%= j.getNumPositions() %></td>
-                <td><%= j.getPostingDate() %></td>
-                <td> <%=j.getClosingDate() %></td>
+                <td><%= j.getNumPositions() %>
+                </td>
+                <td><%= j.getPostingDate() %>
+                </td>
+                <td><%=j.getClosingDate() %>
+                </td>
                 <td>
-                    <a href="admin.jsp?jobaction=true&action=delete&id=<%=j.getJobId()%>"><button>Delete</button></a>
+                    <a href="admin.jsp?jobaction=true&action=delete&id=<%=j.getJobId()%>">
+                        <button class="btn btn-danger">Delete</button>
+                    </a>
                 </td>
 
             </tr>
             <% } %>
         </table>
     </div>
+</div>
 
-    <!-- Job Description Modal -->
-    <!-- Modal -->
-    <div id="myModal" class="modal fade-in" id="showdesc" role="dialog">
-        <div class="modal-dialog">
+<!-- Job Description Modal -->
+<!-- Modal -->
+<div id="myModal" class="modal fade-in" id="showdesc" role="dialog">
+    <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close desc-toggle" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Job Description</h4>
-                </div>
-                <div class="modal-body">
-                    <p></p>
-                    <textarea name="jobDesc" id="jobDesc" value="" disabled style="width: 90%; margin: 0 auto;"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close desc-toggle" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Job Description</h4>
             </div>
-
+            <div class="modal-body">
+                <p></p>
+                <textarea name="jobDesc" id="jobDesc" value="" disabled style="width: 90%; margin: 0 auto;"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
         </div>
-    </div>
 
-    <hr>
-    </body>
+    </div>
+</div>
+
+<hr>
+</body>
 <script>
     $(document).on("click", ".desc-toggle", function () {
         var thisjobDesc = $(this).data('id');

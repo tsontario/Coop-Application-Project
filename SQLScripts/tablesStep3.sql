@@ -87,8 +87,8 @@ CREATE TABLE Offered_To(
 	JobID INTEGER,
 	ProgramCode VARCHAR(3),
 	PRIMARY KEY(JobID, ProgramCode), -- A Job can be offered to multiple programs (e.g. CSI & SEG)
-	Foreign Key (JobID) REFERENCES Job(JobID) ON DELETE RESTRICT ON UPDATE CASCADE,
-	Foreign Key (ProgramCode) REFERENCES Program(ProgramCode) ON DELETE RESTRICT ON UPDATE CASCADE
+	Foreign Key (JobID) REFERENCES Job(JobID) ON DELETE CASCADE ON UPDATE CASCADE,
+	Foreign Key (ProgramCode) REFERENCES Program(ProgramCode) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Resume(

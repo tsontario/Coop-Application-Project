@@ -8,15 +8,29 @@
     // Admin action parameters (default = null)
     String userAction = request.getParameter("useraction");
     String companyAction = request.getParameter("companyaction");
+    String pendingAction = request.getParameter("pendingaction");
+    String jobAction = request.getParameter("jobaction");
 
     String action = request.getParameter("action");
     String id = request.getParameter("id");
 
+    // On Admin update (delete, reject, etc)
     if (userAction != null && userAction.equals("true")) {
         UserBean.executeAction(action, id);
     }
     if (companyAction != null && companyAction.equals("true")) {
         CompanyBean.executeAction(action, Integer.parseInt(id));
+    }
+    if (pendingAction != null && pendingAction.equals("true")) {
+        if (action.equals("approve")) {
+            JobBean.executeAction(action, Integer.parseInt(id));
+        }
+        else if (action.equals("reject")) {
+            JobBean.executeAction(action, Integer.parseInt(id));
+        }
+    }
+    if (jobAction != null && jobAction.equals("true")) {
+        JobBean.executeAction(action, Integer.parseInt(id));
     }
 
 
@@ -25,6 +39,7 @@
     ArrayList<UserBean> allUsers = UserBean.getAllUsers();
     ArrayList<CompanyBean> allCompanies = CompanyBean.getAllCompanies();
     ArrayList<JobBean> pendingJobs = JobBean.getAllPendingJobs();
+    ArrayList<JobBean> approvedJobs = JobBean.getAllApprovedJobs();
     // TODO all companies
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
@@ -160,6 +175,7 @@
                 <th>Posting Date</th>
                 <th>Closing Date</th>
                 <th>Action</th>
+                <th>Action</th>
             </tr>
             <% for (JobBean j : pendingJobs) {%>
             <tr>
@@ -177,9 +193,46 @@
                 <td><%= j.getPostingDate() %></td>
                 <td> <%=j.getClosingDate() %></td>
                 <td>
-                <td>
-                    <a><button>Delete Company</button></a>
+                    <a href="admin.jsp?pendingaction=true&action=approve&id=<%=j.getJobId()%>"><button>Approve</button></a>
                 </td>
+                <td>
+                    <a href="admin.jsp?pendingaction=true&action=reject&id=<%=j.getJobId()%>"><button>Reject</button></a>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+
+        <hr />
+        <table>
+            <tr>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>Salary</th>
+                <th>Description</th>
+                <th># of Positions</th>
+                <th>Posting Date</th>
+                <th>Closing Date</th>
+                <th>Action</th>
+            </tr>
+            <% for (JobBean j : approvedJobs) {%>
+            <tr>
+                <td><%= j.getJobName() %></td>
+                <td>
+                    <%= j.getCName() %>
+                </td>
+                <td><%= j.getRateOfPay() %></td>
+                <td>
+                    <button class="desc-toggle" type="button" data-toggle="modal" data-target="#myModal" data-id="<%= j.getDescription() %>">
+                        Description
+                    </button>
+                </td>
+                <td><%= j.getNumPositions() %></td>
+                <td><%= j.getPostingDate() %></td>
+                <td> <%=j.getClosingDate() %></td>
+                <td>
+                    <a href="admin.jsp?jobaction=true&action=delete&id=<%=j.getJobId()%>"><button>Delete</button></a>
+                </td>
+
             </tr>
             <% } %>
         </table>

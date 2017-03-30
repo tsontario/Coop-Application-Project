@@ -148,4 +148,20 @@ public class JobBean implements Serializable {
     public static ArrayList<JobBean> getAllPendingJobs() {
         return JobDAO.getAllPendingJobs();
     }
+
+    public static void executeAction(String action, int id) {
+        if (action.equals("approve")) {
+            JobDAO.approveJob(id);
+        }
+        else if (action.equals("reject")) {
+            JobDAO.rejectJob(id);
+        }
+        else if (action.equals("delete")) {
+            deleteJob(id);
+        }
+    }
+
+    public static ArrayList<JobBean> getAllApprovedJobs() {
+        return JobDAO.getAllApprovedJobs();
+    }
 }

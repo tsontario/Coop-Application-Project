@@ -231,10 +231,9 @@ public class CompanyDAO {
 
         try {
             st = connection.createStatement();
-            rs = st.executeQuery(
+            st.executeUpdate(
                     "DELETE FROM \"Proj\".company WHERE companyid = " + id + ";");
 
-            rs.close();
             st.close();
             connection.close();
         } catch (SQLException e) {

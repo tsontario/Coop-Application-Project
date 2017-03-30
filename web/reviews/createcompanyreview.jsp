@@ -128,6 +128,17 @@
                         </div>
                     </div>
                 </form>
+                <% if(reviewExist){ %>
+                <div class="col-md-9">
+                    <form role="form" action="../DeleteCompanyReviewControl" class="form-horizontal" method="post">
+                        <input name="deleteUsername" hidden="hidden" readonly="true" type="text"
+                               value=<%=user.getUsername()%>>
+                        <input name="deleteCompanyID" hidden="hidden" readonly="true" type="text"
+                               value=<%=company.getCompanyId()%>>
+                        <button type="submit" class="btn-danger btn">Delete</button>
+                    </form>
+                </div>
+                <%  } %>
             </div>
         </div>
     </div>

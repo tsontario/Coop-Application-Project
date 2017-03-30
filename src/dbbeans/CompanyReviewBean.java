@@ -117,4 +117,8 @@ public class CompanyReviewBean {
     public static CompanyReviewBean getUserReviewByCompanyID(String username, int companyid){
         return CompanyReviewDAO.getUserReviewByCompanyID(username, companyid);
     }
+
+    public static void deleteReview(String username, int companyid){
+        CompanyReviewDAO.deleteReview(username, companyid);
+    }
 }

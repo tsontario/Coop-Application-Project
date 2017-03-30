@@ -177,5 +177,18 @@ public class CompanyReviewDAO {
 
     }
 
+    public static void deleteReview(String username, int companyid){
+        db.openConnection();
+        connection = db.getConnection();
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("DELETE FROM \"Proj\".COMPANY_REVIEW WHERE username='" + username + "' AND companyid="+ companyid + ";");
+            st.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }

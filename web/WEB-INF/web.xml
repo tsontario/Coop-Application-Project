@@ -109,4 +109,12 @@
         <servlet-name>ResumeReviewSubmissionControl</servlet-name>
         <url-pattern>/student/resume/ResumeReviewSubmissionControl</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteCompanyReviewControl</servlet-name>
+        <servlet-class>control.DeleteCompanyReviewControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteCompanyReviewControl</servlet-name>
+        <url-pattern>/DeleteCompanyReviewControl</url-pattern>
+    </servlet-mapping>
 </web-app>

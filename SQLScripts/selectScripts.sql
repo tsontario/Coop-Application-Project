@@ -45,7 +45,7 @@ SELECT * FROM company WHERE cname = name AND password = password;
 SELECT cname FROM company WHERE cname = cname;
 
 -- SELECT all companies
-SELECT cname, location, companyid, companysize FROM company;
+SELECT cname, location, companyid, companysize FROM company ORDER BY cname;
 
 -- SELECT all companies ordered alphabetically
 SELECT * FROM COMPANY ORDER BY cname;
@@ -95,7 +95,7 @@ SELECT username FROM suser WHERE username = ?;
 SELECT email FROM susuer WHERE email = ?;
 
 -- SELECT all users;
-SELECT * FROM suser;
+SELECT * FROM suser ORDER BY fname;
 
 -- SELECT the top five jobs. Job popularity is based on # of applicants
 SELECT jobid, jobname, joblevel, rateofpay, companyid, numpositions, closingdate
@@ -128,9 +128,9 @@ FROM job_approval NATURAL JOIN job NATURAL JOIN company WHERE companyid = ? AND 
 -- SELECT ALL pending jobs
 SELECT jobid, jobname, joblevel, rateofpay, companyid,
 numpositions, closingdate, postingdate, cname, description, location
-FROM job_approval NATURAL JOIN job NATURAL JOIN company WHERE approved = FALSE;
+FROM job_approval NATURAL JOIN job NATURAL JOIN company WHERE approved = FALSE ORDER BY jobid;
 
 -- SELECT ALL approved jobs
 SELECT jobid, jobname, joblevel, rateofpay, companyid,
   numpositions, closingdate, postingdate, cname, description, location
-FROM job_approval NATURAL JOIN job NATURAL JOIN company WHERE approved = TRUE;
+FROM job_approval NATURAL JOIN job NATURAL JOIN company WHERE approved = TRUE ORDER BY jobid;

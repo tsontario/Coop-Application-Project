@@ -15,7 +15,6 @@
     int id = Integer.parseInt(request.getParameter("resumeid"));
     ResumeBean resumeBean = ResumeBean.getResumeById(id);
     UserBean resumeAuthor = UserBean.getUserById(resumeBean.getUsername());
-    System.out.println("*********" + resumeAuthor + " resumeauth is null?");
     request.getSession().setAttribute("moderator", user);
     request.getSession().setAttribute("resume", resumeBean);
 %>

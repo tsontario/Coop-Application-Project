@@ -82,7 +82,7 @@ SELECT * FROM suser WHERE username = ? AND password = ?;
 
 -- SELECT the admin with the given username
 -- Used to determine whether a given user is admin
-SELECT username FROM admin WHERE username = ?
+SELECT username FROM admin WHERE username = ?;
 
 -- SELECT the moderator with the given username
 -- Used to determine whether a given user is a moderator

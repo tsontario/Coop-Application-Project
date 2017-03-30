@@ -32,11 +32,13 @@ public class CompanyReviewDAO {
             while(rs.next()) {
                 CompanyBean company = new CompanyBean();
                 company.setcName(rs.getString("cname"));
-                company.setRating(rs.getDouble("rating"));
                 company.setCompanyId(rs.getInt("companyid"));
                 company.setCompanySize(rs.getInt("companysize"));
                 company.setLocation(rs.getString("location"));
                 companies.add(company);
+            }
+            for (CompanyBean c : companies) {
+                c.setRating(c.getRating());
             }
             rs.close();
             st.close();

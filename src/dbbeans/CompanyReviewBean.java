@@ -9,10 +9,24 @@ import java.util.ArrayList;
  * Created by Kevin on 2017-03-28.
  */
 public class CompanyReviewBean {
+    public CompanyReviewBean(){
 
-    private int reviewid, companyid;
+    }
+
+    public CompanyReviewBean (int reviewid, int companyid, int rating, String username, String interviewExperience,
+                              String onTheJobExperience, String salaryExperience, String timestamp){
+        this.username = username;
+        this.companyid = companyid;
+        this.rating = rating;
+        this.reviewid = reviewid;
+        this.onTheJobExperience = onTheJobExperience;
+        this.interviewExperience = interviewExperience;
+        this.salaryExperience = salaryExperience;
+        this.timestamp = timestamp;
+    }
+
+    private int reviewid, companyid, rating;
     private String username, interviewExperience, onTheJobExperience,salaryExperience,timestamp;
-    private double rating;
 
     public int getReviewid() {
         return reviewid;
@@ -70,11 +84,11 @@ public class CompanyReviewBean {
         this.timestamp = timestamp;
     }
 
-    public double getRating() {
+    public int getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(int rating) {
         this.rating = rating;
     }
 
@@ -87,6 +101,20 @@ public class CompanyReviewBean {
     }
 
     public static ArrayList<CompanyReviewBean> getReviewsByID(int companyid){
-        return CompanyReviewDAO.getReviewsByID(companyid);
+        return CompanyReviewDAO.getReviewsByCompanyID(companyid);
+    }
+    public static void createCompanyReview(String username, int companyid, String interviewExperience, String onTheJobExperience,
+                                           String salaryExperience, int companyrating){
+        CompanyReviewDAO.createCompanyReview(username,companyid,interviewExperience,onTheJobExperience,salaryExperience, companyrating);
+    }
+
+    public static void updateCompanyReview(String username, int companyid, String interviewExperience, String onTheJobExperience,
+                                           String salaryExperience, int companyrating){
+        CompanyReviewDAO.updateCompanyReview(username,companyid,interviewExperience,onTheJobExperience,salaryExperience, companyrating);
+
+    }
+
+    public static CompanyReviewBean getUserReviewByCompanyID(String username, int companyid){
+        return CompanyReviewDAO.getUserReviewByCompanyID(username, companyid);
     }
 }

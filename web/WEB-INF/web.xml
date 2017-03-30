@@ -50,7 +50,7 @@
         <servlet-name>ApplyToJobControl</servlet-name>
         <url-pattern>/ApplyToJobControl</url-pattern>
     </servlet-mapping>
-  <servlet>
+    <servlet>
         <servlet-name>CompanyRegisterControl</servlet-name>
         <servlet-class>control.CompanyRegisterControl</servlet-class>
     </servlet>
@@ -93,7 +93,14 @@
         <servlet-name>UnApplyToJobControl</servlet-name>
         <url-pattern>/UnApplyToJobControl</url-pattern>
     </servlet-mapping>
-    
+    <servlet>
+        <servlet-name>CreateCompanyReviewControl</servlet-name>
+        <servlet-class>control.CreateCompanyReviewControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateCompanyReviewControl</servlet-name>
+        <url-pattern>/CreateCompanyReviewControl</url-pattern>
+    </servlet-mapping>
     <servlet>
         <servlet-name>ResumeReviewSubmissionControl</servlet-name>
         <servlet-class>control.ResumeReviewSubmissionControl</servlet-class>

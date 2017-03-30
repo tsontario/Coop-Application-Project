@@ -42,7 +42,7 @@
                 <a href="../student/profile.jsp">Profile</a>
                 <a href="#">Resume</a>
                 <a href="../jobs/searchjobs.jsp">Jobs</a>
-                <a href="../reviews/reviewlist.jsp" class="selected">Write Review</a>
+                <a href="../reviews/reviewlist.jsp">Write Review</a>
                 <% if (user != null) {
                     if (user.isAdmin(user.getUsername())) { %>
                 <a href="../student/admin.jsp">Admin Panel</a>
@@ -58,20 +58,46 @@
     </header>
 
     <div class="col-8" style="margin-top: 40px">
-        <h2>Companies</h2>
+        <h2>Reviews</h2>
         <hr class="w-100">
         <% for (CompanyReviewBean review : reviews) { %>
-        <div class="card w-100">
+        <div class="card w-100" style="margin-bottom: 40px">
             <div class="card-block job-post">
                 <div class="row">
                     <div class="col">
                         <p class="card-text ">Review by: <%=review.getUsername()%></p>
                     </div>
                     <div class="col">
-                        <p class="card-text ">Rating <%=review.getRating()%></p>
+                        <p class="card-text ">Rating: <%=review.getRating()%></p>
                     </div>
                     <div class="col">
-                        <p class="card-text ">Review Date <%=review.getTimestamp()%></p>
+                        <p class="card-text ">Review Date: <%=review.getTimestamp()%></p>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 40px">
+                    <div class="col">
+                    <h6 class="card-subtitle">Interview Experience</h6>
+                    <% if(review.getInterviewExperience() != null ){%>
+                    <p class="card-text "><%=review.getInterviewExperience()%></p>
+                    <% } %>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <h6 class="card-subtitle">On The Job Experience</h6>
+                        <% if(review.getOnTheJobExperience() != null ){%>
+                        <p class="card-text "><%=review.getOnTheJobExperience()%></p>
+                        <% } %>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <h6 class="card-subtitle">Salary Experience</h6>
+                        <% if(review.getSalaryExperience() != null ){%>
+                            <p class="card-text "><%=review.getSalaryExperience()%></p>
+                        <% } %>
                     </div>
                 </div>
             </div>

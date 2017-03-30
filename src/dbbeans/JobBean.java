@@ -23,8 +23,6 @@ public class JobBean implements Serializable {
     private String cname;
     private String location;
 
-
-
     public JobBean() {
 
     }
@@ -145,5 +143,9 @@ public class JobBean implements Serializable {
 
     public static ArrayList<JobBean> getPendingJobsByCompany(int companyId) {
         return JobDAO.getPendingJobsByCompany(companyId);
+    }
+
+    public static ArrayList<JobBean> getAllPendingJobs() {
+        return JobDAO.getAllPendingJobs();
     }
 }

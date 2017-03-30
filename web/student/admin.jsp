@@ -24,6 +24,7 @@
     UserBean user = (UserBean) request.getSession().getAttribute("currentUser");
     ArrayList<UserBean> allUsers = UserBean.getAllUsers();
     ArrayList<CompanyBean> allCompanies = CompanyBean.getAllCompanies();
+    ArrayList<JobBean> pendingJobs = JobBean.getAllPendingJobs();
     // TODO all companies
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
@@ -32,7 +33,18 @@
     <head>
         <title>Admin Page: ${currentUser}</title>
         <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+        <script src="../js/jquery-3.2.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <style>
+            td {
+                text-align: center;
+            }
+            th, td {
+                border-left: 1px solid black;
+            }
+        </style>
     </head>
     <body>
     <!-- HEADER CODE - DO NOT REMOVE -->
@@ -75,7 +87,6 @@
                 <th>Program</th>
                 <th>Admin</th>
                 <th>Moderator</th>
-                <th></th>
                 <th>Action</th>
             </tr>
         <% for (UserBean u : allUsers) {%>
@@ -98,7 +109,6 @@
                         :
                         "<a href=\"admin.jsp?useraction=true&action=makemoderator&id=" +
                         u.getUsername() + "\"><button>Make Moderator</button></a>" %></td>
-                <td style="width: 20px"></td>
                 <td><a href=admin.jsp?useraction=true&action=delete&id=<%= u.getUsername() %>>
                     <button>Delete User</button></a>
                 </td>
@@ -131,13 +141,80 @@
                 <td><%= (JobBean.getJobsByCompany(c.getCompanyId())).size()%></td>
                 <td><%= (JobBean.getPendingJobsByCompany(c.getCompanyId())).size()%></td>
                 <td><a href=admin.jsp?companyaction=true&action=delete&id=<%= c.getCompanyId() %>>
-                    <button>Delete User</button></a>
+                    <button>Delete Company</button></a>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+        <hr />
+
+        <h2>Pending Jobs</h2>
+        <hr class="w-100">
+        <table>
+            <tr>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>Salary</th>
+                <th>Description</th>
+                <th># of Positions</th>
+                <th>Posting Date</th>
+                <th>Closing Date</th>
+                <th>Action</th>
+            </tr>
+            <% for (JobBean j : pendingJobs) {%>
+            <tr>
+                <td><%= j.getJobName() %></td>
+                <td>
+                    <%= j.getCName() %>
+                </td>
+                <td><%= j.getRateOfPay() %></td>
+                <td>
+                    <button class="desc-toggle" type="button" data-toggle="modal" data-target="#myModal" data-id="<%= j.getDescription() %>">
+                        Description
+                    </button>
+                </td>
+                <td><%= j.getNumPositions() %></td>
+                <td><%= j.getPostingDate() %></td>
+                <td> <%=j.getClosingDate() %></td>
+                <td>
+                <td>
+                    <a><button>Delete Company</button></a>
                 </td>
             </tr>
             <% } %>
         </table>
     </div>
 
+    <!-- Job Description Modal -->
+    <!-- Modal -->
+    <div id="myModal" class="modal fade-in" id="showdesc" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close desc-toggle" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Job Description</h4>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                    <textarea name="jobDesc" id="jobDesc" value="" disabled style="width: 90%; margin: 0 auto;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <hr>
     </body>
+<script>
+    $(document).on("click", ".desc-toggle", function () {
+        var thisjobDesc = $(this).data('id');
+        $(".modal-body #jobDesc").val(thisjobDesc);
+        $('#showdesc').modal('show');
+    });
+</script>
 </html>

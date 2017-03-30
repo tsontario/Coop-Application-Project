@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e24f641-8bdd-4b04-a986-dbaad49dd3c8" name="Default" comment="Admin panel now supports User privilege (de)escalation and deletion and company deletion">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jquery-3.2.0.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/JobDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/JobDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/DAO/UserDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/dbbeans/JobBean.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/dbbeans/JobBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/dbbeans/UserBean.class" afterPath="$PROJECT_DIR$/out/artifacts/CSI2132_war_exploded/WEB-INF/classes/dbbeans/UserBean.class" />
+    <list default="true" id="5e24f641-8bdd-4b04-a986-dbaad49dd3c8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DAO/JobDAO.java" afterPath="$PROJECT_DIR$/src/DAO/JobDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/CompanyAddJobControl.java" afterPath="$PROJECT_DIR$/src/control/CompanyAddJobControl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dbbeans/JobBean.java" afterPath="$PROJECT_DIR$/src/dbbeans/JobBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student/admin.jsp" afterPath="$PROJECT_DIR$/web/student/admin.jsp" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1297,11 +1287,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490824661193</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Admin Panel now shows Users, Companies, and pending jobs.&#10;Added jQuery and Bootstrap.js">
+      <created>1490836595772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1490836595772</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21605000" />
+    <option name="totallyTimeSpent" value="21637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1406,7 +1403,8 @@
     <MESSAGE value="Change table scripts for Resume, resumereview to be serial. Note Versionno for resumes is not serial :(" />
     <MESSAGE value="Admin panel now supports User privilege (de)escalation and deletion and company deletion" />
     <MESSAGE value="Can now get ArrayList&lt;JobBean&gt; of pending jobs by Company id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can now get ArrayList&lt;JobBean&gt; of pending jobs by Company id" />
+    <MESSAGE value="Admin Panel now shows Users, Companies, and pending jobs.&#10;Added jQuery and Bootstrap.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Panel now shows Users, Companies, and pending jobs.&#10;Added jQuery and Bootstrap.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

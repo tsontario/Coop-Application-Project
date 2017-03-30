@@ -297,13 +297,8 @@ public class JobDAO {
         DataAccess.openConnection();
         connection = db.getConnection();
 
-        try {
-            st = connection.createStatement();
-            st.executeUpdate("DELETE FROM \"Proj\".job_approval WHERE jobid = " + id);
-            st.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        deleteJob(id);
+
     }
 
     public static ArrayList<JobBean> getAllApprovedJobs() {

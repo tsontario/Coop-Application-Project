@@ -39,4 +39,12 @@ public class ProgramDAO {
 
         return programList;
     }
+
+    public static void addProgramToDb(ProgramBean programBean) {
+        // TODO Implement
+    }
+
+    public static void removeProgramFromDb(ProgramBean programBean) {
+        // TODO Implement
+    }
 }

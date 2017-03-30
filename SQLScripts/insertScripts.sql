@@ -1,8 +1,8 @@
 -- INSERT inserts a job application of a specific user to a specific job
-INSERT INTO APPLIES_TO VALUES (?, ?);
+INSERT INTO applies_to VALUES (?, ?);
 
 -- INSERT a new company into the database
-INSERT INTO "Proj".company (companysize, location, cname, password) VALUES
+INSERT INTO company (companysize, location, cname, password) VALUES
   (?, ?, ?, ?);
 
 -- INSERT a new company review into the database
@@ -34,9 +34,9 @@ INSERT INTO suser VALUES
 INSERT INTO moderator(username) VALUES (?);
 
 -- INSERT add a user as an administrator
-INSERT INTO "Proj".admin(username) VALUES (?);
+INSERT INTO admin(username) VALUES (?);
 
 -- Insert a new resume review and return its generated id
-INSERT  INTO "Proj".resume_review (reviewid, resumeid, resumeversion, moderator, resumecomments)
+INSERT  INTO resume_review (reviewid, resumeid, resumeversion, moderator, resumecomments)
 VALUES (11, 1, 2, 'tsmit094', 'afdsafdsa')
 RETURNING resumeid;

@@ -257,8 +257,7 @@ public class UserDAO {
         connection = DataAccess.getConnection();
 
         try {
-            pst = connection.prepareStatement("INSERT INTO \"Proj\".moderator SELECT username FROM \"Proj\".suser WHERE " +
-                    "username = ?");
+            pst = connection.prepareStatement("INSERT INTO \"Proj\".moderator(username) VALUES (?)");
 
             pst.setString(1, id);
             pst.executeUpdate();
@@ -276,8 +275,7 @@ public class UserDAO {
         connection = DataAccess.getConnection();
 
         try {
-            pst = connection.prepareStatement("INSERT INTO \"Proj\".admin SELECT username FROM \"Proj\".suser WHERE " +
-                    "username = ?");
+            pst = connection.prepareStatement("INSERT INTO \"Proj\".admin(username) VALUES (?)");
 
             pst.setString(1, id);
             pst.executeUpdate();

@@ -16,7 +16,6 @@ public class ResumeReviewDAO {
 
     public static ResumeReviewBean insertReviewToDb(ResumeReviewBean resumeReviewBean) {
 
-
         DataAccess.openConnection();
         connection = DataAccess.getConnection();
 
@@ -41,9 +40,11 @@ public class ResumeReviewDAO {
                 resumeReviewBean.setReviewId(rs.getInt("reviewid"));
                 ResumeReviewRequestDAO.deleteRequestById(resumeid, resumeVersion);
             }
-            else {
-                return null;
-            }
+            rs.close();
+            pst.close();
+            connection.close();
+
+
 
         } catch (SQLException e) {
             e.printStackTrace();

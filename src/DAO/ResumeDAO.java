@@ -35,13 +35,10 @@ public class ResumeDAO {
                 resumeBean.setResume(rs.getString("resume"));
 
             }
-            else {
-                rs.close();
-                st.close();
-                connection.close();
-                // Couldn't find resume
-                return null;
-            }
+
+            rs.close();
+            st.close();
+            connection.close();
         }
         catch (SQLException e) {
             e.printStackTrace();}
@@ -66,13 +63,10 @@ public class ResumeDAO {
                 resumeBean.setUsername(rs.getString("username"));
                 resumeBean.setResume(rs.getString("resume"));
 
-            } else {
-                rs.close();
-                st.close();
-                connection.close();
-                // Couldn't find resume
-                return null;
             }
+            rs.close();
+            st.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

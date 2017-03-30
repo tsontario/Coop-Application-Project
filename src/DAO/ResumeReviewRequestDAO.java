@@ -34,6 +34,9 @@ public class ResumeReviewRequestDAO {
                 reviewRequestList.add(resumeReviewRequestBean);
             }
 
+            rs.close();
+            st.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -53,8 +56,9 @@ public class ResumeReviewRequestDAO {
             pst.setInt(1, resumeid);
             pst.setInt(2, resumeVersion);
             pst.executeUpdate();
+            pst.close();
+            st.close();
             connection.close();
-            DataAccess.closeConnection();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -72,12 +76,13 @@ public class ResumeReviewRequestDAO {
             pst.setInt(1, resumeId);
             pst.setInt(2, resumeVersion);
             pst.executeUpdate();
+            rs.close();
+            pst.close();
             connection.close();
             System.out.println("ID: " + resumeId + " Version" + resumeVersion);
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        DataAccess.closeConnection();
     }
 }

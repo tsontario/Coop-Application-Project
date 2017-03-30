@@ -33,6 +33,8 @@ public class ProgramDAO {
 
                 programList.add(programBean);
             }
+            rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

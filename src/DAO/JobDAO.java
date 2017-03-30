@@ -152,7 +152,8 @@ public class JobDAO {
         try {
             st = connection.createStatement();
             st.executeUpdate("DELETE FROM \"Proj\".job WHERE jobid = " + jobid);
-            st.close();
+            rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -176,6 +177,8 @@ public class JobDAO {
             if (rs.next()) {
                 st.executeUpdate("INSERT INTO \"Proj\".job_approval (approved, jobid) VALUES (FALSE, " + rs.getInt("jobid") + ");");
             }
+            rs.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -240,6 +243,8 @@ public class JobDAO {
 
                 jobList.add(job);
             }
+            rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -271,6 +276,8 @@ public class JobDAO {
 
                 jobList.add(job);
             }
+            rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -285,7 +292,8 @@ public class JobDAO {
         try {
             st = connection.createStatement();
             st.executeUpdate("UPDATE \"Proj\".job_approval SET approved = TRUE WHERE jobid = " + id);
-            st.close();
+            rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -293,8 +301,6 @@ public class JobDAO {
     }
 
     public static void rejectJob(int id) {
-        DataAccess.openConnection();
-        connection = db.getConnection();
 
         deleteJob(id);
 
@@ -325,6 +331,8 @@ public class JobDAO {
 
                 jobList.add(job);
             }
+            rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

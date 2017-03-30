@@ -20,12 +20,14 @@ public class UserDAO {
 
     public static UserBean getUserById(String username) {
         UserBean userBean = null;
+        DataAccess.openConnection();
 
         try {
             connection = DataAccess.getConnection();
 //            st = connection.createStatement();
             PreparedStatement st = connection.prepareStatement("SELECT * FROM \"Proj\".suser WHERE username = ?");
             st.setString(1, username);
+            System.out.println(st);
             rs = st.executeQuery();
 
             if (rs.next()) {
@@ -39,10 +41,10 @@ public class UserDAO {
                 userBean.setfName(rs.getString("fname"));
                 userBean.setlName(rs.getString("lname"));
 
-                rs.close();
-                st.close();
-                connection.close();
             }
+            rs.close();
+            st.close();
+            connection.close();
 
         } catch(Exception e){
 
@@ -69,12 +71,10 @@ public class UserDAO {
                 userBean.setlName(rs.getString("LName"));
                 userBean.setProgramCode(rs.getString("ProgramCode"));
             }
-            else {
-                rs.close();
-                st.close();
-                connection.close();
-                return null;
-            }
+            rs.close();
+            st.close();
+            connection.close();
+
         }
         catch (SQLException e) {
             e.printStackTrace();}
@@ -96,11 +96,10 @@ public class UserDAO {
                 connection.close();
                 return true;
             }
-            else {
-                rs.close();
-                st.close();
-                connection.close();
-            }
+            rs.close();
+            st.close();
+            connection.close();
+
         }
         catch (SQLException e) {
             e.printStackTrace();}
@@ -164,6 +163,9 @@ public class UserDAO {
             if (rs.next()) {
                 return false;
             }
+            rs.close();
+            st.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -178,9 +180,14 @@ public class UserDAO {
             rs = st.executeQuery("SELECT email FROM \"Proj\".suser" +
                     " WHERE email = '" + email + "';");
             if (rs.next()) {
-
+                rs.close();
+                st.close();
+                connection.close();
                 return false;
             }
+            rs.close();
+            st.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -201,6 +208,8 @@ public class UserDAO {
                                         userBean.getPassword() + "', '" +
                                         userBean.getfName() + "', '" +
                                         userBean.getlName() + "');");
+            st.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -225,6 +234,9 @@ public class UserDAO {
                 userBean.setEmail(rs.getString("email"));
                 users.add(userBean);
             }
+            rs.close();
+            st.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -245,6 +257,9 @@ public class UserDAO {
             pst.executeUpdate();
             connection.close();
             DataAccess.closeConnection();
+
+            pst.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -260,6 +275,7 @@ public class UserDAO {
             pst.setString(1, id);
             pst.executeUpdate();
 
+            pst.close();
             connection.close();
             DataAccess.closeConnection();
 
@@ -278,6 +294,7 @@ public class UserDAO {
             pst.setString(1, id);
             pst.executeUpdate();
 
+            pst.close();
             connection.close();
             DataAccess.closeConnection();
 
@@ -296,6 +313,7 @@ public class UserDAO {
 
             rs = pst.executeQuery();
 
+            pst.close();
             connection.close();
             DataAccess.closeConnection();
         } catch (SQLException e) {
@@ -313,8 +331,9 @@ public class UserDAO {
 
             rs = pst.executeQuery();
 
+            rs.close();
+            pst.close();
             connection.close();
-            DataAccess.closeConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }

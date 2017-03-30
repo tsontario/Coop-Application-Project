@@ -60,6 +60,7 @@ public class CompanyDAO {
             }
 
             rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -80,6 +81,8 @@ public class CompanyDAO {
                 rating = rs.getInt(1);
             }
 
+            rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -155,6 +158,8 @@ public class CompanyDAO {
             if (rs.next()) {
                 return false;
             }
+            rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -172,6 +177,9 @@ public class CompanyDAO {
                     companyBean.getLocation() + "', '" +
                     companyBean.getcName() + "', '" +
                     companyBean.getPassword() + "');");
+
+            rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -189,6 +197,8 @@ public class CompanyDAO {
                     " cname = '" + companyBean.getcName() + "'," +
                     " password='" + companyBean.getPassword() + "'" +
                     " WHERE companyid = '" + companyBean.getCompanyId() + "';");
+            rs.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

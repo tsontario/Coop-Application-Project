@@ -19,10 +19,10 @@ INSERT INTO Moderator VALUES
 INSERT INTO Admin VALUES
 	('leule089');
 
-INSERT INTO Company(CompanySize, Location, Rating, Cname, Password) VALUES
-	(1000, 'Ottawa', -1, 'Shopify', 'passw0rd'),
-	(250, 'Ottawa', -1, 'Kinaxis', 'passw0rd'),
-	(10000, 'Google', -1, 'Silicon Valley', 'passw0rd')
+INSERT INTO Company(CompanySize, Location, Cname, Password) VALUES
+	(1000, 'Ottawa', 'Shopify', 'passw0rd'),
+	(250, 'Ottawa', 'Kinaxis', 'passw0rd'),
+	(10000, 'Google', 'Silicon Valley', 'passw0rd')
 ;
 
 INSERT INTO Company_Review (username, companyid, interviewexperience, onthejobexperience, salaryexperience, timestamp, companyrating) VALUES

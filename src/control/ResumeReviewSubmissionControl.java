@@ -30,12 +30,6 @@ public class ResumeReviewSubmissionControl extends HttpServlet {
 
         resumeReviewBean.setModerator(moderator);
         resumeReviewBean.setComments(request.getParameter("comments"));
-        // Check if any comments actually made
-        if (resumeReviewBean.getComments().trim().length() == 0) {
-            response.sendRedirect("./resumereviewerror.jsp");
-            return;
-        }
-
         resumeReviewBean.setResumeId(resumeBean.getResumeId());
         resumeReviewBean.setResumeVersion(resumeBean.getVersionNo());
 

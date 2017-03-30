@@ -164,4 +164,8 @@ public class JobBean implements Serializable {
     public static ArrayList<JobBean> getAllApprovedJobs() {
         return JobDAO.getAllApprovedJobs();
     }
+
+    public static int consumeNewJobNotificationsByUser(String username) {
+        return JobDAO.consumeNewJobNotifications(username);
+    }
 }

@@ -18,6 +18,7 @@
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
     }
+    int newJobs = JobBean.consumeNewJobNotificationsByUser(user.getUsername());
 
 %>
 
@@ -63,8 +64,16 @@
 
 <br/>
 
-
-
+    <% if (newJobs != 0) { %>
+        <div class="row" style="padding-top: 20px">
+            <div class="alert alert-success alert-dismissable " style="text-align: center;margin-left: 20em">
+                <a class="panel-close close" data-dismiss="alert"></a>
+                <i class="fa fa-coffee"></i>
+                Looks like there are <%= newJobs %> new jobs available for you!
+                Check them out in the Jobs tab!
+            </div>
+        </div>
+    <% } %>
     <div class="row" style="padding-top: 40px">
         <div class="alert alert-info alert-dismissable " style="text-align: center;margin-left: 20em">
             <a class="panel-close close" data-dismiss="alert"></a>
@@ -72,6 +81,7 @@
             Welcome to your dashboard, ${currentUser.getfName()}.
             Here you will see the top 5 job postings and the top 5 companies!
         </div>
+
         <div class="col-lg-7" style="margin-left: 50px;">
 
             <h2>Top Jobs</h2>

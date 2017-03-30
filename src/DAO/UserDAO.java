@@ -70,6 +70,9 @@ public class UserDAO {
                 userBean.setlName(rs.getString("LName"));
                 userBean.setProgramCode(rs.getString("ProgramCode"));
             }
+            else {
+                userBean = null;
+            }
             rs.close();
             st.close();
             connection.close();
@@ -251,7 +254,6 @@ public class UserDAO {
         try {
             pst = connection.prepareStatement("DELETE FROM \"Proj\".suser WHERE username = ?;");
             pst.setString(1, id);
-            System.out.println(pst.toString());
 
             pst.executeUpdate();
             connection.close();

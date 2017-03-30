@@ -3,10 +3,8 @@ package DAO;
 import connection.DataAccess;
 import dbbeans.JobBean;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import javax.xml.crypto.Data;
+import java.sql.*;
 import java.util.ArrayList;
 
 /**
@@ -342,5 +340,26 @@ public class JobDAO {
             e.printStackTrace();
         }
         return jobList;
+    }
+
+    public static int consumeNewJobNotifications(String username) {
+
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+        int numNewJobs = 0;
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(
+                    "DELETE FROM  \"Proj\".job_notification WHERE username = ?");
+            pst.setString(1, username);
+
+            numNewJobs = pst.executeUpdate();
+
+            pst.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return numNewJobs;
     }
 }

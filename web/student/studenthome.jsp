@@ -61,28 +61,6 @@
 <!-- HEADER CODE - DO NOT REMOVE -->
 
 <br/>
-<hr/>
-<br/>
-
-<h2>Top Companies</h2>
-<table id="top5_companies">
-    <tr>
-        <th>Company</th>
-        <th>Location</th>
-        <th>Average Rating</th>
-    </tr>
-    <% for (CompanyBean company : companyList) { %>
-    <%=
-    "<tr>" +
-            "<td>" + company.getcName() + "</td>" +
-            "<td>" + company.getLocation() + "</td>" +
-            "<td>" + company.getAverageRating(company.getCompanyId()) + "</td>" +
-            "</tr>"
-    %>
-    <% } %>
-</table>
-<br/>
-<hr/>
 
 
 

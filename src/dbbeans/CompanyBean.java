@@ -60,14 +60,6 @@ public class CompanyBean implements Serializable {
         this.location = location;
     }
 
-    public double getRating() {
-        return rating;
-    }
-
-    public void setRating(double rating) {
-        this.rating = rating;
-    }
-
     public String getcName() {
         return cName;
     }
@@ -80,8 +72,12 @@ public class CompanyBean implements Serializable {
         return CompanyDAO.getCompanyById(companyId);
     }
 
-    public double getAverageRating(int id) {
-        return CompanyDAO.getAverageRating(id);
+    public double getRating() {
+        return CompanyDAO.getRating(this.getCompanyId());
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
     }
 
     public CompanyBean login(CompanyBean companyBean) {

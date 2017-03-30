@@ -40,7 +40,6 @@
     ArrayList<CompanyBean> allCompanies = CompanyBean.getAllCompanies();
     ArrayList<JobBean> pendingJobs = JobBean.getAllPendingJobs();
     ArrayList<JobBean> approvedJobs = JobBean.getAllApprovedJobs();
-    // TODO all companies
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
     } %>

@@ -44,21 +44,22 @@ public class CompanyDAO {
         return companyBean;
     }
 
-    public static double getAverageRating(int id) {
+    public static double getRating(int id) {
 
-        double averageRating = 0;
+        double averageRating = 0.0;
         DataAccess.openConnection();
         connection = DataAccess.getConnection();
 
         try {
             st = connection.createStatement();
             rs = st.executeQuery("SELECT SUM(companyrating), COUNT(companyrating) " +
-                    "FROM \"Proj\".COMPANY_REVIEW WHERE companyid = '"
-                    + id + "';");
+                    "FROM \"Proj\".company_review WHERE companyid = "
+                    + id);
             if (rs.next()) {
                 averageRating = rs.getDouble(1) / rs.getDouble(2);
             }
 
+            rs.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -93,15 +94,17 @@ public class CompanyDAO {
 
         try {
             st = connection.createStatement();
-            rs = st.executeQuery("SELECT rating, cname, location, companyid FROM \"Proj\".company " +
-                                    "ORDER BY rating DESC LIMIT 5;");
+            rs = st.executeQuery("SELECT AVG(companyrating) AS rating, companyid, cname, location FROM \"Proj\".company NATURAL JOIN \"Proj\".company_review " +
+                    "GROUP BY companyid ORDER BY rating DESC LIMIT 5;");
             while (rs.next()) {
                 CompanyBean company = new CompanyBean();
                 company.setcName(rs.getString("cname"));
                 company.setLocation(rs.getString("location"));
                 company.setCompanyId(rs.getInt("companyid"));
+                company.setRating(rs.getDouble("rating"));
 
                 companyList.add(company);
+                System.out.println(company);
             }
             rs.close();
             st.close();
@@ -128,7 +131,7 @@ public class CompanyDAO {
                 companyBean.setCompanyId(rs.getInt("companyid"));
                 companyBean.setCompanySize(rs.getInt("companysize"));
                 companyBean.setLocation(rs.getString("location"));
-                companyBean.setRating(rs.getDouble("rating"));
+                companyBean.setRating(companyBean.getRating());
             }
             else {
                 rs.close();
@@ -165,10 +168,9 @@ public class CompanyDAO {
 
         try {
             st = connection.createStatement();
-            st.execute("INSERT INTO \"Proj\".company (companysize, location, rating, cname, password) VALUES ('" +
+            st.execute("INSERT INTO \"Proj\".company (companysize, location, cname, password) VALUES ('" +
                     companyBean.getCompanySize() + "', '" +
                     companyBean.getLocation() + "', '" +
-                    companyBean.getRating() + "', '" +
                     companyBean.getcName() + "', '" +
                     companyBean.getPassword() + "');");
         } catch (SQLException e) {
@@ -204,19 +206,25 @@ public class CompanyDAO {
         try {
             st = connection.createStatement();
             rs = st.executeQuery(
-                "SELECT rating, cname, location, companyid, companysize FROM \"Proj\".company;" );
+                "SELECT cname, location, companyid, companysize FROM \"Proj\".company" );
             while (rs.next()) {
                 CompanyBean company = new CompanyBean();
                 company.setcName(rs.getString("cname"));
                 company.setLocation(rs.getString("location"));
                 company.setCompanyId(rs.getInt("companyid"));
                 company.setCompanySize(rs.getInt("companysize"));
-                company.setRating(rs.getDouble("rating"));
+
 
                 companyList.add(company);
             }
             rs.close();
             st.close();
+
+            // This for loop makes db calls and throws an error (as it opens another result set)
+            // very dirty bug.
+            for (CompanyBean company : companyList) {
+                company.setRating(company.getRating());
+            }
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();

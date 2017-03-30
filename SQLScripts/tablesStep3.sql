@@ -33,7 +33,6 @@ CREATE TABLE Company(
 	CompanyID SERIAL PRIMARY KEY,
 	CompanySize INTEGER,
 	Location VARCHAR(255),
-	Rating REAL,
 	CName VARCHAR(255) UNIQUE,
 	Password VARCHAR(255)
 );

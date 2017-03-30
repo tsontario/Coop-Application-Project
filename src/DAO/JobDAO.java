@@ -36,6 +36,7 @@ public class JobDAO {
                 job.setNumPositions(rs.getInt("numpositions"));
                 job.setClosingDate(rs.getString("closingdate"));
                 jobList.add(job);
+                System.out.println(job);
             }
                 rs.close();
                 st.close();
@@ -201,6 +202,7 @@ public class JobDAO {
                 job.setClosingDate(rs.getDate("closingdate").toString());
                 job.setPostingDate(rs.getDate("postingdate").toString());
                 job.setCName(rs.getString("description"));
+
                 jobList.add(job);
             }
             rs.close();

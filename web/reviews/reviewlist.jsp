@@ -68,7 +68,7 @@
                         <p class="card-text "><%=company.getcName()%></p>
                     </div>
                     <div class="col">
-                        <p class="card-text ">Average rating <%=company.getAverageRating(company.getCompanyId())%></p>
+                        <p class="card-text ">Average rating <%=company.getRating(company.getCompanyId())%></p>
                     </div>
                     <div class="col">
                         <p class="card-text ">Number of ratings <%=numRating%></p>

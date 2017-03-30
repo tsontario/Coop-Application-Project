@@ -29,7 +29,7 @@ public class CompanyDAO {
         try {
             st = connection.createStatement();
             rs = st.executeQuery("SELECT cname, companyid FROM \"Proj\".company " +
-                    "WHERE companyid = '" + id + "';");
+                    "WHERE companyid = " + id);
             if (rs.next()) {
                 companyBean.setcName(rs.getString("cname"));
                 companyBean.setCompanyId(rs.getInt("companyid"));

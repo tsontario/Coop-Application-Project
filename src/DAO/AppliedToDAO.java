@@ -80,7 +80,7 @@ public class AppliedToDAO {
         connection = db.getConnection();
         try {
             st = connection.createStatement();
-            rs = st.executeQuery("SELECT * FROM \"Proj\".applies_to WHERE userid ='" + username + "' AND jobid = '" + jobid + "';");
+            rs = st.executeQuery("SELECT * FROM \"Proj\".applies_to WHERE userid ='" + username + "' AND jobid = " + jobid);
             if (rs.next()) {
                 appliedToBean.setJobid(rs.getInt("jobid"));
                 appliedToBean.setTimestamp(rs.getString("timestamp"));

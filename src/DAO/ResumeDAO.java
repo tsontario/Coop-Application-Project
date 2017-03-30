@@ -59,7 +59,7 @@ public class ResumeDAO {
             st = connection.createStatement();
             rs = st.executeQuery("SELECT resumeid, username, resume, MAX(versionno) AS versionno FROM \"Proj\".resume " +
                     "WHERE username = '" + username +
-                    "' GROUP BY resumeid, username, resume;");
+                    "' GROUP BY resumeid, username, resume ORDER BY versionno DESC;");
             if (rs.next()) {
                 resumeBean.setResumeId(rs.getInt("resumeid"));
                 resumeBean.setVersionNo(rs.getInt("versionno"));

@@ -126,14 +126,14 @@
                                 u.getUsername() + "\"><button class=\"btn btn-danger\">Revoke Admin</button></a>"
                         :
                         "<a href=\"admin.jsp?useraction=true&action=makeadmin&id=" +
-                                u.getUsername() + "\"><button class=\"btn btn-success\">Grant Admin</button></a>" %>
+                                u.getUsername() + "\"><button class=\"btn btn-primary\">Grant Admin</button></a>" %>
                 </td>
                 <td><%= UserBean.isModerator(u.getUsername()) ?
                         "<a href=\"admin.jsp?useraction=true&action=removemoderator&id=" +
                                 u.getUsername() + "\"><button class=\"btn btn-danger\">Revoke Moderator</button></a>"
                         :
                         "<a href=\"admin.jsp?useraction=true&action=makemoderator&id=" +
-                                u.getUsername() + "\"><button class=\"btn btn-success\">Grant Moderator</button></a>" %>
+                                u.getUsername() + "\"><button class=\"btn btn-primary\">Grant Moderator</button></a>" %>
                 </td>
                 <td><a href=admin.jsp?useraction=true&action=delete&id=<%= u.getUsername() %>>
                     <button class="btn btn-danger">Delete User</button>

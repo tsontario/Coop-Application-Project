@@ -59,7 +59,7 @@ public class JobDAO {
                             "numpositions, closingdate, postingdate, cname, location " +
                     "FROM \"Proj\".JOB INNER JOIN \"Proj\".COMPANY ON job.companyid = company.companyid " +
                     "INNER JOIN \"Proj\".JOB_APPROVAL ON job.jobid = job_approval.jobid " +
-                    "WHERE job.closingdate > CURRENT_DATE;");
+                    "WHERE job.closingdate > CURRENT_DATE ORDER BY job.jobid DESC;");
             while (rs.next()) {
                 JobBean job = new JobBean();
                 job.setJobName(rs.getString("jobname"));

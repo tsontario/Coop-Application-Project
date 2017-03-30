@@ -277,6 +277,7 @@ public class JobDAO {
                 jobList.add(job);
             }
             rs.close();
+            st.close();
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -287,11 +288,12 @@ public class JobDAO {
 
     public static void approveJob(int id) {
         DataAccess.openConnection();
-        connection = db.getConnection();
+        connection = DataAccess.getConnection();
 
         try {
             st = connection.createStatement();
             st.executeUpdate("UPDATE \"Proj\".job_approval SET approved = TRUE WHERE jobid = " + id);
+
             rs.close();
             connection.close();
         } catch (SQLException e) {

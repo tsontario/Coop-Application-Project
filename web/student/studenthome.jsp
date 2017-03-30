@@ -18,6 +18,7 @@
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
     }
+
 %>
 
 <html>

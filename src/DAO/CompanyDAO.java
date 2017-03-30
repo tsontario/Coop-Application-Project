@@ -104,7 +104,6 @@ public class CompanyDAO {
                 company.setRating(rs.getDouble("rating"));
 
                 companyList.add(company);
-                System.out.println(company);
             }
             rs.close();
             st.close();

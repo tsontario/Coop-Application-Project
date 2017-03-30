@@ -242,9 +242,7 @@ public class UserDAO {
             pst.setString(1, id);
             System.out.println(pst.toString());
 
-            rs = pst.executeQuery();
-
-
+            pst.executeUpdate();
             connection.close();
             DataAccess.closeConnection();
         } catch (SQLException e) {
@@ -297,9 +295,6 @@ public class UserDAO {
             pst.setString(1, id);
 
             rs = pst.executeQuery();
-            if (rs.next()) {
-                System.out.println("Deleted " + rs.getString("username"));
-            }
 
             connection.close();
             DataAccess.closeConnection();
@@ -317,9 +312,6 @@ public class UserDAO {
             pst.setString(1, id);
 
             rs = pst.executeQuery();
-            if (rs.next()) {
-                System.out.println("Deleted " + rs.getString("username"));
-            }
 
             connection.close();
             DataAccess.closeConnection();

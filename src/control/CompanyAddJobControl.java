@@ -58,10 +58,8 @@ public class CompanyAddJobControl extends HttpServlet {
         }
 
         JobBean jobBean = new JobBean();
-        jobBean.setLocation(location);
         jobBean.setCompanyId(companyId);
         jobBean.setClosingDate(daysOpen);
-        jobBean.setCName(companyName);
         jobBean.setDescription(description);
         jobBean.setJobLevel(jobLevel);
         jobBean.setJobName(jobName);

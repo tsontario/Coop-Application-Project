@@ -17,8 +17,8 @@
       <div class="form">
           <form class="login-form" action="LoginControl" method="POST">
               <p>Student Login</p>
-              <input type="text" name="uname" placeholder="username"/>
-              <input type="password" name="pword" placeholder="password"/>
+              <input type="text" name="uname" placeholder="username" required/>
+              <input type="password" name="pword" placeholder="password" required/>
               <button type="submit">login</button>
               <p class="message">Not registered? <a href="student/studentregister.jsp">Create an account</a></p>
               <p class="message">Company? <a href="indexCompany.jsp">Login here</a></p>

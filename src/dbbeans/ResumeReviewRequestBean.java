@@ -44,4 +44,8 @@ public class ResumeReviewRequestBean implements Serializable {
     public static ArrayList<ResumeReviewRequestBean> getReviewRequests() {
         return ResumeReviewRequestDAO.getReviewRequests();
     }
+
+    public static void deleteById(int resumeId, int resumeVersion) {
+        ResumeReviewRequestDAO.deleteById(resumeId,resumeVersion);
+    }
 }

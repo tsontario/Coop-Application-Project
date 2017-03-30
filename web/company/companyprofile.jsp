@@ -56,41 +56,41 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Company Name:</label>
                     <div class="col-lg-8">
-                        <input name="cName" class="form-control" type="text" value=${currentCompany.getcName()}>
+                        <input name="cName" class="form-control" type="text" value=${currentCompany.getcName()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Location:</label>
                     <div class="col-lg-8">
-                        <input name="location" class="form-control" type="text" value=${currentCompany.getLocation()}>
+                        <input name="location" class="form-control" type="text" value=${currentCompany.getLocation()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Company Size:</label>
                     <div class="col-lg-8">
                         <input name="size" class="form-control" type="text"
-                               value=${currentCompany.getCompanySize()}>
+                               value=${currentCompany.getCompanySize()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Rating:</label>
                     <div class="col-md-8">
                         <input name="rating" class="form-control" readonly="true" type="text"
-                               value=${currentCompany.getRating()}>
+                               value=${currentCompany.getRating()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
                         <input name="password" class="form-control" type="password"
-                               value=${currentCompany.getPassword()}>
+                               value=${currentCompany.getPassword()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Confirm password:</label>
                     <div class="col-md-8">
                         <input name="passwordcheck" class="form-control" type="password"
-                               value=${currentCompany.getPassword()}>
+                               value=${currentCompany.getPassword()} required>
                     </div>
                 </div>
                 <div class="form-group">

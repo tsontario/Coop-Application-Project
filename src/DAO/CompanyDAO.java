@@ -194,5 +194,51 @@ public class CompanyDAO {
 
         return companyBean;
     }
+
+    public static ArrayList<CompanyBean> getAllCompanies() {
+        ArrayList<CompanyBean> companyList = new ArrayList<>();
+
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery(
+                "SELECT rating, cname, location, companyid, companysize FROM \"Proj\".company;" );
+            while (rs.next()) {
+                CompanyBean company = new CompanyBean();
+                company.setcName(rs.getString("cname"));
+                company.setLocation(rs.getString("location"));
+                company.setCompanyId(rs.getInt("companyid"));
+                company.setCompanySize(rs.getInt("companysize"));
+                company.setRating(rs.getDouble("rating"));
+
+                companyList.add(company);
+            }
+            rs.close();
+            st.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return companyList;
+    }
+
+    public static void deleteCompanyById(int id) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            st = connection.createStatement();
+            st.executeUpdate(
+                    "DELETE FROM \"Proj\".company WHERE companyid = " + id + ";");
+
+            st.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

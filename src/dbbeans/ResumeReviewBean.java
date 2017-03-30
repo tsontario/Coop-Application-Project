@@ -1,5 +1,7 @@
 package dbbeans;
 
+import DAO.ResumeReviewDAO;
+
 import java.io.Serializable;
 
 /**
@@ -54,5 +56,22 @@ public class ResumeReviewBean implements Serializable {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public ResumeReviewBean insertReviewToDb() {
+        return ResumeReviewDAO.insertReviewToDb(this);
+    }
+
+    @Override
+    public String toString() {
+        String res = "";
+
+        res += this.getReviewId();
+        res += this.getResumeId();
+        res += this.getResumeVersion();
+        res += " " + this.getModerator();
+        res += " " + this.getComments();
+
+        return res;
     }
 }

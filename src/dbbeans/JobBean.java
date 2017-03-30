@@ -23,8 +23,6 @@ public class JobBean implements Serializable {
     private String cname;
     private String location;
 
-
-
     public JobBean() {
 
     }
@@ -137,5 +135,33 @@ public class JobBean implements Serializable {
     public void jobAdd(JobBean jobBean) {
         JobDAO.addJob(jobBean);
 
+    }
+
+    public static ArrayList<JobBean> getJobsByCompany(int companyId) {
+        return JobDAO.getJobsByCompany(companyId);
+    }
+
+    public static ArrayList<JobBean> getPendingJobsByCompany(int companyId) {
+        return JobDAO.getPendingJobsByCompany(companyId);
+    }
+
+    public static ArrayList<JobBean> getAllPendingJobs() {
+        return JobDAO.getAllPendingJobs();
+    }
+
+    public static void executeAction(String action, int id) {
+        if (action.equals("approve")) {
+            JobDAO.approveJob(id);
+        }
+        else if (action.equals("reject")) {
+            JobDAO.rejectJob(id);
+        }
+        else if (action.equals("delete")) {
+            deleteJob(id);
+        }
+    }
+
+    public static ArrayList<JobBean> getAllApprovedJobs() {
+        return JobDAO.getAllApprovedJobs();
     }
 }

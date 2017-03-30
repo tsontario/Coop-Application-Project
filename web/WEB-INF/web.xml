@@ -101,4 +101,12 @@
         <servlet-name>CreateCompanyReviewControl</servlet-name>
         <url-pattern>/CreateCompanyReviewControl</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ResumeReviewSubmissionControl</servlet-name>
+        <servlet-class>control.ResumeReviewSubmissionControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResumeReviewSubmissionControl</servlet-name>
+        <url-pattern>/student/resume/ResumeReviewSubmissionControl</url-pattern>
+    </servlet-mapping>
 </web-app>

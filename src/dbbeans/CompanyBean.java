@@ -91,4 +91,18 @@ public class CompanyBean implements Serializable {
     public void insertIntoDB() {
         CompanyDAO.insertIntoDB(this);
     }
+
+    public static ArrayList<CompanyBean> getAllCompanies() {
+        return CompanyDAO.getAllCompanies();
+    }
+
+    public static void executeAction(String action, int id) {
+
+        if (action == null) {
+            return;
+        }
+        else if (action.equals("delete")) {
+            CompanyDAO.deleteCompanyById(id);
+        }
+    }
 }

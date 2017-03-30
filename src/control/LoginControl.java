@@ -31,7 +31,6 @@ public class LoginControl extends HttpServlet {
         db.openConnection();
 
         userBean = userBean.login(userBean);
-        System.out.println(userBean);
 
         if (userBean != null) {
             session = request.getSession(true);

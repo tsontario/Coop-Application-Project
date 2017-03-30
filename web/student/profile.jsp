@@ -29,7 +29,7 @@
 
     <div class="header-limiter">
 
-        <h1><a href="#">COOP<span>Database</span></a></h1>
+        <h1><a href="studenthome.jsp">COOP<span>Database</span></a></h1>
 
         <nav>
             <a href="../student/studenthome.jsp">Home</a>
@@ -69,19 +69,19 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">First name:</label>
                     <div class="col-lg-8">
-                        <input name="firstName" class="form-control" type="text" value=${currentUser.getfName()}>
+                        <input name="firstName" class="form-control" type="text" value=${currentUser.getfName()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Last name:</label>
                     <div class="col-lg-8">
-                        <input name="lastName" class="form-control" type="text" value=${currentUser.getlName()}>
+                        <input name="lastName" class="form-control" type="text" value=${currentUser.getlName()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Program Code:</label>
                     <div class="col-lg-8">
-                        <select name="programCode" class="form-control">
+                        <select name="programCode" class="form-control" required>
                             <% for (ProgramBean program : programList) {
                                 String p = program.getProgramCode();
                                 if (p.equals(user.getProgramCode())){%>
@@ -94,30 +94,58 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-lg-3 control-label">Level:</label>
+                    <div class="col-lg-8">
+                        <select name="level" class="form-control" required>
+                            <% if (user.getLevel() == 1) { %>
+                            <option selected="1">Year 1</option>
+                            <option value="2">Year 2</option>
+                            <option value="3">Year 3</option>
+                            <option value="4">Year 4</option>
+                            <% } else if (user.getLevel() == 2) { %>
+                            <option value="1">Year 1</option>
+                            <option selected="2">Year 2</option>
+                            <option value="3">Year 3</option>
+                            <option value="4">Year 4</option>
+                            <% } else if (user.getLevel() == 3) { %>
+                            <option value="1">Year 1</option>
+                            <option value="2">Year 2</option>
+                            <option selected="3">Year 3</option>
+                            <option value="4">Year 4</option>
+                            <% } else { %>
+                            <option value="1">Year 1</option>
+                            <option value="2">Year 2</option>
+                            <option value="3">Year 3</option>
+                            <option selected="4">Year 4</option>
+                            <% } %>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-lg-3 control-label">Email:</label>
                     <div class="col-lg-8">
-                        <input name="email" class="form-control" type="text"
-                               value=${currentUser.getEmail()} readonly="true">
+                        <input name="email" class="form-control" type="email"
+                               value=${currentUser.getEmail()} readonly="true" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Username:</label>
                     <div class="col-md-8">
-                        <input name="username" readonly="true" class="form-control" type="text"
-                               value=${currentUser.getUsername()}>
+                        <input name="username" readonly class="form-control" type="text"
+                               value=${currentUser.getUsername()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
-                        <input name="password" class="form-control" type="password" value=${currentUser.getPassword()}>
+                        <input name="password" class="form-control" type="password" value=${currentUser.getPassword()} required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Confirm password:</label>
                     <div class="col-md-8">
                         <input name="passwordcheck" class="form-control" type="password"
-                               value=${currentUser.getPassword()}>
+                               value=${currentUser.getPassword()} required>
                     </div>
                 </div>
                 <div class="form-group">

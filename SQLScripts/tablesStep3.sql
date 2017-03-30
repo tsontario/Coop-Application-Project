@@ -1,3 +1,4 @@
+
 CREATE TABLE Program(
 	ProgramName VARCHAR(50) UNIQUE,
 	ProgramCode VARCHAR(3),
@@ -63,7 +64,7 @@ CREATE TABLE Job(
 	ClosingDate DATE,
 	PostingDate DATE,
 	Primary Key (JobID),
-	Foreign Key (CompanyId) REFERENCES Company(CompanyId) ON DELETE RESTRICT ON UPDATE CASCADE
+	Foreign Key (CompanyId) REFERENCES Company(CompanyId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Job_Approval(
@@ -78,7 +79,7 @@ CREATE TABLE Applies_To(
 	UserID VARCHAR(20),
 	TimeStamp DATE,
 	PRIMARY KEY(JobID, UserID),
-	Foreign Key(JobID) REFERENCES Job(JobID) ON DELETE RESTRICT ON UPDATE CASCADE,
+	Foreign Key(JobID) REFERENCES Job(JobID) ON DELETE CASCADE ON UPDATE CASCADE,
 	Foreign Key(UserID) REFERENCES sUser(Username) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -86,12 +87,12 @@ CREATE TABLE Offered_To(
 	JobID INTEGER,
 	ProgramCode VARCHAR(3),
 	PRIMARY KEY(JobID, ProgramCode), -- A Job can be offered to multiple programs (e.g. CSI & SEG)
-	Foreign Key (JobID) REFERENCES Job(JobID) ON DELETE RESTRICT ON UPDATE CASCADE,
-	Foreign Key (ProgramCode) REFERENCES Program(ProgramCode) ON DELETE RESTRICT ON UPDATE CASCADE
+	Foreign Key (JobID) REFERENCES Job(JobID) ON DELETE CASCADE ON UPDATE CASCADE,
+	Foreign Key (ProgramCode) REFERENCES Program(ProgramCode) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Resume(
-	ResumeID INTEGER,
+	ResumeID SERIAL,
 	VersionNo INTEGER,
 	Username VARCHAR(20),
 	Resume TEXT,
@@ -100,7 +101,7 @@ CREATE TABLE Resume(
 );
 
 CREATE TABLE Resume_Review(
-	ReviewID       INTEGER UNIQUE,
+	ReviewID       SERIAL,
 	ResumeVersion  INTEGER,
 	Moderator      VARCHAR(20),
 	ResumeID       INTEGER,
@@ -114,7 +115,7 @@ CREATE TABLE Resume_Review_Request(
 	RequesterID VARCHAR(20),
 	ResumeID INTEGER,
 	VersionNo INTEGER,
-	Primary Key (RequesterID, ResumeId, VersionNo),
+	Primary Key (ResumeId, VersionNo),
 	Foreign Key (RequesterID) REFERENCES sUser(Username) ON DELETE CASCADE ON UPDATE CASCADE,
 	Foreign Key (ResumeID, VersionNo) REFERENCES Resume(ResumeID, VersionNo) ON DELETE CASCADE ON UPDATE CASCADE
 );
@@ -126,6 +127,7 @@ CREATE TABLE Upvote(
 	Foreign Key (Username) REFERENCES sUser(Username) ON DELETE CASCADE ON UPDATE CASCADE,
 	Foreign Key (ReviewID) REFERENCES Company_Review(ReviewID) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
 
 #Dropping using cascade.
 DROP TABLE Program CASCADE;

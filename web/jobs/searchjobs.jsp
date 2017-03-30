@@ -19,7 +19,7 @@
 %>
 <% String temp = request.getParameter("name") ;%>
 <html>
-
+<title>Jobs Page</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.css">
 <link rel="stylesheet" type="text/css" href="../css/joblist.css">
@@ -35,7 +35,7 @@
 
     <div class="header-limiter">
 
-        <h1><a href="#">COOP<span>Database</span></a></h1>
+        <h1><a href="../student/studenthome.jsp">COOP<span>Database</span></a></h1>
 
         <nav>
             <a href="../student/studenthome.jsp">Home</a>

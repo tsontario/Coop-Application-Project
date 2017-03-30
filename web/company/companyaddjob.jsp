@@ -60,46 +60,46 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Job Name:</label>
                     <div class="col-lg-8">
-                        <input name="jobName" class="form-control" type="text" placeholder="Job Name" value="">
+                        <input name="jobName" class="form-control" type="text" placeholder="Job Name" value="" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Job Level:</label>
                     <div class="col-lg-8">
-                        <input name="jobLevel" class="form-control" type="number" placeholder="2" value="">
+                        <input name="jobLevel" class="form-control" type="number" placeholder="2" value=""required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Location:</label>
                     <div class="col-lg-8">
-                        <input name="location" class="form-control" type="text" placeholder="Location" value="">
+                        <input name="location" class="form-control" type="text" placeholder="Location" value="" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Positions:</label>
                     <div class="col-lg-8">
                         <input name="positions" class="form-control" type="number" placeholder="3"
-                               value="">
+                               value="" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Rate of Pay:</label>
                     <div class="col-md-8">
                         <input name="rateOfPay" class="form-control" type="text" placeholder="15.5"
-                               value="">
+                               value="" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Days to be open:</label>
                     <div class="col-md-8">
                         <input name="daysOpen" class="form-control" type="number" placeholder="10"
-                               value="">
+                               value="" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Description</label>
                     <div class="col-md-8">
-                        <textarea name="description" class="form-control" rows="10"></textarea>
+                        <textarea name="description" class="form-control" rows="10" required></textarea>
                     </div>
                 </div>
                 <div class="form-group">

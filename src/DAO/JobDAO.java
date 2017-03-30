@@ -3,10 +3,7 @@ package DAO;
 import connection.DataAccess;
 import dbbeans.JobBean;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 /**
@@ -26,15 +23,18 @@ public class JobDAO {
 
         try {
             st = connection.createStatement();
-            rs = st.executeQuery("SELECT jobid, jobname, joblevel, rateofpay, companyid " +
+            rs = st.executeQuery("SELECT jobid, jobname, joblevel, rateofpay, companyid, numpositions, closingdate " +
                     "FROM \"Proj\".JOB  NATURAL JOIN \"Proj\".APPLIES_TO " +
                     "GROUP BY jobid ORDER BY count(jobid) DESC;");
             while (rs.next()) {
                 JobBean job = new JobBean();
+                job.setJobId(rs.getInt("jobid"));
                 job.setJobName(rs.getString("jobname"));
                 job.setJobLevel(rs.getInt("joblevel"));
                 job.setRateOfPay(rs.getDouble("rateofpay"));
                 job.setCompanyId(rs.getString("companyid"));
+                job.setNumPositions(rs.getInt("numpositions"));
+                job.setClosingDate(rs.getString("closingdate"));
                 jobList.add(job);
             }
                 rs.close();
@@ -151,7 +151,7 @@ public class JobDAO {
 
         try {
             st = connection.createStatement();
-            st.executeUpdate("DELETE FROM \"Proj\".job WHERE jobid = " + jobid + ";");
+            st.executeUpdate("DELETE FROM \"Proj\".job WHERE jobid = " + jobid);
             st.close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -180,5 +180,158 @@ public class JobDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList<JobBean> getJobsByCompany(int companyId) {
+        DataAccess.openConnection();
+        ArrayList<JobBean> jobList = new ArrayList<>();
+
+        try {
+            connection = DataAccess.getConnection();
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT * FROM \"Proj\".job where companyid = " + companyId);
+            while (rs.next()) {
+                JobBean job = new JobBean();
+                job.setJobName(rs.getString("jobname"));
+                job.setJobId(rs.getInt("jobid"));
+                job.setJobLevel(rs.getInt("joblevel"));
+                job.setRateOfPay(rs.getDouble("rateofpay"));
+                job.setCompanyId(rs.getString("companyid"));
+                job.setNumPositions(rs.getInt("numpositions"));
+                job.setClosingDate(rs.getDate("closingdate").toString());
+                job.setPostingDate(rs.getDate("postingdate").toString());
+                job.setCName(rs.getString("description"));
+                jobList.add(job);
+            }
+            rs.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return jobList;
+    }
+
+    public static ArrayList<JobBean> getPendingJobsByCompany(int companyId) {
+        DataAccess.openConnection();
+        ArrayList<JobBean> jobList = new ArrayList<>();
+
+        try {
+            connection = DataAccess.getConnection();
+            st = connection.createStatement();
+            rs = st.executeQuery(
+                    "SELECT jobid, jobname, joblevel, rateofpay, companyid, " +
+                            "numpositions, closingdate, postingdate, cname, description, location " +
+                            " FROM \"Proj\".job_approval NATURAL JOIN \"Proj\".job NATURAL JOIN \"Proj\".company WHERE companyid = " + companyId + " AND approved = FALSE");
+            while (rs.next()) {
+                JobBean job = new JobBean();
+                job.setJobName(rs.getString("jobname"));
+                job.setJobId(rs.getInt("jobid"));
+                job.setJobLevel(rs.getInt("joblevel"));
+                job.setRateOfPay(rs.getDouble("rateofpay"));
+                job.setCompanyId(rs.getString("companyid"));
+                job.setNumPositions(rs.getInt("numpositions"));
+                job.setClosingDate(rs.getDate("closingdate").toString());
+                job.setPostingDate(rs.getDate("postingdate").toString());
+                job.setCName(rs.getString("cname"));
+                job.setDescription(rs.getString("description"));
+                job.setLocation(rs.getString("location"));
+
+                jobList.add(job);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return jobList;
+    }
+
+    public static ArrayList<JobBean> getAllPendingJobs() {
+        DataAccess.openConnection();
+        ArrayList<JobBean> jobList = new ArrayList<>();
+
+        try {
+            connection = DataAccess.getConnection();
+            st = connection.createStatement();
+            rs = st.executeQuery(
+                    "SELECT jobid, jobname, joblevel, rateofpay, companyid, " +
+                            "numpositions, closingdate, postingdate, cname, description FROM \"Proj\".job_approval NATURAL JOIN \"Proj\".job NATURAL JOIN \"Proj\".company WHERE approved = FALSE");
+            while (rs.next()) {
+                JobBean job = new JobBean();
+                job.setJobName(rs.getString("jobname"));
+                job.setJobId(rs.getInt("jobid"));
+                job.setJobLevel(rs.getInt("joblevel"));
+                job.setRateOfPay(rs.getDouble("rateofpay"));
+                job.setCompanyId(rs.getString("companyid"));
+                job.setNumPositions(rs.getInt("numpositions"));
+                job.setClosingDate(rs.getDate("closingdate").toString());
+                job.setPostingDate(rs.getDate("postingdate").toString());
+                job.setCName(rs.getString("cname"));
+                job.setDescription(rs.getString("description"));
+
+                jobList.add(job);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return jobList;
+
+    }
+
+    public static void approveJob(int id) {
+        DataAccess.openConnection();
+        connection = db.getConnection();
+
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("UPDATE \"Proj\".job_approval SET approved = TRUE WHERE jobid = " + id);
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void rejectJob(int id) {
+        DataAccess.openConnection();
+        connection = db.getConnection();
+
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("DELETE FROM \"Proj\".job_approval WHERE jobid = " + id);
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static ArrayList<JobBean> getAllApprovedJobs() {
+        DataAccess.openConnection();
+        ArrayList<JobBean> jobList = new ArrayList<>();
+
+        try {
+            connection = DataAccess.getConnection();
+            st = connection.createStatement();
+            rs = st.executeQuery(
+                    "SELECT jobid, jobname, joblevel, rateofpay, companyid, " +
+                            "numpositions, closingdate, postingdate, cname, description FROM \"Proj\".job_approval NATURAL JOIN \"Proj\".job NATURAL JOIN \"Proj\".company WHERE approved = TRUE");
+            while (rs.next()) {
+                JobBean job = new JobBean();
+                job.setJobName(rs.getString("jobname"));
+                job.setJobId(rs.getInt("jobid"));
+                job.setJobLevel(rs.getInt("joblevel"));
+                job.setRateOfPay(rs.getDouble("rateofpay"));
+                job.setCompanyId(rs.getString("companyid"));
+                job.setNumPositions(rs.getInt("numpositions"));
+                job.setClosingDate(rs.getDate("closingdate").toString());
+                job.setPostingDate(rs.getDate("postingdate").toString());
+                job.setCName(rs.getString("cname"));
+                job.setDescription(rs.getString("description"));
+
+                jobList.add(job);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return jobList;
     }
 }

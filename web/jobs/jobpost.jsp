@@ -47,7 +47,7 @@
             <a href="../student/studenthome.jsp">Home</a>
             <a href="../student/profile.jsp">Profile</a>
             <a href="#">Resume</a>
-            <a href="../jobs/searchjobs.jsp" class="selected">Jobs</a>
+            <a href="../jobs/searchjobs.jsp">Jobs</a>
             <a href="../reviews/reviewlist.jsp">Write Review</a>
             <% if (user != null) {
                 if (user.isAdmin(user.getUsername())) { %>

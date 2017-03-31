@@ -48,7 +48,8 @@ CREATE TABLE Company_Review(
 	CompanyRating INTEGER,
 	Primary Key (ReviewID),
 	Foreign Key (CompanyID) REFERENCES Company(CompanyID) ON DELETE CASCADE ON UPDATE CASCADE,
-	Foreign Key (Username) REFERENCES sUser(Username) ON DELETE SET NULL ON UPDATE CASCADE
+	Foreign Key (Username) REFERENCES sUser(Username) ON DELETE SET NULL ON UPDATE CASCADE,
+	UNIQUE (Username, companyID)
 );
 
 
@@ -144,13 +145,12 @@ CREATE TABLE new_resume_review_requests(
 	FOREIGN KEY (username) REFERENCES moderator ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-CREATE TABLE resume_review_notification(
-	requesterid VARCHAR(20),
-	resumeid INTEGER,
-	versionno INTEGER,
-	PRIMARY KEY (resumeid, versionno),
-	FOREIGN KEY (resumeid, versionno) REFERENCES resume_review_request(resumeid, versionno) ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY(requesterid) REFERENCES suser ON DELETE CASCADE ON UPDATE CASCADE
+CREATE TABLE job_notification(
+	jobid INTEGER,
+	username VARCHAR(20),
+	PRIMARY KEY (jobid, username),
+	FOREIGN KEY (jobid) REFERENCES job(jobid),
+	FOREIGN KEY (username) REFERENCES suser(username)
 );
 
 -- Dropping using cascade.

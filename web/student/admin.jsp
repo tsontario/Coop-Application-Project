@@ -2,6 +2,7 @@
 <%@ page import="dbbeans.JobBean" %>
 <%@ page import="dbbeans.UserBean" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="dbbeans.ProgramBean" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
@@ -10,6 +11,7 @@
     String companyAction = request.getParameter("companyaction");
     String pendingAction = request.getParameter("pendingaction");
     String jobAction = request.getParameter("jobaction");
+    String programAction = request.getParameter("programaction");
 
     String action = request.getParameter("action");
     String id = request.getParameter("id");
@@ -31,6 +33,11 @@
     if (jobAction != null && jobAction.equals("true")) {
         JobBean.executeAction(action, Integer.parseInt(id));
     }
+    if (programAction != null && programAction.equals("true")) {
+        if (action.equals("delete")) {
+            ProgramBean.executeAction(action, id);
+        }
+    }
 
 
     UserBean admin = (UserBean) request.getSession().getAttribute("currentUser");
@@ -39,6 +46,7 @@
     ArrayList<CompanyBean> allCompanies = CompanyBean.getAllCompanies();
     ArrayList<JobBean> pendingJobs = JobBean.getAllPendingJobs();
     ArrayList<JobBean> approvedJobs = JobBean.getAllApprovedJobs();
+    ArrayList<ProgramBean> programList = ProgramBean.getProgramList();
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
     } %>
@@ -238,8 +246,9 @@
         </table>
 
         <hr/>
-        <h4>Approved Jobs</h4>
+
         <hr class="wr-100"/>
+        <h4>Approved Jobs</h4>
         <table class="w-100">
             <tr>
                 <th class="text-center">Job Title</th>
@@ -281,6 +290,37 @@
             </tr>
             <% } %>
         </table>
+
+        <hr/>
+        <hr class="wr-100"/>
+
+        <h4>Active Programs</h4>
+        <h5>Note: A program can only be deleted if no users are currently registered in it</h5>
+        <table class="w-100">
+            <tr>
+                <th class="text-center">Program Name</th>
+                <th class="text-center">Program Code</th>
+                <th class="text-center">Action</th>
+            </tr>
+            <% for (ProgramBean p : programList) {%>
+            <tr>
+                <td><%= p.getProgramName() %>
+                </td>
+                <td>
+                    <%= p.getProgramCode() %>
+                </td>
+                <td>
+                    <a href="admin.jsp?programaction=true&action=delete&id=<%=p.getProgramCode()%>">
+                        <button class="btn btn-danger">Delete</button>
+                    </a>
+                </td>
+
+            </tr>
+            <% } %>
+        </table>
+        <a href="../program/addprogram.jsp">
+            <button type="submit" class="btn btn-info">Add New Program</button>
+        </a>
     </div>
 </div>
 

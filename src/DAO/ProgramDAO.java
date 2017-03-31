@@ -3,10 +3,7 @@ package DAO;
 import connection.DataAccess;
 import dbbeans.ProgramBean;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 /**
@@ -43,10 +40,39 @@ public class ProgramDAO {
     }
 
     public static void addProgramToDb(ProgramBean programBean) {
-        // TODO Implement
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(
+                    "INSERT INTO \"Proj\".program(programcode, programname) VALUES (?, ?)");
+            pst.setString(1, programBean.getProgramCode());
+            pst.setString(2, programBean.getProgramName());
+
+            pst.executeUpdate();
+            pst.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
-    public static void removeProgramFromDb(ProgramBean programBean) {
-        // TODO Implement
+    public static void deleteProgramById(String id) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement("DELETE FROM \"Proj\".program WHERE programcode = ?");
+            pst.setString(1, id);
+
+            pst.executeUpdate();
+
+            pst.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

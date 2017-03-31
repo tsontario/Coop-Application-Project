@@ -117,4 +117,13 @@
         <servlet-name>DeleteCompanyReviewControl</servlet-name>
         <url-pattern>/DeleteCompanyReviewControl</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AddProgramControl</servlet-name>
+        <servlet-class>control.AddProgramControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddProgramControl</servlet-name>
+        <url-pattern>/program/AddProgramControl</url-pattern>
+    </servlet-mapping>
 </web-app>

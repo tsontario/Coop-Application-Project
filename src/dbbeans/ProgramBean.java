@@ -36,4 +36,14 @@ public class ProgramBean implements Serializable {
     public static ArrayList<ProgramBean> getProgramList() {
         return ProgramDAO.getProgramList();
     }
+
+    public static void executeAction(String action, String id) {
+        if (action.equals("delete")) {
+            ProgramDAO.deleteProgramById(id);
+        }
+    }
+
+    public static void addProgramToDb(ProgramBean programBean) {
+        ProgramDAO.addProgramToDb(programBean);
+    }
 }

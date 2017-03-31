@@ -12,7 +12,15 @@
 
 <%
     UserBean user = (UserBean) request.getSession().getAttribute("currentUser");
-    ArrayList<JobBean> jobList = JobBean.getAllJobs();
+    String ordering = request.getParameter("ordering");
+    String sortby = request.getParameter("sortby");
+    if(sortby == null || sortby.equals("null")){
+        sortby = "postingdate";
+    }
+    if(ordering == null || ordering.equals("null")){
+        ordering = "DESC";
+    }
+    ArrayList<JobBean> jobList = JobBean.getAllValidJobs(sortby, ordering);
     if(user == null){
         response.sendRedirect("../index.jsp");
     }
@@ -58,9 +66,10 @@
 </header>
 <!-- HEADER CODE - DO NOT REMOVE -->
 
-    <div class="col-10"  style="padding-top: 40px">
-        <h2>Job Postings</h2>
-        <hr class="w-100">
+<div class="row" style="padding: 40px">
+    <h2 style="padding-left: 15px;">Job Postings</h2>
+    <hr class="w-100">
+    <div class="col-9">
         <% for (JobBean job : jobList) { %>
         <% if(user.getLevel() >= job.getJobLevel()){%>
         <a href="#">
@@ -93,7 +102,30 @@
         <% } %>
         <% } %>
     </div>
-
+    <div class="col-3">
+        <h4>Sort</h4>
+        <form action="../SortJobsControl" method="post" class="form-group">
+            <div class="row">
+                <select name="sortby" class="form-control">
+                    <option value="postingdate" <%= sortby.equals("postingdate") ? "selected" : "" %> >Posting Date</option>
+                    <option value="closingdate" <%= sortby.equals("closingdate")? "selected" : "" %> >Closing Date</option>
+                    <option value="numpositions" <%= sortby.equals("numpositions") ? "selected" : "" %> >Number of Positions</option>
+                    <option value="joblevel" <%= sortby.equals("joblevel") ? "selected" : "" %> >Student Level</option>
+                    <option value="companyrating" <%= sortby.equals("companyrating") ? "selected" : "" %> >Company Rating</option>
+                </select>
+            </div>
+            <div class="row">
+                <select name="ordering" class="form-control">
+                    <option value="ASC" <%= ordering.equals("ASC") ? "selected" : "" %> >Ascending</option>
+                    <option value="DESC" <%= ordering.equals("DESC") ? "selected" : "" %> >Descending</option>
+                </select>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary form-control" type="submit">Sort</button>
+            </div>
+        </form>
+    </div>
+</div>
 <hr>
 </body>
 

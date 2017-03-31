@@ -48,7 +48,13 @@ public class JobDAO {
         return jobList;
     }
 
-    public static ArrayList<JobBean> getAllValidJobListing() {
+    public static ArrayList<JobBean> getAllValidJobListing(String sortingAttribute, String ordering) {
+        if(sortingAttribute == null){
+            sortingAttribute = "postingdate";
+        }
+        if(ordering == null){
+            ordering = "DESC";
+        }
         ArrayList<JobBean> jobList = new ArrayList<>();
         db.openConnection();
         connection = db.getConnection();
@@ -59,7 +65,8 @@ public class JobDAO {
                             "numpositions, closingdate, postingdate, cname, location " +
                     "FROM \"Proj\".JOB INNER JOIN \"Proj\".COMPANY ON job.companyid = company.companyid " +
                     "INNER JOIN \"Proj\".JOB_APPROVAL ON job.jobid = job_approval.jobid " +
-                    "WHERE job.closingdate > CURRENT_DATE AND approved = TRUE ORDER BY job.jobid DESC;");
+                    "WHERE job.closingdate > CURRENT_DATE AND approved = TRUE ORDER BY job." + sortingAttribute
+                    + " " + ordering + " ;");
             while (rs.next()) {
                 JobBean job = new JobBean();
                 job.setJobName(rs.getString("jobname"));
@@ -361,6 +368,7 @@ public class JobDAO {
             e.printStackTrace();
         }
         return numNewJobs;
+
     }
 
     public static int consumeNumNewPendingJobs(String username) {

@@ -126,4 +126,12 @@
         <servlet-name>AddProgramControl</servlet-name>
         <url-pattern>/program/AddProgramControl</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>SortJobsControl</servlet-name>
+        <servlet-class>control.SortJobsControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortJobsControl</servlet-name>
+        <url-pattern>/SortJobsControl</url-pattern>
+    </servlet-mapping>
 </web-app>

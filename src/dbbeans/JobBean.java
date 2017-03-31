@@ -129,8 +129,8 @@ public class JobBean implements Serializable {
     public static ArrayList<JobBean> listTopFiveJobs() {
         return JobDAO.listTopFiveJobs();
     }
-    public static ArrayList<JobBean> getAllJobs() {
-        return JobDAO.getAllValidJobListing();
+    public static ArrayList<JobBean> getAllValidJobs(String sortingAttribute, String ordering) {
+        return JobDAO.getAllValidJobListing(sortingAttribute,ordering);
     }
     public void jobAdd(JobBean jobBean) {
         JobDAO.addJob(jobBean);

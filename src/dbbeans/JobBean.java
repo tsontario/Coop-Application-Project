@@ -168,4 +168,7 @@ public class JobBean implements Serializable {
     public static int consumeNewJobNotificationsByUser(String username) {
         return JobDAO.consumeNewJobNotifications(username);
     }
+
+    public static int getNewPendingJobs() {
+    }
 }

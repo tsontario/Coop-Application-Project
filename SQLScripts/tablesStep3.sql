@@ -127,6 +127,13 @@ CREATE TABLE Upvote(
 	Foreign Key (ReviewID) REFERENCES Company_Review(ReviewID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+CREATE TABLE job_pending_approval(
+	jobid INTEGER,
+	username VARCHAR(20),
+	PRIMARY KEY(jobid, username),
+	FOREIGN KEY(jobid) REFERENCES job(jobid) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY(username) REFERENCES admin(username) ON DELETE CASCADE ON UPDATE CASCADE
+);
 
 #Dropping using cascade.
 DROP TABLE Program CASCADE;

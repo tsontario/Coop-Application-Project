@@ -49,7 +49,11 @@
     ArrayList<ProgramBean> programList = ProgramBean.getProgramList();
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
-    } %>
+    }
+
+%>
+
+
 <html>
 <head>
     <title>Admin Page: ${currentUser}</title>
@@ -98,8 +102,21 @@
 </header>
 <!-- HEADER CODE - DO NOT REMOVE -->
 
+
+<% if (numPendingJobs != 0) { %>
+<div class="row" style="padding-top: 20px">
+    <div class="alert alert-success alert-dismissable " style="text-align: center;margin-left: 20em">
+        <a class="panel-close close" data-dismiss="alert"></a>
+        <i class="fa fa-coffee"></i>
+        Looks like there are <%= numPendingJobs %> new jobs available for you!
+        Check them out in the <a href="../jobs/searchjobs.jsp">Jobs</a> tab!
+    </div>
+</div>
+<% } %>
+
 <div class="container">
     <div class="col-lg-12">
+
         <h2>Users</h2>
         <hr class="w-100">
 

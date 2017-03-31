@@ -85,4 +85,26 @@ public class ResumeReviewRequestDAO {
             e.printStackTrace();
         }
     }
+
+    public static int consumeNewReviewRequests(String username) {
+        int numNewReviewRequests = 0;
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(
+                    "DELETE FROM \"Proj\".new_resume_review_requests WHERE username = ?"
+            );
+            pst.setString(1, username);
+
+            numNewReviewRequests = pst.executeUpdate();
+            pst.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return numNewReviewRequests;
+    }
 }

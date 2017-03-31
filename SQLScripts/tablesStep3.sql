@@ -135,7 +135,25 @@ CREATE TABLE job_pending_approval(
 	FOREIGN KEY(username) REFERENCES admin(username) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-#Dropping using cascade.
+CREATE TABLE new_resume_review_requests(
+	resumeid INTEGER,
+	versionno INTEGER,
+	username VARCHAR(20),
+	PRIMARY KEY (resumeid, versionno, username),
+	FOREIGN KEY (resumeid, versionno) REFERENCES resume_review_request ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY (username) REFERENCES moderator ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE resume_review_notification(
+	requesterid VARCHAR(20),
+	resumeid INTEGER,
+	versionno INTEGER,
+	PRIMARY KEY (resumeid, versionno),
+	FOREIGN KEY (resumeid, versionno) REFERENCES resume_review_request(resumeid, versionno) ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY(requesterid) REFERENCES suser ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Dropping using cascade.
 DROP TABLE Program CASCADE;
 DROP TABLE sUSER CASCADE;
 DROP TABLE Moderator CASCADE;

@@ -55,4 +55,40 @@ DELETE ON "Proj".job_pending_approval
 FOR ROW
 EXECUTE PROCEDURE "Proj".remove_redundant_pending_job_alerts();
 
+-- TRIGGER Alert moderators of new resume review requests
+CREATE FUNCTION "Proj".alert_mod_new_resume_review_req() RETURNS TRIGGER AS
+$BODY$
+BEGIN
+  INSERT INTO "Proj".new_resume_review_requests (
+    SELECT resumeid, versionno, username FROM
+      "Proj".moderator CROSS JOIN "Proj".resume_review_request
+    WHERE "Proj".resume_review_request.resumeid = NEW.resumeid AND
+          "Proj".resume_review_request.versionno = NEW.versionno);
+  RETURN NULL;
+END;
+$BODY$ LANGUAGE PLPGSQL;
+
+CREATE TRIGGER alert_mod_new_resume_review_req_trigger AFTER
+INSERT ON "Proj".resume_review_request
+FOR ROW
+EXECUTE PROCEDURE "Proj".alert_mod_new_resume_review_req();
+
+-- TRIGGER removing redundant notifications for resume review request
+-- same reasoning as for admin notifications
+CREATE FUNCTION "Proj".remove_redundant_resume_review_reqs() RETURNS TRIGGER AS
+$BODY$
+BEGIN
+  DELETE FROM "Proj".new_resume_review_requests
+  WHERE "Proj".new_resume_review_requests.resumeid = OLD.resumeid AND
+        "Proj".new_resume_review_requests.versionno = OLD.versionno;
+  RETURN NULL;
+END;
+
+$BODY$ LANGUAGE PLPGSQL;
+
+CREATE TRIGGER remove_redundant_resume_review_reqs_trigger AFTER
+DELETE ON "Proj".new_resume_review_requests
+FOR ROW
+EXECUTE PROCEDURE "Proj".remove_redundant_resume_review_reqs();
+
 

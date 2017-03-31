@@ -15,6 +15,7 @@
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
     }
+    int numNewResumeReviewRequests = ResumeReviewRequestBean.consumeNewReviewRequests(user.getUsername());
 %>
 
 <!DOCTYPE html>
@@ -57,6 +58,17 @@
 
 </header>
 <!-- HEADER CODE - DO NOT REMOVE -->
+
+<% if (numNewResumeReviewRequests != 0) { %>
+<div class="row" style="padding-top: 20px">
+    <div class="alert alert-success alert-dismissable " style="text-align: center;margin-left: 20em">
+        <a class="panel-close close" data-dismiss="alert"></a>
+        <i class="fa fa-coffee"></i>
+        Looks like there are <%= numNewResumeReviewRequests %> new resume review requests!
+    </div>
+</div>
+<% } %>
+
 <div class="table-title">
     <h3>Resumes to be Reviewed</h3>
 </div>

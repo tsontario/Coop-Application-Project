@@ -48,4 +48,8 @@ public class ResumeReviewRequestBean implements Serializable {
     public static void deleteById(int resumeId, int resumeVersion) {
         ResumeReviewRequestDAO.deleteById(resumeId,resumeVersion);
     }
+
+    public static int consumeNewReviewRequests(String username) {
+        return ResumeReviewRequestDAO.consumeNewReviewRequests(username);
+    }
 }

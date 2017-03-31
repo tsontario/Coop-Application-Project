@@ -41,7 +41,7 @@ public class ResumeReviewSubmissionControl extends HttpServlet {
         ResumeReviewRequestBean.deleteById(resumeId, resumeVersion);
 
         session.setAttribute("resumereview", resumeReviewBean);
-        response.sendRedirect("./resumereviewsuccess.jsp");
+        response.sendRedirect("../mod.jsp");
 
     }
 }

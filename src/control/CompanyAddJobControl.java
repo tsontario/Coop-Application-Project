@@ -1,7 +1,9 @@
 package control;
 
+import DAO.ProgramDAO;
 import connection.DataAccess;
 import dbbeans.JobBean;
+import dbbeans.ProgramBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -28,6 +30,7 @@ public class CompanyAddJobControl extends HttpServlet {
         String location = req.getParameter("location");
         String description = req.getParameter("description").replaceAll("'", "''");
         String companyName = req.getParameter("companyname");
+        String[] programCodes = req.getParameterValues("programCodes");
 
         if (jobName == null || jobName.trim().length() < 1) {
             fail(resp, req, "Job title cant be null");
@@ -56,6 +59,9 @@ public class CompanyAddJobControl extends HttpServlet {
         if (location == null || location.trim().length() < 1) {
             fail(resp, req, "Location cant be empty.");
         }
+        if (programCodes == null || programCodes.length == 0) {
+            fail(resp, req, "Must select at least one program");
+        }
 
         JobBean jobBean = new JobBean();
         jobBean.setCompanyId(companyId);
@@ -66,7 +72,9 @@ public class CompanyAddJobControl extends HttpServlet {
         jobBean.setNumPositions(positions);
         jobBean.setRateOfPay(rateOfPay);
 
-        jobBean.jobAdd(jobBean);
+        int id = jobBean.jobAdd(jobBean);
+
+        ProgramBean.addToOffered(programCodes, id);
 
         resp.sendRedirect("../company/companyhome.jsp");
 

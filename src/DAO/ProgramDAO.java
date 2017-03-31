@@ -75,4 +75,23 @@ public class ProgramDAO {
             e.printStackTrace();
         }
     }
+
+    public static void addToOffered(String[] programCodes, int jobId) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            for (int i=0; i<programCodes.length; i++) {
+                PreparedStatement pst = connection.prepareStatement(
+                        "INSERT INTO \"Proj\".offered_to(programcode, jobid) VALUES (?, ?)"
+                );
+                pst.setString(1, programCodes[i]);
+                pst.setInt(2, jobId);
+                pst.executeUpdate();
+                pst.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -1,4 +1,6 @@
 <%@ page import="dbbeans.CompanyBean" %>
+<%@ page import="dbbeans.ProgramBean" %>
+<%@ page import="java.util.ArrayList" %>
 <%--
   Created by IntelliJ IDEA.
   User: willieausrotas
@@ -9,6 +11,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     CompanyBean company = (CompanyBean) request.getSession().getAttribute("currentCompany");
+    ArrayList<ProgramBean> programList = ProgramBean.getProgramList();
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +41,7 @@
 </header>
 <!-- HEADER CODE - DO NOT REMOVE -->
 <div class="container">
-    <h1>Edit Company</h1>
+    <h1>Add New Job</h1>
     <hr>
     <div class="row">
 
@@ -61,6 +64,20 @@
                     <label class="col-lg-3 control-label">Job Name:</label>
                     <div class="col-lg-8">
                         <input name="jobName" class="form-control" type="text" placeholder="Job Name" value="" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Program Code:</label>
+                    <div class="col-lg-8">
+                            <% for (ProgramBean program : programList) {
+                                String p = program.getProgramCode();
+                            %>
+                        <div class="checkbox">
+                            <label>
+                                <input type ="checkbox" name="programCodes" value="<%=p%>"> <%=p%>
+                            </label>
+                        </div>
+                        <% } %>
                     </div>
                 </div>
                 <div class="form-group">

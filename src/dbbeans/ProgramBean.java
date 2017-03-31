@@ -46,4 +46,8 @@ public class ProgramBean implements Serializable {
     public static void addProgramToDb(ProgramBean programBean) {
         ProgramDAO.addProgramToDb(programBean);
     }
+
+    public static void addToOffered(String[] programCodes, int jobId) {
+        ProgramDAO.addToOffered(programCodes, jobId);
+    }
 }

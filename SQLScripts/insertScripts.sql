@@ -21,6 +21,9 @@ VALUES (?, ?, ?, ?,
 INSERT INTO job_approval (approved, jobid) VALUES
   (FALSE, ?);
 
+-- INSERT a new relation row indicating a program is eligible for a job
+INSERT INTO offered_to VALUES (?, ?);
+
 -- INSERT a completed resume review to the database
 INSERT INTO resume_review (resumeid, resumeversion, moderator, resumecomments)
 VALUES (?, ?, ?, ?)

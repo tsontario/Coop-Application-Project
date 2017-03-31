@@ -129,11 +129,11 @@ public class JobBean implements Serializable {
     public static ArrayList<JobBean> listTopFiveJobs() {
         return JobDAO.listTopFiveJobs();
     }
-    public static ArrayList<JobBean> getAllValidJobs(String sortingAttribute, String ordering) {
-        return JobDAO.getAllValidJobListing(sortingAttribute,ordering);
+    public static ArrayList<JobBean> getAllValidJobsByProg(String programCode, String sortingAttribute, String ordering) {
+        return JobDAO.getAllValidJobsByProg(programCode, sortingAttribute,ordering);
     }
-    public void jobAdd(JobBean jobBean) {
-        JobDAO.addJob(jobBean);
+    public int jobAdd(JobBean jobBean) {
+        return JobDAO.addJob(jobBean);
 
     }
 
@@ -172,4 +172,5 @@ public class JobBean implements Serializable {
     public static int getNumNewPendingJobs(String username) {
         return JobDAO.consumeNumNewPendingJobs(username);
     }
+
 }

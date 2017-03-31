@@ -48,7 +48,7 @@ public class JobDAO {
         return jobList;
     }
 
-    public static ArrayList<JobBean> getAllValidJobListing(String sortingAttribute, String ordering) {
+    public static ArrayList<JobBean> getAllValidJobsByProg(String programCode, String sortingAttribute, String ordering) {
         if(sortingAttribute == null){
             sortingAttribute = "postingdate";
         }
@@ -167,9 +167,10 @@ public class JobDAO {
         }
     }
 
-    public static void addJob(JobBean jobBean) {
+    public static int addJob(JobBean jobBean) {
         db.openConnection();
         connection = db.getConnection();
+        int id = -1;
         try {
             st = connection.createStatement();
             st.executeUpdate("INSERT INTO \"Proj\".job (joblevel, jobname, companyid, description, numpositions, rateofpay, closingdate, postingdate) VALUES (" +
@@ -180,12 +181,18 @@ public class JobDAO {
                     jobBean.getNumPositions() + ", " +
                     jobBean.getRateOfPay() + ", " +
                     "CURRENT_DATE +" + jobBean.getClosingDate() + ", " +
-                    "CURRENT_DATE );");
+                    "CURRENT_DATE);");
+            rs = st.executeQuery("SELECT currval(pg_get_serial_sequence('\"Proj\".job', 'jobid'));");
+            if (rs.next()) {
+
+                id = rs.getInt("currval");
+            }
             connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return id;
     }
 
     public static ArrayList<JobBean> getJobsByCompany(int companyId) {
@@ -387,4 +394,6 @@ public class JobDAO {
 
         return numNewPendingJobs;
     }
+
+
 }

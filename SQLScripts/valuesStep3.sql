@@ -66,17 +66,7 @@ INSERT INTO Job(joblevel, jobname, companyid, description, numpositions,rateofpa
 	(3, 'Fraud Detection', 2, 'Find out who''s lying!', 3, 16, current_date+14, current_date),
 	(3, 'Node Developer', 3, 'Enter callback hell!', 3, 8, current_date+14, current_date);
 
-INSERT INTO Applies_to VALUES
-	(1, 'leule089', current_date),
-	(1, 'cgauss099', current_date),
-	(2, 'tsmit094', current_date)
-;
 
-INSERT INTO Offered_to VALUES
-	(1, 'CSI'),
-	(2, 'MCG'),
-	(3, 'SEG')
-;
 
 INSERT INTO Resume VALUES
 	(1, 1, 'tsmit094', 'It''s a resume'),

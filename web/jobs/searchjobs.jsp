@@ -20,7 +20,7 @@
     if(ordering == null || ordering.equals("null")){
         ordering = "DESC";
     }
-    ArrayList<JobBean> jobList = JobBean.getAllValidJobs(sortby, ordering);
+    ArrayList<JobBean> jobList = JobBean.getAllValidJobsByProg(user.getProgramCode(), sortby, ordering);
     if(user == null){
         response.sendRedirect("../index.jsp");
     }

@@ -39,7 +39,6 @@ INSERT INTO moderator(username) VALUES (?);
 -- INSERT add a user as an administrator
 INSERT INTO admin(username) VALUES (?);
 
--- Insert a new resume review and return its generated id
-INSERT  INTO resume_review (reviewid, resumeid, resumeversion, moderator, resumecomments)
-VALUES (11, 1, 2, 'tsmit094', 'afdsafdsa')
-RETURNING resumeid;
+-- INSERT a new resume review request
+INSERT INTO resume_review_request(requesterid, resumeid, versionno) VALUES
+  ('leule089', 2, 1);

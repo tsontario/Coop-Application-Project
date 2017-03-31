@@ -104,8 +104,8 @@
     </div>
     <div class="col-3">
         <h4>Sort</h4>
-        <form action="../SortJobsControl" method="post" class="form-group">
-            <div class="row">
+        <form action="../SortJobsControl" method="post" class="form-horizontal" role="form">
+            <div class="row" style="padding-top: 10px">
                 <select name="sortby" class="form-control">
                     <option value="postingdate" <%= sortby.equals("postingdate") ? "selected" : "" %> >Posting Date</option>
                     <option value="closingdate" <%= sortby.equals("closingdate")? "selected" : "" %> >Closing Date</option>
@@ -114,13 +114,13 @@
                     <option value="companyrating" <%= sortby.equals("companyrating") ? "selected" : "" %> >Company Rating</option>
                 </select>
             </div>
-            <div class="row">
+            <div class="row" style="padding-top: 10px">
                 <select name="ordering" class="form-control">
                     <option value="ASC" <%= ordering.equals("ASC") ? "selected" : "" %> >Ascending</option>
                     <option value="DESC" <%= ordering.equals("DESC") ? "selected" : "" %> >Descending</option>
                 </select>
             </div>
-            <div class="row">
+            <div class="row col-4" style="padding-top: 10px">
                 <button class="btn btn-primary form-control" type="submit">Sort</button>
             </div>
         </form>

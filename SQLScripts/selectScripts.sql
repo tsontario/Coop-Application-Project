@@ -6,8 +6,11 @@ FROM job INNER JOIN company ON job.companyid = company.companyid WHERE job.jobid
 SELECT  jobid, jobname, joblevel, rateofpay, job.companyid, numpositions, closingdate, postingdate, cname, location
 FROM job INNER JOIN company ON job.companyid = company.companyid;
 
+-- SELECT the id of the most recent INSERT into the table
+SELECT currval(pg_get_serial_sequence('job', 'jobid'));
+
 -- SELECT the most recent version of a particular resume
-SELECT resumeid, username, resume, MAX(versionno) AS versionno FROM "Proj".resume
+SELECT resumeid, username, resume, MAX(versionno) AS versionno FROM resume
 WHERE resumeid = id
 GROUP BY resumeid, username, resume LIMIT 1;
 

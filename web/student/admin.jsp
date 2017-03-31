@@ -219,6 +219,7 @@
         <table class="w-100">
             <tr>
                 <th class="text-center">Job Title</th>
+                <th class="text-center">Job Level</th>
                 <th class="text-center">Company</th>
                 <th class="text-center">Salary</th>
                 <th class="text-center">Description</th>
@@ -232,6 +233,7 @@
             <tr>
                 <td><%= j.getJobName() %>
                 </td>
+                <td><%= j.getJobLevel() %></td>
                 <td>
                     <%= j.getCName() %>
                 </td>
@@ -270,6 +272,7 @@
         <table class="w-100">
             <tr>
                 <th class="text-center">Job Title</th>
+                <th class="text-center">Job Level</th>
                 <th class="text-center">Company</th>
                 <th class="text-center">Salary</th>
                 <th class="text-center">Description</th>
@@ -282,6 +285,7 @@
             <tr>
                 <td><%= j.getJobName() %>
                 </td>
+                <td><%= j.getJobLevel() %></td>
                 <td>
                     <%= j.getCName() %>
                 </td>

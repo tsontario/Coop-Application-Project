@@ -91,4 +91,20 @@ DELETE ON "Proj".new_resume_review_requests
 FOR ROW
 EXECUTE PROCEDURE "Proj".remove_redundant_resume_review_reqs();
 
+-- When a new job is created, it is automatically added to the job_approval table
+-- to be accepted or rejected by an admin
+CREATE OR REPLACE FUNCTION "Proj".new_job_pending_approval() RETURNS TRIGGER AS
+$BODY$
+BEGIN
+  INSERT INTO "Proj".job_approval(jobid) VALUES (NEW.jobid);
+  RETURN NULL;
+END;
+$BODY$ LANGUAGE PLPGSQL;
+
+
+CREATE TRIGGER new_job_pending_approval_trigger
+AFTER INSERT ON "Proj".job
+FOR ROW
+EXECUTE PROCEDURE new_job_pending_approval();
+
 

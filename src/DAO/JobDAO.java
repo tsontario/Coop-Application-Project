@@ -181,11 +181,6 @@ public class JobDAO {
                     jobBean.getRateOfPay() + ", " +
                     "CURRENT_DATE +" + jobBean.getClosingDate() + ", " +
                     "CURRENT_DATE );");
-            rs = st.executeQuery("SELECT jobid FROM \"Proj\".job WHERE jobname ='" + jobBean.getJobName() + "' AND companyid =" + jobBean.getCompanyId() + ";");
-            if (rs.next()) {
-                st.executeUpdate("INSERT INTO \"Proj\".job_approval (approved, jobid) VALUES (FALSE, " + rs.getInt("jobid") + ");");
-            }
-            rs.close();
             connection.close();
 
         } catch (SQLException e) {

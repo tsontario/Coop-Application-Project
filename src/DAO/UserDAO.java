@@ -26,7 +26,6 @@ public class UserDAO {
 //            st = connection.createStatement();
             PreparedStatement st = connection.prepareStatement("SELECT * FROM \"Proj\".suser WHERE username = ?");
             st.setString(1, username);
-            System.out.println(st);
             rs = st.executeQuery();
 
             if (rs.next()) {

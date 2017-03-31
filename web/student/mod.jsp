@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="../css/header.css">
     <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <title>Moderator Panel</title>
-    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
 </head>
 
 <body>
@@ -81,7 +81,7 @@
     </thead>
     <tbody class="table-hover">
     <% for (ResumeReviewRequestBean resume : resumeList) { %>
-        <tr id="">
+        <tr>
             <td class="text-left">
                 <%= resume.getRequesterUsername() %>
             </td>

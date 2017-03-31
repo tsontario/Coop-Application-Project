@@ -115,13 +115,13 @@
 </div>
 <% } %>
 
-<div class="container">
+<div style="margin-top: 20px">
     <div class="col-lg-12">
 
         <h2>Users</h2>
         <hr class="w-100">
 
-        <table class="table-fill">
+        <table class="w-100">
             <thead>
             <tr>
                 <th class="text-center">Username</th>
@@ -174,7 +174,7 @@
 
         <h2>Companies</h2>
         <hr class="w-100">
-        <table class="table-fill" class="w-100">
+        <table class="w-100">
             <thead>
             <tr>
                 <th class="text-center">Company Name</th>
@@ -341,7 +341,7 @@
             <% } %>
         </table>
         <a href="../program/addprogram.jsp">
-            <button type="submit" class="btn btn-info">Add New Program</button>
+            <button type="submit" class="btn btn-info" style="margin-top: 15px">Add New Program</button>
         </a>
     </div>
 </div>

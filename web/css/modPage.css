@@ -9,12 +9,11 @@ body {
 }
 
 table tbody, thead {
-    display: block !important;
+
 }
 
 table tbody {
-    overflow-y: auto !important;
-    height: 30px !important;
+
 }
 
 div.table-title {

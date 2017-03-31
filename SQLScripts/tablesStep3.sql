@@ -168,3 +168,5 @@ DROP TABLE Resume_Review CASCADE;
 DROP TABLE Resume_Review_Request CASCADE;
 DROP TABLE Upvote CASCADE;
 DROP TABLE job_approval CASCADE;
+DROP TABLE job_pending_approval CASCADE;
+DROP TABLE new_resume_review_requests CASCADE;

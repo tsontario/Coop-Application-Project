@@ -50,6 +50,7 @@
     if (user == null) {
         response.sendRedirect("sessionended.jsp");
     }
+    int numPendingJobs = JobBean.getNumNewPendingJobs(user.getUsername());
 
 %>
 
@@ -108,8 +109,8 @@
     <div class="alert alert-success alert-dismissable " style="text-align: center;margin-left: 20em">
         <a class="panel-close close" data-dismiss="alert"></a>
         <i class="fa fa-coffee"></i>
-        Looks like there are <%= numPendingJobs %> new jobs available for you!
-        Check them out in the <a href="../jobs/searchjobs.jsp">Jobs</a> tab!
+        Looks like there are <%= numPendingJobs %> new jobs to be approved!
+        <a href="#pendingjobs">Click here to see them!</a>
     </div>
 </div>
 <% } %>
@@ -213,7 +214,7 @@
         </table>
         <hr/>
 
-        <h2>Pending Jobs</h2>
+        <h2 id="pendingjobs">Pending Jobs</h2>
         <hr class="w-100">
         <table class="w-100">
             <tr>

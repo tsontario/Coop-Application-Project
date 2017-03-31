@@ -45,6 +45,7 @@ CREATE FUNCTION "Proj".remove_redundant_pending_job_alerts() RETURNS TRIGGER AS
 $BODY$
 BEGIN
   DELETE FROM "Proj".job_pending_approval WHERE "Proj".job_pending_approval.jobid = OLD.jobid;
+  RETURN NULL;
 END;
 
 $BODY$ LANGUAGE PLPGSQL;

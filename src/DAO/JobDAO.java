@@ -362,4 +362,26 @@ public class JobDAO {
         }
         return numNewJobs;
     }
+
+    public static int consumeNumNewPendingJobs(String username) {
+        int numNewPendingJobs = 0;
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(
+                    "DELETE FROM \"Proj\".job_pending_approval WHERE username = ?"
+            );
+            pst.setString(1, username);
+
+            numNewPendingJobs = pst.executeUpdate();
+            pst.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return numNewPendingJobs;
+    }
 }

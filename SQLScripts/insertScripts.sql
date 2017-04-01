@@ -57,3 +57,18 @@ INSERT INTO resume (requesterid, resumeid, versionno) VALUES(? ,?, ?);
 INSERT INTO resume_review_request(requesterid, resumeid, versionno) VALUES
   ('leule089', 2, 1);
 
+
+INSERT INTO offered_to VALUES
+  (1, 'CSI'),
+  (1, 'SEG'),
+  (2, 'CSI'),
+  (2, 'SEG'),
+  (3, 'CSI'),
+  (3, 'SEG'),
+  (4, 'CSI'),
+  (4, 'SEG'),
+  (5, 'CSI'),
+  (5, 'SEG'),
+  (6, 'CSI'),
+  (6, 'SEG');
+

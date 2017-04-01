@@ -83,4 +83,32 @@ public class ResumeReviewDAO {
         }
         return resumeBean;
     }
+
+    public static boolean exists(int resumeId, int versionNo) {
+        boolean exists = false;
+
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(
+                    "SELECT * FROM \"Proj\".resume_review " +
+                            "WHERE resumeid = ? AND resumeversion = ?;"
+            );
+            pst.setInt(1, resumeId);
+            pst.setInt(2, versionNo);
+
+            rs = pst.executeQuery();
+            if (rs.next()) {
+                exists = true;
+            }
+            rs.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return exists;
+    }
 }

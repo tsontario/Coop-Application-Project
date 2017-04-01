@@ -13,7 +13,8 @@
         response.sendRedirect("sessionended.jsp");
     }
     int id = Integer.parseInt(request.getParameter("resumeid"));
-    ResumeBean resumeBean = ResumeBean.getResumeById(id);
+    int version = Integer.parseInt(request.getParameter("resumeversion"));
+    ResumeBean resumeBean = ResumeBean.getResumeByIdAndVersion(id, version);
     UserBean resumeAuthor = UserBean.getUserById(resumeBean.getUsername());
     request.getSession().setAttribute("moderator", user);
     request.getSession().setAttribute("resume", resumeBean);

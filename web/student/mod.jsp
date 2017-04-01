@@ -88,6 +88,7 @@
             <td class="text-center">
                 <form style="all:initial" action="resume/resumereview.jsp" method="POST">
                     <input type="hidden" name="resumeid" value="<%= resume.getResumeId() %>"/>
+                    <input type="hidden" name="resumeversion" value="<%= resume.getVersionNo() %>"/>
                     <button class="btn btn-primary" type="submit">Review</button>
                 </form>
             </td>

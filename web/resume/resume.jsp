@@ -3,7 +3,8 @@
 <%@ page import="dbbeans.ResumeBean" %>
 <%@ page import="DAO.ResumeReviewDAO" %>
 <%@ page import="DAO.ResumeDAO" %>
-<%@ page import="dbbeans.ResumeReviewBean" %><%--
+<%@ page import="dbbeans.ResumeReviewBean" %>
+<%@ page import="dbbeans.ResumeReviewRequestBean" %><%--
   Created by IntelliJ IDEA.
   User: Kevin
   Date: 2017-04-01
@@ -18,6 +19,7 @@
     }
     boolean resumeIsPending = false;
     boolean isExistingResume = false;
+    boolean reviewExists = false;
     ResumeBean resume = new ResumeBean();
     ResumeReviewBean resumeReviewBean = new ResumeReviewBean();
     int versionno = 0;
@@ -27,6 +29,8 @@
         resume = ResumeDAO.getResumeByVersionNumber(user.getUsername(),versionno);
         if(resume.getResume() != null){
             isExistingResume = true;
+            reviewExists = ResumeReviewDAO.exists(resume.getResumeId(), versionno);
+
             resumeReviewBean = ResumeReviewBean.getReviewForResumeVersion(resume.getResumeId(),versionno);
         }
     }
@@ -109,7 +113,7 @@
                 <button type="submit" class="btn-primary btn" style="margin: 15px 0px">Go to Version</button>
             </form>
         </div>
-        <% if(!resumeIsPending && isExistingResume){ %>
+        <% if(!resumeIsPending && isExistingResume && !reviewExists){ %>
         <div class="col-md-9">
             <form role="form" action="../CreateResumeRequestControl" class="form-horizontal" method="post">
                 <input name="username" hidden="hidden" readonly="true" type="text"

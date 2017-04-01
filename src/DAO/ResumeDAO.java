@@ -163,4 +163,31 @@ public class ResumeDAO {
         }
         return resumeBean;
     }
+
+    public static ResumeBean getResumeByIdAndVersion(int id, int version) {
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+
+        ResumeBean resumeBean = new ResumeBean();
+
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT resumeid, username, resume, versionno FROM \"Proj\".resume " +
+                    "WHERE resumeid = " + id +
+                    " AND versionno = " + version);
+            if (rs.next()) {
+                resumeBean.setResumeId(rs.getInt("resumeid"));
+                resumeBean.setVersionNo(rs.getInt("versionno"));
+                resumeBean.setUsername(rs.getString("username"));
+                resumeBean.setResume(rs.getString("resume"));
+            }
+            rs.close();
+            st.close();
+            connection.close();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();}
+
+        return resumeBean;
+    }
 }

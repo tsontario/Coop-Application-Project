@@ -3,7 +3,8 @@ INSERT INTO PROGRAM VALUES
 	('Software Engineering', 'SEG'),
 	('Computer Science', 'CSI'),
 	('Mechanical Engineering', 'MCG'),
-	('Civil Engineering', 'CVG')
+	('Civil Engineering', 'CVG'),
+	('Electrical Engineering', 'EEG')
 ;
 
 INSERT INTO sUser VALUES
@@ -79,9 +80,6 @@ INSERT INTO Resume VALUES
 INSERT INTO Resume_Review VALUES
 	(1, 1, 'tsmit094', 1, 'Bad resume, work harder better faster stronger technologic.');
 
-INSERT INTO Resume_Review_Request VALUES
-	('tsmit094', 1, 2),
-	('leule089', 2, 1);
 
 INSERT INTO Upvote VALUES
 	('leule089', 1),

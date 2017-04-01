@@ -52,3 +52,8 @@ INSERT INTO resume (versionno, username, resume) VALUES(? ,?, ?);
 
 -- INSERT new resume request
 INSERT INTO resume (requesterid, resumeid, versionno) VALUES(? ,?, ?);
+
+-- INSERT a new resume review request
+INSERT INTO resume_review_request(requesterid, resumeid, versionno) VALUES
+  ('leule089', 2, 1);
+

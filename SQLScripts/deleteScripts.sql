@@ -25,3 +25,6 @@ DELETE FROM moderator WHERE username = ? RETURNING username;
 -- Consumes notifications of new jobs for users (uses number returned from query)
 -- Used to let users know when new job postings are available
 DELETE FROM job_notification WHERE username = ?;
+
+-- Delete an upvote
+DELETE FROM upvote WHERE username = ? AND reviewid = ?;

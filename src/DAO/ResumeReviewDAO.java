@@ -1,7 +1,9 @@
 package DAO;
 
 import connection.DataAccess;
+import dbbeans.ResumeBean;
 import dbbeans.ResumeReviewBean;
+import dbbeans.UserBean;
 
 import java.sql.*;
 
@@ -51,5 +53,34 @@ public class ResumeReviewDAO {
         }
 
         return resumeReviewBean;
+    }
+
+    public static ResumeReviewBean getReviewForResumeVersion(int resumeid, int version){
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+        ResumeReviewBean resumeBean = new ResumeReviewBean();
+        String username ="";
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT * FROM \"Proj\".RESUME_REVIEW WHERE resumeid=" + resumeid +
+                    " AND resumeversion=" + version + ";");
+            if(rs.next()){
+                resumeBean.setReviewId(Integer.parseInt(rs.getString("reviewid")));
+                resumeBean.setResumeId(Integer.parseInt(rs.getString("resumeid")));
+                resumeBean.setResumeVersion(Integer.parseInt(rs.getString("resumeversion")));
+                resumeBean.setComments(rs.getString("resumecomments"));
+                username = rs.getString("moderator");
+            }
+            rs.close();
+            st.close();
+            connection.close();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(!username.equals("")){
+            resumeBean.setModerator(UserBean.getUserById(username));
+        }
+        return resumeBean;
     }
 }

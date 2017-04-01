@@ -1,5 +1,6 @@
 package dbbeans;
 
+import DAO.ResumeDAO;
 import DAO.ResumeReviewDAO;
 
 import java.io.Serializable;
@@ -60,6 +61,10 @@ public class ResumeReviewBean implements Serializable {
 
     public ResumeReviewBean insertReviewToDb() {
         return ResumeReviewDAO.insertReviewToDb(this);
+    }
+
+    public static ResumeReviewBean getReviewForResumeVersion(int resumeid, int version){
+        return ResumeReviewDAO.getReviewForResumeVersion(resumeid,version);
     }
 
     @Override

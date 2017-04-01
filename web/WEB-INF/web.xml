@@ -134,4 +134,28 @@
         <servlet-name>SortJobsControl</servlet-name>
         <url-pattern>/SortJobsControl</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>UpVoteControl</servlet-name>
+        <servlet-class>control.UpVoteControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpVoteControl</servlet-name>
+        <url-pattern>/UpVoteControl</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CreateResumeControl</servlet-name>
+        <servlet-class>control.CreateResumeControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateResumeControl</servlet-name>
+        <url-pattern>/CreateResumeControl</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CreateResumeRequestControl</servlet-name>
+        <servlet-class>control.CreateResumeRequestControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateResumeRequestControl</servlet-name>
+        <url-pattern>/CreateResumeRequestControl</url-pattern>
+    </servlet-mapping>
 </web-app>

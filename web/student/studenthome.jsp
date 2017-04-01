@@ -44,7 +44,7 @@
         <nav>
             <a href="studenthome.jsp" class="selected">Home</a>
             <a href="profile.jsp">Profile</a>
-            <a href="#">Resume</a>
+            <a href="../resume/resume.jsp">Resume</a>
             <a href="../jobs/searchjobs.jsp">Jobs</a>
             <a href="../reviews/reviewlist.jsp">Write Review</a>
             <% if (user != null) {

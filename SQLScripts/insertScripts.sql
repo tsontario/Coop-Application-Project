@@ -43,3 +43,12 @@ INSERT INTO admin(username) VALUES (?);
 INSERT  INTO resume_review (reviewid, resumeid, resumeversion, moderator, resumecomments)
 VALUES (11, 1, 2, 'tsmit094', 'afdsafdsa')
 RETURNING resumeid;
+
+-- Insert a new upvote for a review
+INSERT INTO upvote(username, reviewid) VALUES (?, ?);
+
+-- INSERT new resume
+INSERT INTO resume (versionno, username, resume) VALUES(? ,?, ?);
+
+-- INSERT new resume request
+INSERT INTO resume (requesterid, resumeid, versionno) VALUES(? ,?, ?);

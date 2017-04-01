@@ -77,7 +77,7 @@ INSERT INTO Resume VALUES
 ;
 
 INSERT INTO Resume_Review VALUES
-	(1, 1, 'tsmit094', 2, 'Bad resume, work harder better faster stronger technologic.');
+	(1, 1, 'tsmit094', 1, 'Bad resume, work harder better faster stronger technologic.');
 
 INSERT INTO Resume_Review_Request VALUES
 	('tsmit094', 1, 2),

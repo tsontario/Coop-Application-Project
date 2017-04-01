@@ -8,6 +8,7 @@
 <%@ page import="dbbeans.CompanyReviewBean" %>
 <%@ page import="dbbeans.UserBean" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="DAO.CompanyReviewDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     UserBean user = (UserBean) request.getSession().getAttribute("currentUser");
@@ -73,6 +74,9 @@
                     <div class="col">
                         <p class="card-text ">Review Date: <%=review.getTimestamp()%></p>
                     </div>
+                    <div class="col">
+                        <p class="card-text ">Upvotes: <%=review.getUpvotes()%></p>
+                    </div>
                 </div>
                 <div class="row" style="margin-top: 40px">
                     <div class="col">
@@ -98,6 +102,27 @@
                         <% if(review.getSalaryExperience() != null ){%>
                             <p class="card-text "><%=review.getSalaryExperience()%></p>
                         <% } %>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col">
+                            <form action="../UpVoteControl" method="post">
+                                <input name="username" hidden="hidden" readonly="true" type="text"
+                                       value=<%=user.getUsername()%>>
+                                <input name="reviewid" hidden="hidden" readonly="true" type="text"
+                                       value=<%=review.getReviewid()%>>
+                                <input name="companyid" hidden="hidden" readonly="true" type="text"
+                                       value=<%=review.getCompanyid()%>>
+                                <% if(CompanyReviewDAO.alreadyUpvoted(user.getUsername(),review.getReviewid())){%>
+                                    <input name="isUpvoting" hidden="hidden" readonly="true" type="text"
+                                       value="false">
+                                    <button type="submit" class="btn btn-danger">Undo Upvote</button>
+                                <% } else {%>
+                                    <input name="isUpvoting" hidden="hidden" readonly="true" type="text"
+                                       value="true">
+                                    <button type="submit" class="btn btn-primary">Upvote</button>
+                                <% } %>
+                            </form>
                     </div>
                 </div>
             </div>

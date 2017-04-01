@@ -1,4 +1,3 @@
-
 CREATE TABLE Program(
 	ProgramName VARCHAR(50) UNIQUE,
 	ProgramCode VARCHAR(3),

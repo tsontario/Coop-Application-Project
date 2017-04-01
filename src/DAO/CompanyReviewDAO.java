@@ -78,7 +78,9 @@ public class CompanyReviewDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        for(CompanyReviewBean review : reviews){
+            review.setUpvotes(CompanyReviewDAO.getAllUpvotesForReview(review.getReviewid()));
+        }
         return reviews;
     }
 
@@ -190,6 +192,74 @@ public class CompanyReviewDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static boolean alreadyUpvoted(String username, int reviewid){
+        db.openConnection();
+        connection = db.getConnection();
+        int count = 0;
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT COUNT(*) FROM \"Proj\".UPVOTE where username='" + username +
+                    "' AND reviewid='" + reviewid + "';");
+            if(rs.next()){
+                count = rs.getInt(1);
+            }
+            st.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(count >= 1){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public static void upvoteReview(String username, int reviewid){
+        db.openConnection();
+        connection = db.getConnection();
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("INSERT INTO \"Proj\".UPVOTE VALUES('" + username + "'," + reviewid + ");");
+            st.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteUpvoteReview(String username, int reviewid){
+        db.openConnection();
+        connection = db.getConnection();
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("DELETE FROM \"Proj\".UPVOTE WHERE username='" + username + "' AND reviewid="+ reviewid + ";");
+            st.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static int getAllUpvotesForReview(int reviewid){
+        db.openConnection();
+        connection = db.getConnection();
+        int count = 0;
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT COUNT(*) FROM \"Proj\".UPVOTE WHERE reviewid='" + reviewid + "';");
+            if(rs.next()){
+                count = rs.getInt(1);
+            }
+            st.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return count;
     }
 
 

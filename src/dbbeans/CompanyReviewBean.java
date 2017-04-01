@@ -23,9 +23,22 @@ public class CompanyReviewBean {
         this.interviewExperience = interviewExperience;
         this.salaryExperience = salaryExperience;
         this.timestamp = timestamp;
+        this.upvotes = 0;
     }
 
-    private int reviewid, companyid, rating;
+    private int reviewid;
+    private int companyid;
+    private int rating;
+
+    public int getUpvotes() {
+        return upvotes;
+    }
+
+    public void setUpvotes(int upvotes) {
+        this.upvotes = upvotes;
+    }
+
+    private int upvotes;
     private String username, interviewExperience, onTheJobExperience,salaryExperience,timestamp;
 
     public int getReviewid() {

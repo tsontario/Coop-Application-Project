@@ -20,12 +20,11 @@
     if(ordering == null || ordering.equals("null")){
         ordering = "DESC";
     }
-    ArrayList<JobBean> jobList = JobBean.getAllValidJobsByProg(user.getProgramCode(), sortby, ordering);
     if(user == null){
         response.sendRedirect("../index.jsp");
     }
+    ArrayList<JobBean> jobList = JobBean.getAllValidJobsByProg(user.getProgramCode(), sortby, ordering);
 %>
-<% String temp = request.getParameter("name") ;%>
 <html>
 <title>Jobs Page</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">

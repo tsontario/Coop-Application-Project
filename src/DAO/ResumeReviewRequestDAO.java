@@ -107,4 +107,49 @@ public class ResumeReviewRequestDAO {
 
         return numNewReviewRequests;
     }
+
+    public static void createNewResumeRequest(String username, int resumeid ,int versionno){
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+        int versionNumber = ResumeDAO.getLastestVersionNumber(username) + 1;
+        try {
+            st = connection.createStatement();
+            st.executeUpdate("INSERT INTO \"Proj\".RESUME_REVIEW_REQUEST (requesterid, resumeid, versionno) " +
+                    "VALUES('" + username + "', " + resumeid + ", " + versionno + "); ");
+            rs.close();
+            st.close();
+            connection.close();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public static boolean isResumePending(String username, int versionno){
+        DataAccess.openConnection();
+        connection = DataAccess.getConnection();
+        int count = 0;
+        try {
+            st = connection.createStatement();
+            rs = st.executeQuery("SELECT COUNT(*) FROM \"Proj\".resume_review_request WHERE requesterid ='" + username +
+                    "' AND versionno='"+ versionno +"';");
+            if(rs.next()){
+                count = rs.getInt(1);
+            }
+            rs.close();
+            st.close();
+            connection.close();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(count >= 1){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
 }

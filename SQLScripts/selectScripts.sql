@@ -137,3 +137,18 @@ FROM job_approval NATURAL JOIN job NATURAL JOIN company WHERE approved = FALSE O
 SELECT jobid, jobname, joblevel, rateofpay, companyid,
   numpositions, closingdate, postingdate, cname, description, location
 FROM job_approval NATURAL JOIN job NATURAL JOIN company WHERE approved = TRUE ORDER BY jobid;
+
+-- Select an upvote with username and reviewid to check if it exists
+SELECT COUNT(*) FROM upvote where username=? AND reviewid = ?;
+
+-- SELECT to see how many upvotes for a particular review
+SELECT COUNT(*) FROM upvote where reviewid = ?;
+
+-- SELECT if resume review is still pending
+SELECT COUNT(*) FROM resume_review_request WHERE requesterid= ? AND versionno = ?;
+
+-- SELECT how many resumes a user has
+SELECT COUNT(*) FROM resume WHERE username= ?;
+
+-- SELECT specific resume version of a user
+SELECT * FROM resume WHERE username= ? and versionno= ?;
